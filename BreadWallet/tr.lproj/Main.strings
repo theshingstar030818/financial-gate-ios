@@ -1,0 +1,188 @@
+/* Class = "UIButton"; normalTitle = "recover wallet"; ObjectID = "4w7-k8-9wY"; */
+"4w7-k8-9wY.normalTitle" = "cüzdanı kurtarın";
+
+/* Class = "UILabel"; text = "local currency"; ObjectID = "8e2-ar-Ehc"; */
+"8e2-ar-Ehc.text" = "yerel para birimi";
+
+/* Class = "UIButton"; normalTitle = "generate recovery phrase"; ObjectID = "A4M-yq-26d"; */
+"A4M-yq-26d.normalTitle" = "kurtarma metnini oluştur";
+
+/* Class = "UILabel"; text = "start/recover another wallet"; ObjectID = "D1b-HB-lKH"; */
+"D1b-HB-lKH.text" = "başka bir cüzdanı başlat/geri yükle";
+
+/* Class = "UILabel"; text = "exchange rate data provided by\nbitpay.com/rates"; ObjectID = "D4H-hd-LsX"; */
+"D4H-hd-LsX.text" = "döviz kurları\nbitpay.com/rates tarafından sağlanmaktadır";
+
+/* Class = "UILabel"; text = "if you ever lose your phone, you will need this phrase to recover your wallet"; ObjectID = "EQG-Km-ZKY"; */
+"EQG-Km-ZKY.text" = "telefonunuzu kaybederseniz, cüzdanınızı kurtarmak için bu metine ihtiyacınız olacak";
+
+/* Class = "UILabel"; text = "sent"; ObjectID = "FjB-H2-BnK"; */
+"FjB-H2-BnK.text" = "gönderilen";
+
+/* Class = "UIBarButtonItem"; title = "remind me later"; ObjectID = "QQS-Me-RNh"; */
+"QQS-Me-RNh.title" = "daha sonra hatırlat";
+
+/* Class = "UILabel"; text = "please write it down"; ObjectID = "Td7-xP-kmB"; */
+"Td7-xP-kmB.text" = "lütfen not edin";
+
+/* Class = "UILabel"; text = "not connected"; ObjectID = "UyF-OV-QVY"; */
+"UyF-OV-QVY.text" = "bağlı değil";
+
+/* Class = "UINavigationItem"; title = "settings"; ObjectID = "W8m-Eh-Nf9"; */
+"W8m-Eh-Nf9.title" = "ayarlar";
+
+/* Class = "UINavigationItem"; title = "Transaction History"; ObjectID = "bfL-42-zKV"; */
+"bfL-42-zKV.title" = "işlem geçmişi";
+
+/* Class = "UILabel"; text = "amount:"; ObjectID = "XJu-9x-HqQ"; */
+"XJu-9x-HqQ.text" = "tutar:";
+
+/* Class = "UILabel"; text = "Enter this wallet's recovery phrase to wipe it and start/recover another. Your current balance remains on this phrase."; ObjectID = "YC6-rN-4P5"; */
+"YC6-rN-4P5.text" = "Yeni cüzdan başlatmak/geri yüklemek veya bu cüzdanı silmek için cüzdana ait kurtarma metnini giriniz.";
+
+/* Class = "UIButton"; normalTitle = "pay address from clipboard"; ObjectID = "bfj-xS-5rN"; */
+"bfj-xS-5rN.normalTitle" = "panodaki adresten öde";
+
+/* Class = "UIButton"; normalTitle = "scan QR code"; ObjectID = "ce6-Wi-wk4"; */
+"ce6-Wi-wk4.normalTitle" = "QR kodunu tara";
+
+/* Class = "UILabel"; text = "I wrote it down:"; ObjectID = "cyp-mV-Bhd"; */
+"cyp-mV-Bhd.text" = "Not aldım:";
+
+/* Class = "UIButton"; normalTitle = "new wallet"; ObjectID = "dOa-zm-TDG"; */
+"dOa-zm-TDG.normalTitle" = "yeni cüzdan";
+
+/* Class = "UILabel"; text = "if you ever lose your phone, you will need this phrase to recover your wallet"; ObjectID = "dX6-jg-5IA"; */
+"dX6-jg-5IA.text" = "telefonunuzu kaybederseniz, cüzdanınızı geri yüklemek için bu metine ihtiyacınız olacak";
+
+/* Class = "UILabel"; text = "unconfirmed"; ObjectID = "eJ2-5h-DO2"; */
+"eJ2-5h-DO2.text" = "onaylanmamış";
+
+/* Class = "UIButton"; normalTitle = "show"; ObjectID = "efL-Cj-Aho"; */
+"efL-Cj-Aho.normalTitle" = "göster";
+
+/* Class = "UINavigationItem"; title = "confirm:"; ObjectID = "fQN-xb-SYb"; */
+"fQN-xb-SYb.title" = "onayla:";
+
+/* Class = "UILabel"; text = "send money:"; ObjectID = "l5l-JR-LKA"; */
+"l5l-JR-LKA.text" = "para gönder:";
+
+/* Class = "UILabel"; text = "app support:"; ObjectID = "lYb-eg-NfF"; */
+"lYb-eg-NfF.text" = "uygulama desteği:";
+
+/* Class = "UINavigationItem"; title = "recovery phrase:"; ObjectID = "ooJ-EA-DFl"; */
+"ooJ-EA-DFl.title" = "kurtarma metni:";
+
+/* Class = "UILabel"; text = "receive money:"; ObjectID = "qel-3J-2VC"; */
+"qel-3J-2VC.text" = "para al:";
+
+/* Class = "UITableViewController"; title = "transaction details"; ObjectID = "s4T-yd-VfX"; */
+"s4T-yd-VfX.title" = "işlem detayları";
+
+/* Class = "UILabel"; text = "no transactions"; ObjectID = "81e-oW-dEy"; */
+"81e-oW-dEy.text" = "işlem yok";
+
+/* Class = "UILabel"; text = "start a new wallet by generating a wallet recovery phrase"; ObjectID = "wDZ-DN-szv"; */
+"wDZ-DN-szv.text" = "bir cüzdan kurtarma metni oluşturmak için yeni bir cüzdan oluşturun";
+
+// Send Balance: text = "Send" class = UIButton
+"bfj-xS-5rN.normalTitle" = "göndermek";
+
+// Receive Balance: text = "Receieve" class = UIButton
+"9J3-b4-4Mo.normalTitle" = "Teslim almak";
+
+// Balance: text = "balance" class = UILabel
+"PQl-Cm-NzU.text" = "Denge";
+
+// Your current address: text = "Your current address" class = UILabel
+"5Jc-yF-eA1.text" = "Geçerli adresiniz";
+
+/* Class = "UILabel"; text = "Send"; ObjectID = "WEI-gl-6UV"; */
+"WEI-gl-6UV.text" = "göndermek";
+
+/* Class = "UILabel"; text = "Recipent"; ObjectID = "vxh-Ky-6Wc"; */
+"vxh-Ky-6Wc.text" = "alıcı";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "OWy-1w-NVm"; */
+"OWy-1w-NVm.text" = "Tutar";
+
+/* Class = "UILabel"; text = "Memo"; ObjectID = "dNj-BZ-eWd"; */
+"dNj-BZ-eWd.text" = "Açıklama";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "qmp-pM-gb5"; */
+"qmp-pM-gb5.normalTitle" = "Gönder";
+
+/* Class = "UILabel"; text = "Apply For Debit Card"; ObjectID = "4BB-ke-6R1"; */
+"4BB-ke-6R1.text" = "Banka Kartına Uygula";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "hV9-co-dKF"; */
+"hV9-co-dKF.text" = "Ad Soyad";
+
+/* Class = "UITextField"; placeholder = "First"; ObjectID = "NUB-do-wYV"; */
+"NUB-do-wYV.placeholder" = "İsim";
+
+/* Class = "UITextField"; placeholder = "Last"; ObjectID = "ybs-it-keV"; */
+"ybs-it-keV.placeholder" = "Soyadı";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "cIY-ON-ZKV"; */
+"cIY-ON-ZKV.text" = "Adres";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "PGE-NH-RPW"; */
+"PGE-NH-RPW.placeholder" = "Adres１";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "ESz-bk-cub"; */
+"ESz-bk-cub.placeholder" = "Şehir";
+
+/* Class = "UITextField"; placeholder = "Zip Code"; ObjectID = "C45-ej-s9N"; */
+"C45-ej-s9N.placeholder" = "Posta kodu";
+
+/* Class = "UILabel"; text = "Identity Card"; ObjectID = "Sli-wd-97Q"; */
+"Sli-wd-97Q.text" = "Kimlik kartı";
+
+/* Class = "UIButton"; normalTitle = "Upload"; ObjectID = "a9u-9b-QNN"; */
+"a9u-9b-QNN.normalTitle" = "Yükleme";
+
+/* Class = "UILabel"; text = "or drag files here"; ObjectID = "Q2i-du-csf"; */
+"Q2i-du-csf.text" = "";
+
+/* Class = "UILabel"; text = "Address Certificate"; ObjectID = "Ezc-pY-egs"; */
+"Ezc-pY-egs.text" = "Adres Belgesi";
+
+/* Class = "UIButton"; normalTitle = "Upload"; ObjectID = "Ax9-kq-cYE"; */
+"Ax9-kq-cYE.normalTitle" = "Yükleme";
+
+/* Class = "UILabel"; text = "or drag files here"; ObjectID = "q2j-xB-AZF"; */
+"q2j-xB-AZF.text" = "";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "an4-D7-IV2"; */
+"an4-D7-IV2.text" = "Telefon numarası";
+
+/* Class = "UITextField"; placeholder = "Phone No."; ObjectID = "2dF-XT-tbR"; */
+"2dF-XT-tbR.placeholder" = "Telefon numarası";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "bD4-hm-pZ2"; */
+"bD4-hm-pZ2.text" = "E-posta";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "hwG-B5-p1p"; */
+"hwG-B5-p1p.placeholder" = "E-posta";
+
+/* Class = "UILabel"; text = "Date of Birth"; ObjectID = "ea1-Z0-IbM"; */
+"ea1-Z0-IbM.text" = "Doğum tarihi";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "lWa-fU-rqP"; */
+"lWa-fU-rqP.normalTitle" = "Gönder";
+
+/* Class = "UILabel"; text = "Support"; ObjectID = "bP3-c6-Azq"; */
+"bP3-c6-Azq.text" = "Destek";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "aTi-xP-g78"; */
+"aTi-xP-g78.text" = "isim";
+
+/* Class = "UILabel"; text = "E-mail"; ObjectID = "Gtg-wo-eVX"; */
+"Gtg-wo-eVX.text" = "E-mail";
+
+/* Class = "UILabel"; text = "Inquiry"; ObjectID = "0IJ-sP-ugb"; */
+"0IJ-sP-ugb.text" = "soruşturma";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "dNn-5u-RG8"; */
+"dNn-5u-RG8.normalTitle" = "göndermek";

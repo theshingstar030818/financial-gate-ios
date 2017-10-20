@@ -1,0 +1,22 @@
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+// Updated by Farrukh Askari <farrukh.askari01@gmail.com> on 3:22 PM 17/4/17.
+
+#import "BRAppDelegate.h"
+#import "BRWalletManager.h"
+#import "BRWallet.h"
+#import "BRPeerManager.h"
+#import "BRKey.h"
+#import "NSData+Bitcoin.h"
+#import "NSString+Bitcoin.h"
+#import "NSMutableData+Bitcoin.h"
+#import <bzlib.h>
+#import <sqlite3.h>
+@import WebKit;
+#include "BRSocketHelpers.h"
+#include <pthread.h>
+#include <errno.h>
+#import "BRBip39Mnemonic.h"
+#import "BRBip32Sequence.h"
