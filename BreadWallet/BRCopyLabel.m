@@ -93,7 +93,7 @@
 - (void)toggleCopyMenu
 {
     if (self.copyableText.length == 0) return;
-    
+    NSLog(@"toggleCopyMenu");
     if ([self isFirstResponder]) {
         [self resignFirstResponder];
         return;

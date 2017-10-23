@@ -395,7 +395,8 @@
     
     if (! self.navBarTap) {
         self.navBarTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(navBarTap:)];
-        [self.navigationController.navigationBar addGestureRecognizer:self.navBarTap];
+        //[self.navigationController.navigationBar addGestureRecognizer:self.navBarTap];
+        [self.navigationItem.titleView addGestureRecognizer:self.navBarTap];
     }
 
     if (! self.protectedObserver) {
