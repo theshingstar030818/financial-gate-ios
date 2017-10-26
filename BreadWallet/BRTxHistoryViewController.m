@@ -260,20 +260,22 @@ static NSString *dateFormat(NSString *template)
 
 - (void)setTransactions:(NSArray *)transactions {
     uint32_t height = self.blockHeight;
-
+    
     if (! [BRWalletManager sharedInstance].didAuthenticate &&
         [self.navigationItem.title isEqual:NSLocalizedString(@"syncing...", nil)]) {
         _transactions = @[];
+        NSLog(@"TxH: %long", transactions.count);
         if (transactions.count > 0) self.moreTx = YES;
     }
     else {
+        NSLog(@"TxH: %long", transactions.count);
         if (transactions.count <= 5) self.moreTx = NO;
-        _transactions = (self.moreTx) ? [transactions subarrayWithRange:NSMakeRange(0, 5)] : [transactions copy];
+        _transactions = (self.moreTx) ? [transactions subarrayWithRange:NSMakeRange(0, transactions.count)] : [transactions copy];
     
         if (! [BRWalletManager sharedInstance].didAuthenticate) {
             for (BRTransaction *tx in _transactions) {
-                if (tx.blockHeight == TX_UNCONFIRMED ||
-                    (tx.blockHeight > height - 5 && tx.blockHeight <= height)) continue;
+                if (tx.blockHeight == TX_UNCONFIRMED || (tx.blockHeight > height - 10 && tx.blockHeight <= height)) continue;
+                // else
                 _transactions = [_transactions subarrayWithRange:NSMakeRange(0, [_transactions indexOfObject:tx])];
                 self.moreTx = YES;
                 break;
