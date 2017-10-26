@@ -513,7 +513,7 @@
                                     <rect key="frame" x="0.0" y="1" width="94" height="15"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhm-ou-mVI">
-                                    <rect key="frame" x="164" y="8.6666666666666661" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="102" y="8.6666666666666661" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                     <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                     <nil key="highlightedColor"/>
@@ -522,7 +522,7 @@
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="KqJ-6D-LUi" firstAttribute="top" secondItem="Rxa-kr-LOc" secondAttribute="top" constant="1" id="5yL-Xp-odo"/>
-                                <constraint firstItem="xhm-ou-mVI" firstAttribute="leading" secondItem="KqJ-6D-LUi" secondAttribute="trailing" constant="70" id="8zi-PP-QJI"/>
+                                <constraint firstItem="xhm-ou-mVI" firstAttribute="leading" secondItem="KqJ-6D-LUi" secondAttribute="trailing" constant="8" symbolic="YES" id="8zi-PP-QJI"/>
                                 <constraint firstItem="KqJ-6D-LUi" firstAttribute="leading" secondItem="Rxa-kr-LOc" secondAttribute="leading" id="Q5z-fl-MQG"/>
                                 <constraint firstAttribute="bottom" secondItem="KqJ-6D-LUi" secondAttribute="bottom" constant="-1" id="WeZ-hf-zvq"/>
                                 <constraint firstItem="xhm-ou-mVI" firstAttribute="centerY" secondItem="KqJ-6D-LUi" secondAttribute="centerY" id="a12-m3-Lie"/>
