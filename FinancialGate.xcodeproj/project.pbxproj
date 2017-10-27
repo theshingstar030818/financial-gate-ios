@@ -120,6 +120,7 @@
 		BAA4843C1B3EFFAF0075C749 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA4843B1B3EFFAF0075C749 /* UIImage+Utils.m */; };
 		BAC7B6BE1BD9C29900165B84 /* BRPhoneWCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC7B6BD1BD9C29900165B84 /* BRPhoneWCSessionManager.m */; };
 		C220E621DD7A8949023FA2BF /* Pods_breadwallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */; };
+		C84653388637AD1D950A9DD2 /* Pods_FinancialGate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		04F85C9A1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRApplyDebitCardViewController.h; sourceTree = "<group>"; };
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.release.xcconfig"; sourceTree = "<group>"; };
 		22005B951C9276AF00F87733 /* BRLinkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRLinkPlugin.swift; sourceTree = "<group>"; };
 		220128D11C753C670001CAC1 /* BRSocketHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BRSocketHelpers.c; sourceTree = "<group>"; };
 		220128D21C753C670001CAC1 /* BRSocketHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSocketHelpers.h; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		22FCD22B1C0E68C80066D798 /* BRTarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRTarTests.swift; sourceTree = "<group>"; };
 		22FF2C361BED381400B36384 /* breadwallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "breadwallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		22FF2C371BED381400B36384 /* BRAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRAPIClient.swift; sourceTree = "<group>"; };
+		284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancialGate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breadwallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D68B501C23B6C10030FAAA /* FinancialGateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancialGateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D68B521C23B6C10030FAAA /* BreadWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadWalletUITests.swift; sourceTree = "<group>"; };
@@ -454,6 +457,7 @@
 		84F68C881975E9E2002FC300 /* BRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScanViewController.h; sourceTree = "<group>"; };
 		84F68C891975E9E2002FC300 /* BRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScanViewController.m; sourceTree = "<group>"; };
 		9236D48D3872E0F7C36584A8 /* Pods-WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
+		926F031AF6864E0BC0B29998 /* Pods-FinancialGate.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.testflight.xcconfig"; sourceTree = "<group>"; };
 		9AC2DBFB595E1BCF25285A9A /* Pods_WatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE425AF1EF8D1B5364E9F33 /* Pods-TodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayExtension/Pods-TodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		B887EE9F4D186E42AF3D6FA1 /* Pods-WatchApp Extension.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp Extension.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.testflight.xcconfig"; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 		BAC7B6BD1BD9C29900165B84 /* BRPhoneWCSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRPhoneWCSessionManager.m; sourceTree = "<group>"; };
 		BAC7B6C41BD9C9B600165B84 /* WatchApp Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchApp Extension-Bridging-Header.h"; sourceTree = "<group>"; };
 		BAC7B6C81BD9CA8400165B84 /* BRAppleWatchSharedConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAppleWatchSharedConstants.h; sourceTree = "<group>"; };
+		BAD9FCC3DEFE1BD4B76F5BEE /* Pods-FinancialGate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.debug.xcconfig"; sourceTree = "<group>"; };
 		BAE12BE61B2DEE7F00895CC5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		BAE12BEA1B2DEE7F00895CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE12C041B2DEEF700895CC5 /* BRTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTodayViewController.h; sourceTree = "<group>"; };
@@ -519,6 +524,7 @@
 				222040C61C1A1940005CE1C3 /* WebKit.framework in Frameworks */,
 				22B6A4481C0E963900673913 /* libbz2.tbd in Frameworks */,
 				C220E621DD7A8949023FA2BF /* Pods_breadwallet.framework in Frameworks */,
+				C84653388637AD1D950A9DD2 /* Pods_FinancialGate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +862,7 @@
 				9AC2DBFB595E1BCF25285A9A /* Pods_WatchApp.framework */,
 				EE4E0706B16E18216D757ADF /* Pods_WatchApp_Extension.framework */,
 				310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */,
+				284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -958,6 +965,9 @@
 				F92454CFD7D366E27C475570 /* Pods-breadwallet.debug.xcconfig */,
 				79D0B3EA6A7115EB4CDAE39D /* Pods-breadwallet.release.xcconfig */,
 				CC684926BF54B3CC1286ABDC /* Pods-breadwallet.testflight.xcconfig */,
+				BAD9FCC3DEFE1BD4B76F5BEE /* Pods-FinancialGate.debug.xcconfig */,
+				21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */,
+				926F031AF6864E0BC0B29998 /* Pods-FinancialGate.testflight.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1228,7 +1238,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-breadwallet/Pods-breadwallet-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75564AB619A0D3BDDC84FE9B /* [CP] Embed Pods Frameworks */ = {
@@ -1237,16 +1247,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-breadwallet/Pods-breadwallet-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSSES/AWSSES.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSES.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-breadwallet/Pods-breadwallet-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8811CC5BE3EF6BCD5D530EA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1260,7 +1274,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-breadwallet-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FinancialGate-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1691,7 +1705,7 @@
 		};
 		75D5F3F7191EC270004AB296 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F92454CFD7D366E27C475570 /* Pods-breadwallet.debug.xcconfig */;
+			baseConfigurationReference = BAD9FCC3DEFE1BD4B76F5BEE /* Pods-FinancialGate.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1728,7 +1742,7 @@
 		};
 		75D5F3F8191EC270004AB296 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79D0B3EA6A7115EB4CDAE39D /* Pods-breadwallet.release.xcconfig */;
+			baseConfigurationReference = 21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1851,7 +1865,7 @@
 		};
 		CEE253D31E26A9BC00A25B15 /* Testflight */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC684926BF54B3CC1286ABDC /* Pods-breadwallet.testflight.xcconfig */;
+			baseConfigurationReference = 926F031AF6864E0BC0B29998 /* Pods-FinancialGate.testflight.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
