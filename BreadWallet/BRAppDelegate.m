@@ -150,6 +150,12 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"cleanUp: applicationDidBecomeActive");
+    
+    [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO];
+    if(![BRWalletManager sharedInstance].didAuthenticate){
+        while (! [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO]) { }
+    }
+    
     [self cleanUp];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (self.balance == UINT64_MAX) self.balance = [BRWalletManager sharedInstance].wallet.balance;

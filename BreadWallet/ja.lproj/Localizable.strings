@@ -197,6 +197,9 @@
 "email not configured" = "メールアドレスが設定されていません";
 
 /* No comment provided by engineer. */
+"Thank you. We will get back to you soon." = "お問い合わせいただきありがとうございます。担当者よりご連絡いたします。";
+
+/* No comment provided by engineer. */
 "enter old passcode" = "現在のパスコードを\nご入力下さい";
 
 /* No comment provided by engineer. */
