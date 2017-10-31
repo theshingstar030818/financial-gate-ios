@@ -776,36 +776,46 @@ int check = 1;
     }
     
     self.request = protoReq;
+    uint64_t financial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
     
     if (self.amount == 0) {
         tx = [manager.wallet transactionForAmounts:protoReq.details.outputAmounts
               toOutputScripts:protoReq.details.outputScripts withFee:YES];
     }
     else {
-        tx = [manager.wallet transactionForAmounts:@[@(self.amount)]
-              toOutputScripts:@[protoReq.details.outputScripts.firstObject] withFee:YES];
+        tx = [manager.wallet transactionForAmounts:@[@(self.amount),@(financial_gate_charge)]
+              toOutputScripts:@[[protoReq.details.outputScripts objectAtIndex:0], [protoReq.details.outputScripts objectAtIndex:1]] withFee:YES];
     }
     
     if (tx) {
         amount = [manager.wallet amountSentByTransaction:tx] - [manager.wallet amountReceivedFromTransaction:tx];
         fee = [manager.wallet feeForTransaction:tx];
+        
+//        NSInteger i = [tx.outputAddresses indexOfObject:@"mz9N536mp3D6Ziqd2jjgPJMPcqYYrXr2Yb"];
     }
     else {
         fee = [manager.wallet feeForTxSize:[manager.wallet transactionFor:manager.wallet.balance
                                             to:address withFee:NO].size];
-        fee += (manager.wallet.balance - amount) % 100;
-        amount += fee;
     }
+
+    uint64_t prompt_fee = fee + financial_gate_charge;
 
     for (NSData *script in protoReq.details.outputScripts) {
         NSString *addr = [NSString addressWithScriptPubKey:script];
             
         if (! addr) addr = NSLocalizedString(@"unrecognized address", nil);
         if ([address rangeOfString:addr].location != NSNotFound) continue;
+        
+#if BITCOIN_TESTNET
+        NSString *fixedChargeDepositAccount = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount_TEST_NET"];
+#else
+        NSString *fixedChargeDepositAccount = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount"];
+#endif
+        if ([addr isEqualToString:fixedChargeDepositAccount]) continue;
         address = [address stringByAppendingFormat:@"%@%@", (address.length > 0) ? @", " : @"", addr];
     }
     
-    NSString *prompt = [self promptForAmount:amount fee:fee address:address name:protoReq.commonName
+    NSString *prompt = [self promptForAmount:amount fee:prompt_fee address:address name:protoReq.commonName
                         memo:protoReq.details.memo isSecure:(valid && ! [protoReq.pkiType isEqual:@"none"])];
     
     // to avoid the frozen pincode keyboard bug, we need to make sure we're scheduled normally on the main runloop

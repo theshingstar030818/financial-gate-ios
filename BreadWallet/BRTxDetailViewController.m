@@ -112,9 +112,14 @@
     }
 
     if (self.sent > 0 && fee > 0 && fee != UINT64_MAX) {
+        [text removeObjectAtIndex:1];
+        [detail removeObjectAtIndex:1];
+        [amount removeObjectAtIndex:1];
+        uint64_t amt = [transaction.outputAmounts[2] unsignedLongLongValue];
+        uint64_t cumulativeFee = fee + (amt);
         [text addObject:@""];
         [detail addObject:NSLocalizedString(@"bitcoin network fee", nil)];
-        [amount addObject:@(-fee)];
+        [amount addObject:@(-cumulativeFee)];
     }
     
     self.outputText = text;

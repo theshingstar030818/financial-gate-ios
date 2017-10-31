@@ -25,6 +25,7 @@
 
 // Updated by Farrukh Askari <farrukh.askari01@gmail.com> on 3:22 PM 17/4/17.
 
+#import "BRWalletManager.h"
 #import "BRPaymentRequest.h"
 #import "BRPaymentProtocol.h"
 #import "NSString+Bitcoin.h"
@@ -196,17 +197,28 @@
 #endif
     NSData *name = [self.label dataUsingEncoding:NSUTF8StringEncoding];
     NSMutableData *script = [NSMutableData data];
-    
     [script appendScriptPubKeyForAddress:self.paymentAddress];
     if (script.length == 0) return nil;
     
+    NSMutableData *script_financial_gate = [NSMutableData data];
+    
+#if BITCOIN_TESTNET
+    [script_financial_gate appendScriptPubKeyForAddress:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount_TEST_NET"]];
+#else
+    [script_financial_gate appendScriptPubKeyForAddress:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount"]];
+#endif
+        
+    if (script_financial_gate.length == 0) return nil;
+    
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    uint64_t financial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
+    
     BRPaymentProtocolDetails *details =
-        [[BRPaymentProtocolDetails alloc] initWithNetwork:network outputAmounts:@[@(self.amount)]
-         outputScripts:@[script] time:0 expires:0 memo:self.message paymentURL:nil merchantData:nil];
+        [[BRPaymentProtocolDetails alloc] initWithNetwork:network outputAmounts:@[@(self.amount),@(financial_gate_charge)]
+         outputScripts:@[script, script_financial_gate] time:0 expires:0 memo:self.message paymentURL:nil merchantData:nil];
     BRPaymentProtocolRequest *request =
         [[BRPaymentProtocolRequest alloc] initWithVersion:1 pkiType:@"none" certs:(name ? @[name] : nil) details:details
          signature:nil];
-    
     return request;
 }
 

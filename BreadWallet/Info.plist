@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FixedChargeDepositAccount_TEST_NET</key>
+	<string>mgbQJiXPSH418HtkNfxFhnmbLZXxGCPzrn</string>
+	<key>FixedChargeDepositAccount</key>
+	<string>35cPK8F7RU3TfZi4xtANpUauv61TDpJJin</string>
+	<key>FixedCharge</key>
+	<real>0.5</real>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>

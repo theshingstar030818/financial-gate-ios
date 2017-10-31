@@ -151,8 +151,7 @@
 {
     NSLog(@"cleanUp: applicationDidBecomeActive");
     
-    [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO];
-    if(![BRWalletManager sharedInstance].didAuthenticate){
+    if(![BRWalletManager sharedInstance].noWallet && ![BRWalletManager sharedInstance].didAuthenticate){
         while (! [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO]) { }
     }
     

@@ -18,24 +18,18 @@
 "You can send a payment to anyone with an address.", nil)
 
 @interface BRSendBalanceViewController ()
-
 @property (weak, nonatomic) IBOutlet UITextField *editRecipent;
 @property (weak, nonatomic) IBOutlet UITextView *txtMemo;
-@property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UITextField *editBTC;
 @property (weak, nonatomic) IBOutlet UITextField *editUSD;
-
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
 @property (weak, nonatomic) IBOutlet UIButton *btnBTC;
 @property (weak, nonatomic) IBOutlet UIButton *btnUSD;
-
 @property (nonatomic, strong) IBOutlet UIView *logo;
 @property (nonatomic, strong) BRScanViewController *scanController;
-
 @property (nonatomic, assign) uint64_t amount;
-
 @property (nonatomic, strong) NSCharacterSet *charset;
 @property (nonatomic, strong) id balanceObserver, backgroundObserver;
-
 @end
 
 @implementation BRSendBalanceViewController
@@ -87,6 +81,25 @@
     self.navigationController.navigationBar.hidden = NO;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIStatusBarStyleLightContent;
+    numberToolbar.items = @[[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"X" style:UIBarButtonItemStyleDone target:self action:@selector(cancelNumberPad)]];
+    [numberToolbar sizeToFit];
+    [numberToolbar setBarTintColor:[UIColor whiteColor]];
+    _editBTC.inputAccessoryView = numberToolbar;
+    _editUSD.inputAccessoryView = numberToolbar;
+    _txtMemo.inputAccessoryView = numberToolbar;
+    _editRecipent.inputAccessoryView = numberToolbar;
+}
+
+-(void)cancelNumberPad
+{
+    [_editBTC resignFirstResponder];
+    [_editUSD resignFirstResponder];
+    [_txtMemo resignFirstResponder];
+    [_editRecipent resignFirstResponder];
 }
 
 - (void)dealloc {
@@ -96,7 +109,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     if (! self.scanController) {
         self.scanController = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanViewController"];
     }
@@ -256,6 +268,11 @@
 }
 
 #pragma mark: - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     

@@ -20,7 +20,7 @@
 
 @end
 
-@interface BRSendBalanceViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, AVCaptureMetadataOutputObjectsDelegate, UIViewControllerTransitioningDelegate>
+@interface BRSendBalanceViewController : UIViewController<UITextFieldDelegate, UITextViewDelegate, UIAlertViewDelegate, AVCaptureMetadataOutputObjectsDelegate, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, assign) id<BRSendBalanceViewControllerDelegate> delegate;
 

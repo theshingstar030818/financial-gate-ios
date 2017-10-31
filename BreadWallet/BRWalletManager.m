@@ -864,6 +864,42 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
     return self.localPrice.doubleValue;
 }
 
+- (int64_t)getFinancialGateChargeAmount:(NSString *)string
+{
+    NSUInteger i = [_currencyCodes indexOfObject:@"USD"];
+    NSNumber *localPriceUSD =  _currencyPrices[i];
+    
+    NSNumberFormatter * localFormatUSD = [NSNumberFormatter new];
+    localFormatUSD.lenient = YES;
+    localFormatUSD.numberStyle = NSNumberFormatterCurrencyStyle;
+    localFormatUSD.generatesDecimalNumbers = YES;
+    localFormatUSD.negativeFormat = self.format.negativeFormat;
+    
+    localFormatUSD.currencyCode = @"USD";
+    localFormatUSD.maximum =
+    [[NSDecimalNumber decimalNumberWithDecimal:localPriceUSD.decimalValue]
+     decimalNumberByMultiplyingBy:(id)[NSDecimalNumber numberWithLongLong:MAX_MONEY/SATOSHIS]];
+    
+    NSNumber *n = [localFormatUSD numberFromString:string];
+    int64_t price = [[NSDecimalNumber decimalNumberWithDecimal:localPriceUSD.decimalValue]
+                     decimalNumberByMultiplyingByPowerOf10:localFormatUSD.maximumFractionDigits].longLongValue,
+    local = [[NSDecimalNumber decimalNumberWithDecimal:n.decimalValue]
+             decimalNumberByMultiplyingByPowerOf10:localFormatUSD.maximumFractionDigits].longLongValue,
+    overflowbits = 0, p = 10, min, max, amount;
+    
+    if (local == 0 || price < 1) return 0;
+    while (llabs(local) + 1 > INT64_MAX/SATOSHIS) local /= 2, overflowbits++; // make sure we won't overflow an int64_t
+    min = llabs(local)*SATOSHIS/price + 1; // minimum amount that safely matches local currency string
+    max = (llabs(local) + 1)*SATOSHIS/price - 1; // maximum amount that safely matches local currency string
+    amount = (min + max)/2; // average min and max
+    while (overflowbits > 0) local *= 2, min *= 2, max *= 2, amount *= 2, overflowbits--;
+    
+    if (amount >= MAX_MONEY) return (local < 0) ? -MAX_MONEY : MAX_MONEY;
+    while ((amount/p)*p >= min && p <= INT64_MAX/10) p *= 10; // lowest decimal precision matching local currency string
+    p /= 10;
+    return (local < 0) ? -(amount/p)*p : (amount/p)*p;
+}
+
 // local currency ISO code
 - (void)setLocalCurrencyCode:(NSString *)code
 {
