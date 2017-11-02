@@ -11,8 +11,6 @@
 
 @import AWSSES;
 
-
-
 @interface BRSupportViewController ()
 
 @end

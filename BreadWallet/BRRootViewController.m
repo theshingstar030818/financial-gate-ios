@@ -470,11 +470,11 @@
         return;
 #endif
 
-        if ([defs doubleForKey:PIN_UNLOCK_TIME_KEY] + 7*24*60*60 < [NSDate timeIntervalSinceReferenceDate]) {
-            while (! [manager authenticateWithPrompt:nil andTouchId:NO]) { }
-            [self unlock:nil];
-        }
-
+//        if ([defs doubleForKey:PIN_UNLOCK_TIME_KEY] + 7*24*60*60 < [NSDate timeIntervalSinceReferenceDate]) {
+//            while (! [manager authenticateWithPrompt:nil andTouchId:NO]) { }
+//            [self unlock:nil];
+//        }
+        
         if (self.navigationController.visibleViewController == self) {
             if (self.showTips) [self performSelector:@selector(tip:) withObject:nil afterDelay:0.3];
         }

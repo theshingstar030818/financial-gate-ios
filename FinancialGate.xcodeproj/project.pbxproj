@@ -14,6 +14,9 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
+		218AB6D71FAAE73100E03F7E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6D81FAAE73100E03F7E /* AWSCore.framework */; };
+		218AB6D91FAAE73600E03F7E /* AWSSES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6DA1FAAE73600E03F7E /* AWSSES.framework */; };
+		218AB6DB1FAAE73A00E03F7E /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */; };
 		22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22005B951C9276AF00F87733 /* BRLinkPlugin.swift */; };
 		220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 220128D11C753C670001CAC1 /* BRSocketHelpers.c */; };
 		220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220128D41C76E1550001CAC1 /* BRWebSocket.swift */; };
@@ -119,7 +122,6 @@
 		BA7B535C1BDBC36700355E8D /* BRTransaction+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7B535B1BDBC36700355E8D /* BRTransaction+Utils.m */; };
 		BAA4843C1B3EFFAF0075C749 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA4843B1B3EFFAF0075C749 /* UIImage+Utils.m */; };
 		BAC7B6BE1BD9C29900165B84 /* BRPhoneWCSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC7B6BD1BD9C29900165B84 /* BRPhoneWCSessionManager.m */; };
-		C220E621DD7A8949023FA2BF /* Pods_breadwallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */; };
 		C84653388637AD1D950A9DD2 /* Pods_FinancialGate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +187,9 @@
 		04F85C9A1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRApplyDebitCardViewController.h; sourceTree = "<group>"; };
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		218AB6DA1FAAE73600E03F7E /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.release.xcconfig"; sourceTree = "<group>"; };
 		22005B951C9276AF00F87733 /* BRLinkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRLinkPlugin.swift; sourceTree = "<group>"; };
 		220128D11C753C670001CAC1 /* BRSocketHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BRSocketHelpers.c; sourceTree = "<group>"; };
@@ -235,7 +240,6 @@
 		22FF2C361BED381400B36384 /* breadwallet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "breadwallet-Bridging-Header.h"; sourceTree = "<group>"; };
 		22FF2C371BED381400B36384 /* BRAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRAPIClient.swift; sourceTree = "<group>"; };
 		284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancialGate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breadwallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D68B501C23B6C10030FAAA /* FinancialGateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinancialGateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D68B521C23B6C10030FAAA /* BreadWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadWalletUITests.swift; sourceTree = "<group>"; };
 		31D68B541C23B6C10030FAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -516,6 +520,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218AB6DB1FAAE73A00E03F7E /* IQKeyboardManager.framework in Frameworks */,
+				218AB6D91FAAE73600E03F7E /* AWSSES.framework in Frameworks */,
+				218AB6D71FAAE73100E03F7E /* AWSCore.framework in Frameworks */,
 				22DC3A231D2C8DD100A72EA5 /* PushKit.framework in Frameworks */,
 				225383011C694D7400968BEE /* CoreLocation.framework in Frameworks */,
 				22D3613D1C56F2CD0057CF76 /* libsqlite3.tbd in Frameworks */,
@@ -523,7 +530,6 @@
 				222E7F561C46E9B8009AB45D /* Security.framework in Frameworks */,
 				222040C61C1A1940005CE1C3 /* WebKit.framework in Frameworks */,
 				22B6A4481C0E963900673913 /* libbz2.tbd in Frameworks */,
-				C220E621DD7A8949023FA2BF /* Pods_breadwallet.framework in Frameworks */,
 				C84653388637AD1D950A9DD2 /* Pods_FinancialGate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -844,6 +850,9 @@
 		75D5F3C0191EC270004AB296 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */,
+				218AB6DA1FAAE73600E03F7E /* AWSSES.framework */,
+				218AB6D81FAAE73100E03F7E /* AWSCore.framework */,
 				22DC3A221D2C8DD100A72EA5 /* PushKit.framework */,
 				225383001C694D7400968BEE /* CoreLocation.framework */,
 				22D3613C1C56F2CD0057CF76 /* libsqlite3.tbd */,
@@ -861,7 +870,6 @@
 				71412BCB98A145455C58DDFD /* Pods_TodayExtension.framework */,
 				9AC2DBFB595E1BCF25285A9A /* Pods_WatchApp.framework */,
 				EE4E0706B16E18216D757ADF /* Pods_WatchApp_Extension.framework */,
-				310EB0C67F8FA3E4D5279A12 /* Pods_breadwallet.framework */,
 				284A23CF76C9885141DBF4C1 /* Pods_FinancialGate.framework */,
 			);
 			name = Frameworks;
