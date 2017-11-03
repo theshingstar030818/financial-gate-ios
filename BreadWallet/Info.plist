@@ -2,18 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>FixedChargeDepositAccount_TEST_NET</key>
-	<string>mgbQJiXPSH418HtkNfxFhnmbLZXxGCPzrn</string>
-	<key>FixedChargeDepositAccount</key>
-	<string>35cPK8F7RU3TfZi4xtANpUauv61TDpJJin</string>
-	<key>FixedCharge</key>
-	<real>0.5</real>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Financial Gate</string>
+	<string>FG Wallet</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -58,7 +50,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.4</string>
+	<string>1.41</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -96,10 +88,18 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>0.4</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+	<key>FixedCharge</key>
+	<real>0.5</real>
+	<key>FixedChargeDepositAccount</key>
+	<string>35cPK8F7RU3TfZi4xtANpUauv61TDpJJin</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>FixedChargeDepositAccount_TEST_NET</key>
+	<string>mgbQJiXPSH418HtkNfxFhnmbLZXxGCPzrn</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

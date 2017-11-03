@@ -859,7 +859,7 @@
     [BREventManager saveEvent:@"root:unlock"];
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     
-    if (sender && ! manager.didAuthenticate && ! [manager authenticateWithPrompt:nil andTouchId:YES]) return;
+    //if (sender && ! manager.didAuthenticate && ! [manager authenticateWithPrompt:nil andTouchId:YES]) return;
     [BREventManager saveEvent:@"root:unlock_success"];
 
     [self.navigationItem setRightBarButtonItem:nil animated:(sender) ? YES : NO];

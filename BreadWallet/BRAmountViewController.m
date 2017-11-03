@@ -187,7 +187,7 @@
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     [BREventManager saveEvent:@"amount:unlock"];
     
-    if (sender && ! manager.didAuthenticate && ! [manager authenticateWithPrompt:nil andTouchId:YES]) return;
+    //if (sender && ! manager.didAuthenticate && ! [manager authenticateWithPrompt:nil andTouchId:YES]) return;
     [BREventManager saveEvent:@"amount:successful_unlock"];
     
     self.payButton.title = @"pay";

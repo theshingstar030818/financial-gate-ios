@@ -14,9 +14,6 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
-		218AB6D71FAAE73100E03F7E /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6D81FAAE73100E03F7E /* AWSCore.framework */; };
-		218AB6D91FAAE73600E03F7E /* AWSSES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6DA1FAAE73600E03F7E /* AWSSES.framework */; };
-		218AB6DB1FAAE73A00E03F7E /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */; };
 		22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22005B951C9276AF00F87733 /* BRLinkPlugin.swift */; };
 		220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 220128D11C753C670001CAC1 /* BRSocketHelpers.c */; };
 		220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220128D41C76E1550001CAC1 /* BRWebSocket.swift */; };
@@ -520,9 +517,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				218AB6DB1FAAE73A00E03F7E /* IQKeyboardManager.framework in Frameworks */,
-				218AB6D91FAAE73600E03F7E /* AWSSES.framework in Frameworks */,
-				218AB6D71FAAE73100E03F7E /* AWSCore.framework in Frameworks */,
 				22DC3A231D2C8DD100A72EA5 /* PushKit.framework in Frameworks */,
 				225383011C694D7400968BEE /* CoreLocation.framework in Frameworks */,
 				22D3613D1C56F2CD0057CF76 /* libsqlite3.tbd in Frameworks */,
