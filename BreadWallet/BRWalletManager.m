@@ -900,6 +900,14 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
     return (local < 0) ? -(amount/p)*p : (amount/p)*p;
 }
 
+// local variable network fee
+- (void)setVariableNetworkFee:(NSString *)variableNetworkFee
+{
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSUInteger i = [_variableNetworkFees indexOfObject:variableNetworkFee];
+    
+}
+
 // local currency ISO code
 - (void)setLocalCurrencyCode:(NSString *)code
 {

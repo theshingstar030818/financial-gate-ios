@@ -301,7 +301,7 @@
     
     switch (section) {
         case 0: return 2;
-        case 1: return (self.touchId) ? 3 : 2;
+        case 1: return (self.touchId) ? 4 : 3;
         case 2: return 3;
         case 3: return 0;
     }
@@ -311,7 +311,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *disclosureIdent = @"DisclosureCell", *restoreIdent = @"RestoreCell", *actionIdent = @"ActionCell",
-                    *selectorIdent = @"SelectorCell", *selectorOptionCell = @"SelectorOptionCell";
+                    *selectorIdent = @"SelectorCell",*networkFeeSelectorIdent = @"NetworkFeeSelectorCell", *selectorOptionCell = @"SelectorOptionCell";
     UITableViewCell *cell = nil;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     
@@ -327,7 +327,8 @@
         
         return cell;
     }
-    
+    NSLog(@"settings : indexPath.section : %ld", (long)indexPath.section);
+    NSLog(@"settings : indexPath.row : %ld", (long)indexPath.row);
     switch (indexPath.section) {
         case 0:
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
@@ -350,8 +351,12 @@
                     cell = [tableView dequeueReusableCellWithIdentifier:selectorIdent];
                     cell.detailTextLabel.text = manager.localCurrencyCode;
                     break;
-            
                 case 1:
+                    cell = [tableView dequeueReusableCellWithIdentifier:networkFeeSelectorIdent];
+                    cell.detailTextLabel.text = @"Low";
+                    
+                    break;
+                case 2:
                     if (self.touchId) {
                         cell = [tableView dequeueReusableCellWithIdentifier:selectorIdent];
                         cell.textLabel.text = NSLocalizedString(@"Touch ID Limit", nil);
@@ -360,7 +365,7 @@
                         goto _switch_cell;
                     }
                     break;
-                case 2:
+                case 3:
                 {
 _switch_cell:
                     cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
@@ -526,6 +531,43 @@ _switch_cell:
       otherButtonTitles:NSLocalizedString(@"show", nil), nil] show];
 }
 
+- (void)showNetworkFeeSelector
+{
+    [BREventManager saveEvent:@"settings:show_cnetwork_fee_selector"];
+    NSUInteger networkFeeIndex = 0;
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    NSString *networkFee = manager.variableNetworkFee;
+    NSMutableArray *options;
+    self.selectorType = 0;
+    options = [NSMutableArray array];
+    
+    for (NSString *variableFee in manager.variableNetworkFees) {
+        [options addObject:[NSString stringWithFormat:@"%@ - %@", variableFee, manager.variableNetworkFeeNames[networkFeeIndex++]]];
+    }
+    self.selectorOptions = options;
+    networkFeeIndex = [manager.variableNetworkFees indexOfObject:manager.variableNetworkFee];
+    if (networkFeeIndex < options.count) self.selectedOption = options[networkFeeIndex];
+    self.noOptionsText = NSLocalizedString(@"no network fee data", nil);
+    self.selectorController.title = [NSString stringWithFormat:@"%@", networkFee];
+    [self.navigationController pushViewController:self.selectorController animated:YES];
+    [self.selectorController.tableView reloadData];
+    
+    if (networkFeeIndex < options.count) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.selectorController.tableView
+             scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:networkFeeIndex inSection:0]
+             atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+            
+            if (! self.navBarSwipe) {
+                self.navBarSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                             action:@selector(navBarSwipe:)];
+                self.navBarSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+                [self.navigationController.navigationBar addGestureRecognizer:self.navBarSwipe];
+            }
+        });
+    }
+}
+
 - (void)showCurrencySelector {
     [BREventManager saveEvent:@"settings:show_currency_selector"];
     NSUInteger currencyCodeIndex = 0;
@@ -615,10 +657,12 @@ _switch_cell:
             switch (indexPath.row) {
                 case 0: // local currency
                     [self showCurrencySelector];
-                    
                     break;
-                    
-                case 1: // touch id spending limit
+                case 1:
+                    NSLog(@"need to open network fee page");
+                    [self showNetworkFeeSelector];
+                    break;
+                case 2: // touch id spending limit
                     if (self.touchId) {
                         [self performSelector:@selector(touchIdLimit:) withObject:nil afterDelay:0.0];
                         break;
@@ -626,7 +670,7 @@ _switch_cell:
                         goto _deselect_switch;
                     }
                     break;
-                case 2:
+                case 3:
 _deselect_switch:
                     {
                         [tableView deselectRowAtIndexPath:indexPath animated:YES];
