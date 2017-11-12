@@ -111,11 +111,19 @@
         }
     }
 
-    if (self.sent > 0 && fee > 0 && fee != UINT64_MAX) {
-        [text removeObjectAtIndex:1];
-        [detail removeObjectAtIndex:1];
-        [amount removeObjectAtIndex:1];
-        uint64_t amt = [transaction.outputAmounts[2] unsignedLongLongValue];
+    if (self.sent > 0 && fee > 0 && fee != UINT64_MAX && text.count > 1) {
+        NSString *fg_charge_address = @"";
+#if BITCOIN_TESTNET
+        fg_charge_address = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount_TEST_NET"];
+#else
+        fg_charge_address = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FixedChargeDepositAccount"];
+#endif
+        
+        long fg_charge_index = [text indexOfObject:fg_charge_address];
+        [text removeObjectAtIndex:fg_charge_index];
+        [detail removeObjectAtIndex:fg_charge_index];
+        [amount removeObjectAtIndex:fg_charge_index];
+        uint64_t amt = [transaction.outputAmounts[fg_charge_index] unsignedLongLongValue];
         uint64_t cumulativeFee = fee + (amt);
         [text addObject:@""];
         [detail addObject:NSLocalizedString(@"bitcoin network fee", nil)];
