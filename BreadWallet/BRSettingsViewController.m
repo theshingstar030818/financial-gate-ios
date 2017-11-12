@@ -36,6 +36,8 @@
 #include <WebKit/WebKit.h>
 #include <asl.h>
 
+#define ALL_NETWORK_FEES_KEY      @"ALL_NETWORK_FEES"
+
 @interface BRSettingsViewController ()
 
 @property (nonatomic, assign) BOOL touchId;
@@ -282,6 +284,7 @@
     manager.format.maximum = @(MAX_MONEY/(int64_t)pow(10.0, manager.format.maximumFractionDigits));
     [[NSUserDefaults standardUserDefaults] setInteger:digits forKey:SETTINGS_MAX_DIGITS_KEY];
     manager.localCurrencyCode = manager.localCurrencyCode; // force balance notification
+    manager.variableNetworkFee = manager.variableNetworkFee;
     self.selectorController.title = [NSString stringWithFormat:@"%@ = %@",
                                      [manager localCurrencyStringForAmount:SATOSHIS/manager.localCurrencyPrice],
                                      [self updateBalance:SATOSHIS/manager.localCurrencyPrice]];
@@ -301,7 +304,7 @@
     
     switch (section) {
         case 0: return 2;
-        case 1: return (self.touchId) ? 3 : 2;
+        case 1: return (self.touchId) ? 4 : 3;
         case 2: return 3;
         case 3: return 0;
     }
@@ -311,7 +314,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *disclosureIdent = @"DisclosureCell", *restoreIdent = @"RestoreCell", *actionIdent = @"ActionCell",
-                    *selectorIdent = @"SelectorCell", *selectorOptionCell = @"SelectorOptionCell";
+                    *selectorIdent = @"SelectorCell",*networkFeeSelectorIdent = @"NetworkFeeSelectorCell", *selectorOptionCell = @"SelectorOptionCell";
     UITableViewCell *cell = nil;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     
@@ -327,7 +330,8 @@
         
         return cell;
     }
-    
+    NSLog(@"settings : indexPath.section : %ld", (long)indexPath.section);
+    NSLog(@"settings : indexPath.row : %ld", (long)indexPath.row);
     switch (indexPath.section) {
         case 0:
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
@@ -350,8 +354,12 @@
                     cell = [tableView dequeueReusableCellWithIdentifier:selectorIdent];
                     cell.detailTextLabel.text = manager.localCurrencyCode;
                     break;
-            
                 case 1:
+                    cell = [tableView dequeueReusableCellWithIdentifier:networkFeeSelectorIdent];
+                    cell.detailTextLabel.text = manager.variableNetworkFee;
+                    
+                    break;
+                case 2:
                     if (self.touchId) {
                         cell = [tableView dequeueReusableCellWithIdentifier:selectorIdent];
                         cell.textLabel.text = NSLocalizedString(@"Touch ID Limit", nil);
@@ -360,7 +368,7 @@
                         goto _switch_cell;
                     }
                     break;
-                case 2:
+                case 3:
                 {
 _switch_cell:
                     cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
@@ -526,6 +534,90 @@ _switch_cell:
       otherButtonTitles:NSLocalizedString(@"show", nil), nil] show];
 }
 
+- (NSString *)convertToBTC:(uint64_t)amount {
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    NSString *btcAmount = [[manager stringForAmount: amount] stringByReplacingOccurrencesOfString:@"ƀ" withString:@"BTC"];
+    return btcAmount;
+}
+
+-(long)binarySearchAllFeesForTime: (NSString *)fee
+{
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    NSArray *all_fees = manager.allNetworkFees;
+    id searchObject = [fee copy];
+    NSRange searchRange = NSMakeRange(0, [all_fees count]);
+    NSUInteger findIndex = [all_fees indexOfObject:searchObject
+                                        inSortedRange:searchRange
+                                              options:NSBinarySearchingFirstEqual
+                                      usingComparator:^(id obj1, id obj2)
+                            {
+                                NSLog(@"....");
+                                NSNumber *fee_per_byte = [NSNumber numberWithInt:[obj2 integerValue]/1024];
+                                NSDictionary *fee_data_dict = (NSDictionary *) obj1;
+                                NSInteger c1 = [fee_data_dict[@"minFee"] compare:fee_per_byte];
+                                NSInteger c2 = [fee_data_dict[@"maxFee"] compare:fee_per_byte];
+                                if(c1!=c2){
+                                    c1 = (NSComparisonResult)NSOrderedSame;
+                                }
+                                return c1;
+                            }];
+    return findIndex;
+}
+
+- (void)showNetworkFeeSelector
+{
+    [BREventManager saveEvent:@"settings:show_cnetwork_fee_selector"];
+    NSUInteger networkFeeIndex = 0;
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+//    NSString *networkFee = manager.variableNetworkFee;
+    NSMutableArray *options;
+    self.selectorType = 1;
+    options = [NSMutableArray array];
+    
+    NSArray *all_fees = manager.allNetworkFees;
+    int64_t finanacial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
+    
+    for (NSString *variableFee in manager.variableNetworkFees) {
+        
+        NSDictionary *fee_data_dict = [all_fees objectAtIndex:[self binarySearchAllFeesForTime:variableFee]];
+        long maxTime = [[fee_data_dict valueForKey:@"maxMinutes"] longLongValue];
+        long minTime = [[fee_data_dict valueForKey:@"minMinutes"] longLongValue];
+        
+        [options addObject:[NSString stringWithFormat:@"%@ - (%ld to %ld mins) %@",
+                            manager.variableNetworkFeeNames[networkFeeIndex++],
+                            minTime,
+                            maxTime,
+                            [self convertToBTC:([variableFee integerValue] + finanacial_gate_charge)]
+        ]];
+    }
+    self.selectorOptions = options;
+    networkFeeIndex = [manager.variableNetworkFeeNames indexOfObject:manager.variableNetworkFee];
+    if (networkFeeIndex < options.count) self.selectedOption = options[networkFeeIndex];
+    self.noOptionsText = NSLocalizedString(@"no network fee data", nil);
+    self.selectorController.title =
+    [NSString stringWithFormat:@"%@ = %@",
+     manager.variableNetworkFee,
+     [self convertToBTC:[manager.variableNetworkFees[networkFeeIndex] integerValue]]];
+    
+    [self.navigationController pushViewController:self.selectorController animated:YES];
+    [self.selectorController.tableView reloadData];
+    
+    if (networkFeeIndex < options.count) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.selectorController.tableView
+             scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:networkFeeIndex inSection:0]
+             atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+            
+            if (! self.navBarSwipe) {
+                self.navBarSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                             action:@selector(navBarSwipe:)];
+                self.navBarSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+                [self.navigationController.navigationBar addGestureRecognizer:self.navBarSwipe];
+            }
+        });
+    }
+}
+
 - (void)showCurrencySelector {
     [BREventManager saveEvent:@"settings:show_currency_selector"];
     NSUInteger currencyCodeIndex = 0;
@@ -574,6 +666,7 @@ _switch_cell:
     //TODO: include an option to generate a new wallet and sweep old balance if backup may have been compromized
     BRWalletManager *manager = [BRWalletManager sharedInstance];
     NSUInteger currencyCodeIndex = 0;
+    NSUInteger networkFeeIndex = 0;
     
     // if we are showing the local currency selector
     if (tableView == self.selectorController.tableView) {
@@ -585,11 +678,25 @@ _switch_cell:
                 manager.localCurrencyCode = manager.currencyCodes[indexPath.row];
             }
         }
-        else manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
+        else if (self.selectorType == 1) {
+            if (indexPath.row < manager.variableNetworkFees.count) {
+                [manager setVariableNetworkFee:manager.variableNetworkFeeNames[indexPath.row]];
+                manager.variableNetworkFee = manager.variableNetworkFeeNames[indexPath.row];
+                self.selectorController.title =
+                [NSString stringWithFormat:@"%@ = %@",
+                 manager.variableNetworkFee,
+                 [self convertToBTC:[manager.variableNetworkFees[indexPath.row] integerValue]]];
+            }
+        }else manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
         
-        if (currencyCodeIndex < self.selectorOptions.count && currencyCodeIndex != indexPath.row) {
+        if (self.selectorType != 1 && currencyCodeIndex < self.selectorOptions.count && currencyCodeIndex != indexPath.row) {
             [tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:currencyCodeIndex inSection:0], indexPath]
              withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+        
+        if (self.selectorType == 1 && networkFeeIndex < self.selectorOptions.count && networkFeeIndex != indexPath.row) {
+            [tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:networkFeeIndex inSection:0], indexPath]
+                             withRowAnimation:UITableViewRowAnimationAutomatic];
         }
 
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -615,10 +722,12 @@ _switch_cell:
             switch (indexPath.row) {
                 case 0: // local currency
                     [self showCurrencySelector];
-                    
                     break;
-                    
-                case 1: // touch id spending limit
+                case 1:
+                    NSLog(@"need to open network fee page");
+                    [self showNetworkFeeSelector];
+                    break;
+                case 2: // touch id spending limit
                     if (self.touchId) {
                         [self performSelector:@selector(touchIdLimit:) withObject:nil afterDelay:0.0];
                         break;
@@ -626,7 +735,7 @@ _switch_cell:
                         goto _deselect_switch;
                     }
                     break;
-                case 2:
+                case 3:
 _deselect_switch:
                     {
                         [tableView deselectRowAtIndexPath:indexPath animated:YES];

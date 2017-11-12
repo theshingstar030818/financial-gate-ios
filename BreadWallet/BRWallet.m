@@ -883,8 +883,9 @@ masterPublicKey:(NSData *)masterPublicKey seed:(NSData *(^)(NSString *authprompt
 // fee that will be added for a transaction of the given size in bytes
 - (uint64_t)feeForTxSize:(NSUInteger)size
 {
-    uint64_t standardFee = ((size + 999)/1000)*TX_FEE_PER_KB, // standard fee based on tx size rounded up to nearest kb
-             fee = (((size*self.feePerKb/1000) + 99)/100)*100; // fee using feePerKb, rounded up to nearest 100 satoshi
+    uint64_t tx_fee_per_byte = self.feePerKb/1024;
+    uint64_t standardFee = ((size+1024)/1024)*TX_FEE_PER_KB, // standard fee based on tx size rounded up to nearest kb
+             fee = size*tx_fee_per_byte; // fee using feePerKb
     
     return (fee > standardFee) ? fee : standardFee;
 }

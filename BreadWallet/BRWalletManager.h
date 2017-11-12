@@ -62,6 +62,15 @@ FOUNDATION_EXPORT NSString* _Nonnull const BRWalletManagerSeedChangedNotificatio
 @property (nonatomic, readonly, getter=isTouchIdEnabled) BOOL touchIdEnabled; // true if touch id is enabled
 @property (nonatomic, readonly, getter=isPasscodeEnabled) BOOL passcodeEnabled; // true if device passcode is enabled
 @property (nonatomic, assign) BOOL didAuthenticate; // true if the user authenticated after this was last set to false
+
+
+@property (nonatomic, copy) NSString * _Nullable variableNetworkFee; // local variable network fee
+@property (nonatomic, readonly) NSArray * _Nullable variableNetworkFees; // list for variable network fees
+
+@property (nonatomic, readonly) NSArray * _Nullable allNetworkFees; // list for variable network fees
+
+@property (nonatomic, readonly) NSArray * _Nullable variableNetworkFeeNames; // list for variable network fee names
+
 @property (nonatomic, readonly) NSNumberFormatter * _Nullable format; // bitcoin currency formatter
 @property (nonatomic, readonly) NSNumberFormatter * _Nullable localFormat; // local currency formatter
 @property (nonatomic, copy) NSString * _Nullable localCurrencyCode; // local currency ISO code

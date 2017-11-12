@@ -48,18 +48,30 @@
 #define UNSPENT_URL          @"https://api.breadwallet.com/q/addrs/utxo"
 #define UNSPENT_FAILOVER_URL @"https://insight.bitpay.com/api/addrs/utxo"
 #define FEE_PER_KB_URL       @"https://api.breadwallet.com/fee-per-kb"
+#define FEE_PER_B_URL        @"https://bitcoinfees.earn.com/api/v1/fees/list"
 #define TICKER_URL           @"https://api.breadwallet.com/rates"
 #define TICKER_FAILOVER_URL  @"https://bitpay.com/rates"
 
 #define SEED_ENTROPY_LENGTH   (128/8)
 #define SEC_ATTR_SERVICE      @"org.voisine.breadwallet"
-#define DEFAULT_CURRENCY_CODE @"USD"
+
 #define DEFAULT_SPENT_LIMIT   SATOSHIS
 
 #define LOCAL_CURRENCY_CODE_KEY @"LOCAL_CURRENCY_CODE"
+
+#define DEFAULT_CURRENCY_CODE @"USD"
 #define CURRENCY_CODES_KEY      @"CURRENCY_CODES"
 #define CURRENCY_NAMES_KEY      @"CURRENCY_NAMES"
 #define CURRENCY_PRICES_KEY     @"CURRENCY_PRICES"
+
+#define DEFAULT_NETWORK_FEE @"High"
+#define LOCAL_NETWORK_FEE_NAME_KEY @"LOCAL_NETWORK_FEE_NAME"
+#define NETWORK_FEES_KEY      @"NETWORK_FEES"
+
+#define ALL_NETWORK_FEES_KEY      @"ALL_NETWORK_FEES"
+
+#define NETWORK_FEES_NAMES_KEY     @"NETWORK_FEES_NAMES"
+
 #define SPEND_LIMIT_AMOUNT_KEY  @"SPEND_LIMIT_AMOUNT"
 #define SECURE_TIME_KEY         @"SECURE_TIME"
 #define FEE_PER_KB_KEY          @"FEE_PER_KB"
@@ -199,6 +211,8 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
 @property (nonatomic, strong) BRWallet *wallet;
 @property (nonatomic, strong) Reachability *reachability;
 @property (nonatomic, strong) NSArray *currencyPrices;
+@property (nonatomic, strong) NSArray *variableNetworkFees;
+@property (nonatomic, strong) NSArray *allNetworkFees;
 @property (nonatomic, strong) NSNumber *localPrice;
 @property (nonatomic, assign) BOOL sweepFee, didPresent;
 @property (nonatomic, strong) NSString *sweepKey;
@@ -268,9 +282,23 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
 
     if (self.protectedObserver) [[NSNotificationCenter defaultCenter] removeObserver:self.protectedObserver];
     self.protectedObserver = nil;
+    
+    _variableNetworkFeeNames = [defs arrayForKey:NETWORK_FEES_NAMES_KEY];
+    self.variableNetworkFee = ([defs stringForKey:LOCAL_NETWORK_FEE_NAME_KEY]) ? [defs stringForKey:LOCAL_NETWORK_FEE_NAME_KEY] : DEFAULT_NETWORK_FEE;
+    [defs setObject:self.variableNetworkFee forKey:LOCAL_NETWORK_FEE_NAME_KEY];
+    
+    if(!_variableNetworkFeeNames)
+    {
+        _variableNetworkFeeNames = [[NSBundle mainBundle] objectForInfoDictionaryKey:NETWORK_FEES_NAMES_KEY];
+        [defs setObject:_variableNetworkFeeNames forKey:NETWORK_FEES_NAMES_KEY];
+    }
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{ [self updateNetworkTransactionFees]; });
+    
     _currencyCodes = [defs arrayForKey:CURRENCY_CODES_KEY];
     _currencyNames = [defs arrayForKey:CURRENCY_NAMES_KEY];
     _currencyPrices = [defs arrayForKey:CURRENCY_PRICES_KEY];
+    
     self.localCurrencyCode = ([defs stringForKey:LOCAL_CURRENCY_CODE_KEY]) ?
         [defs stringForKey:LOCAL_CURRENCY_CODE_KEY] : [[NSLocale currentLocale] objectForKey:NSLocaleCurrencyCode];
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateExchangeRate]; });
@@ -900,6 +928,23 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
     return (local < 0) ? -(amount/p)*p : (amount/p)*p;
 }
 
+// local variable network fee
+- (void)setVariableNetworkFee:(NSString *)variableNetworkFee
+{
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    _variableNetworkFeeNames = [defs arrayForKey:NETWORK_FEES_NAMES_KEY];
+    if(!_variableNetworkFeeNames)
+    {
+        _variableNetworkFeeNames = [[NSBundle mainBundle] objectForInfoDictionaryKey:NETWORK_FEES_NAMES_KEY];
+        [defs setObject:_variableNetworkFeeNames forKey:NETWORK_FEES_NAMES_KEY];
+    }
+    NSUInteger i = [_variableNetworkFeeNames indexOfObject:variableNetworkFee];
+    if (i == NSNotFound) variableNetworkFee = DEFAULT_NETWORK_FEE, i = [_variableNetworkFeeNames indexOfObject:DEFAULT_NETWORK_FEE];
+    _variableNetworkFee = [variableNetworkFee copy];
+    [defs setObject:self.variableNetworkFee forKey:LOCAL_NETWORK_FEE_NAME_KEY];
+    [self updateFeePerKb];
+}
+
 // local currency ISO code
 - (void)setLocalCurrencyCode:(NSString *)code
 {
@@ -1000,7 +1045,6 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
                  object:nil];
             }
         });
-        
         [self updateFeePerKb];
     }] resume];
 }
@@ -1015,15 +1059,51 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
     }];
 }
 
-// MARK: - floating fees
+-(void)getAllNetworkFees
+{
+    if (self.reachability.currentReachabilityStatus == NotReachable) return;
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:FEE_PER_B_URL]
+                                                       cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", req.URL.absoluteString);
+    [[[NSURLSession sharedSession] dataTaskWithRequest:req
+     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+         if (error != nil) {
+             NSLog(@"unable to fetch fee-per-kb: %@", error);
+             return;
+         }
+         
+         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+         
+         if (error || ! [json isKindOfClass:[NSDictionary class]]) {
+             NSLog(@"unexpected response from %@:\n%@", req.URL.host,
+                   [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+             return;
+         }
+         
+         NSMutableArray *fees = [NSMutableArray array];
+         fees = json[@"fees"];
+         _allNetworkFees = fees;
+         self.allNetworkFees = _allNetworkFees;
+         
+         
+         NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+         [defs setObject:self.allNetworkFees forKey:ALL_NETWORK_FEES_KEY];
+         [defs synchronize];
+         
+     }] resume];
+}
 
+// MARK: - floating fees
 - (void)updateFeePerKb
 {
     if (self.reachability.currentReachabilityStatus == NotReachable) return;
-
+    
+    [self getAllNetworkFees];
+    
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:FEE_PER_KB_URL]
                                 cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
-    
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@", req.URL.absoluteString);
 
     [[[NSURLSession sharedSession] dataTaskWithRequest:req
@@ -1034,16 +1114,39 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
         }
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-
+        
         if (error || ! [json isKindOfClass:[NSDictionary class]] ||
             ! [json[@"fee_per_kb"] isKindOfClass:[NSNumber class]]) {
             NSLog(@"unexpected response from %@:\n%@", req.URL.host,
                   [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             return;
         }
-
-        uint64_t newFee = [json[@"fee_per_kb"] unsignedLongLongValue];
+        
+        NSMutableArray *networkFees = [NSMutableArray array];
+        uint64_t minNetworkFee = 1024ULL;
+        uint64_t maxNetworkFee = [json[@"fee_per_kb"] unsignedLongLongValue];
+        uint64_t add = minNetworkFee + maxNetworkFee;
+        uint64_t mediumNetworkFee = add/2.0;
+        
+        [networkFees addObject:[NSNumber numberWithInt:minNetworkFee]];
+        [networkFees addObject:[NSNumber numberWithInt:mediumNetworkFee]];
+        [networkFees addObject:[NSNumber numberWithInt:maxNetworkFee]];
+        
+        _variableNetworkFees = networkFees;
+        self.variableNetworkFees = _variableNetworkFees;
+        [defs setObject:self.variableNetworkFees forKey:NETWORK_FEES_KEY];
+        [defs synchronize];
+        
+        NSLog(@"low network fees updated to %tu", minNetworkFee);
+        NSLog(@"medium network fees updated to %tu", mediumNetworkFee);
+        NSLog(@"max network fees updated to %tu", maxNetworkFee);
+        
+//        uint64_t newFee = [json[@"fee_per_kb"] unsignedLongLongValue];
         NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+        NSUInteger i = [_variableNetworkFeeNames indexOfObject:_variableNetworkFee];
+        uint64_t newFee = [[_variableNetworkFees objectAtIndex:i] intValue];
+        
+        NSLog(@"new network fees updated to %tu", newFee);
         
         if (newFee >= MIN_FEE_PER_KB && newFee <= MAX_FEE_PER_KB && newFee != [defs doubleForKey:FEE_PER_KB_KEY]) {
             NSLog(@"setting new fee-per-kb %lld", newFee);
