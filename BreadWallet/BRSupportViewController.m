@@ -24,6 +24,27 @@
     self.emailField.delegate = self;
     
     [self.sendButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    
+    self.navigationController.navigationBar.hidden = NO;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIStatusBarStyleLightContent;
+    numberToolbar.items = @[[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                            [[UIBarButtonItem alloc]initWithTitle:@"X" style:UIBarButtonItemStyleDone target:self action:@selector(cancel)]];
+    [numberToolbar sizeToFit];
+    [numberToolbar setBarTintColor:[UIColor whiteColor]];
+    _nameField.inputAccessoryView = numberToolbar;
+    _emailField.inputAccessoryView = numberToolbar;
+    _inquiryTextView.inputAccessoryView = numberToolbar;
+}
+
+-(void)cancel
+{
+    [_nameField resignFirstResponder];
+    [_emailField resignFirstResponder];
+    [_inquiryTextView resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,7 +133,7 @@
     awsSESSendEmailRequest.destination = awsSESDestination;
     AWSSESMessage *awsSESMessage = [AWSSESMessage new];
     AWSSESContent *awsSESSubject = [AWSSESContent new];
-    awsSESSubject.data = @"Financial Gate Support Request";
+    awsSESSubject.data = @"FG Wallet Support Request";
     awsSESSubject.charset = @"UTF-8";
     awsSESMessage.subject = awsSESSubject;
     AWSSESContent *awsSESContent = [AWSSESContent new];
