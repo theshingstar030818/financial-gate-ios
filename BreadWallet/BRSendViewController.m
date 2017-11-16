@@ -778,14 +778,16 @@ int check = 1;
     self.request = protoReq;
     uint64_t financial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
     
-    if (self.amount == 0) {
-        tx = [manager.wallet transactionForAmounts:protoReq.details.outputAmounts
-              toOutputScripts:protoReq.details.outputScripts withFee:YES];
-    }
-    else {
-        tx = [manager.wallet transactionForAmounts:@[@(self.amount),@(financial_gate_charge)]
-              toOutputScripts:@[[protoReq.details.outputScripts objectAtIndex:0], [protoReq.details.outputScripts objectAtIndex:1]] withFee:YES];
-    }
+    tx = [manager.wallet transactionForAmounts:protoReq.details.outputAmounts
+                               toOutputScripts:protoReq.details.outputScripts withFee:YES];
+//    if (self.amount == 0) {
+//        tx = [manager.wallet transactionForAmounts:protoReq.details.outputAmounts
+//              toOutputScripts:protoReq.details.outputScripts withFee:YES];
+//    }
+//    else {
+//        tx = [manager.wallet transactionForAmounts:@[@(self.amount),@(financial_gate_charge)]
+//              toOutputScripts:@[[protoReq.details.outputScripts objectAtIndex:0], [protoReq.details.outputScripts objectAtIndex:1]] withFee:YES];
+//    }
     
     if (tx) {
         amount = [manager.wallet amountSentByTransaction:tx] - [manager.wallet amountReceivedFromTransaction:tx];

@@ -932,17 +932,28 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
 - (void)setVariableNetworkFee:(NSString *)variableNetworkFee
 {
     NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    NSUInteger i = [_variableNetworkFeeNames indexOfObject:variableNetworkFee];
+    if (i == NSNotFound) variableNetworkFee = DEFAULT_NETWORK_FEE, i = [_variableNetworkFeeNames indexOfObject:DEFAULT_NETWORK_FEE];
+    _variableNetworkFee = [variableNetworkFee copy];
+    
     _variableNetworkFeeNames = [defs arrayForKey:NETWORK_FEES_NAMES_KEY];
     if(!_variableNetworkFeeNames)
     {
         _variableNetworkFeeNames = [[NSBundle mainBundle] objectForInfoDictionaryKey:NETWORK_FEES_NAMES_KEY];
         [defs setObject:_variableNetworkFeeNames forKey:NETWORK_FEES_NAMES_KEY];
     }
-    NSUInteger i = [_variableNetworkFeeNames indexOfObject:variableNetworkFee];
-    if (i == NSNotFound) variableNetworkFee = DEFAULT_NETWORK_FEE, i = [_variableNetworkFeeNames indexOfObject:DEFAULT_NETWORK_FEE];
-    _variableNetworkFee = [variableNetworkFee copy];
+    
+    
     [defs setObject:self.variableNetworkFee forKey:LOCAL_NETWORK_FEE_NAME_KEY];
+    [defs setObject:self.variableNetworkFee forKey:DEFAULT_NETWORK_FEE];
     [self updateFeePerKb];
+    
+    if (! _wallet) return;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:BRWalletBalanceChangedNotification object:nil];
+    });
+    
 }
 
 // local currency ISO code
