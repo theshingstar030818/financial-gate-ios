@@ -569,7 +569,7 @@ _switch_cell:
     [BREventManager saveEvent:@"settings:show_cnetwork_fee_selector"];
     NSUInteger networkFeeIndex = 0;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
-//    NSString *networkFee = manager.variableNetworkFee;
+    NSString *networkFee = manager.variableNetworkFee;
     NSMutableArray *options;
     self.selectorType = 1;
     options = [NSMutableArray array];
@@ -582,13 +582,22 @@ _switch_cell:
         NSDictionary *fee_data_dict = [all_fees objectAtIndex:[self binarySearchAllFeesForTime:variableFee]];
         long maxTime = [[fee_data_dict valueForKey:@"maxMinutes"] longLongValue];
         long minTime = [[fee_data_dict valueForKey:@"minMinutes"] longLongValue];
+
+        NSString *maxTimeString = @"";
+        if(maxTime>60){
+            maxTime = maxTime/60;
+            maxTimeString = [NSString stringWithFormat:@"%ld hrs", maxTime];
+        }else{
+            maxTimeString = [NSString stringWithFormat:@"%ld mins", maxTime];
+        }
         
-        [options addObject:[NSString stringWithFormat:@"%@ - (%ld to %ld mins) %@",
-                            manager.variableNetworkFeeNames[networkFeeIndex++],
-                            minTime,
-                            maxTime,
-                            [self convertToBTC:([variableFee integerValue] + finanacial_gate_charge)]
-        ]];
+        NSString *opt = [NSString stringWithFormat:@"%@ - (%ld mins to %@) %@",
+                    manager.variableNetworkFeeNames[networkFeeIndex++],
+                    minTime,
+                    maxTimeString,
+                         [manager localCurrencyStringForAmount:  ([variableFee integerValue] + finanacial_gate_charge) ]];
+        NSLog(@"%@", opt);
+        [options addObject:opt];
     }
     self.selectorOptions = options;
     networkFeeIndex = [manager.variableNetworkFeeNames indexOfObject:manager.variableNetworkFee];
@@ -597,7 +606,7 @@ _switch_cell:
     self.selectorController.title =
     [NSString stringWithFormat:@"%@ = %@",
      manager.variableNetworkFee,
-     [self convertToBTC:[manager.variableNetworkFees[networkFeeIndex] integerValue]]];
+     [manager localCurrencyStringForAmount:([manager.variableNetworkFees[networkFeeIndex] integerValue] + finanacial_gate_charge)]];
     
     [self.navigationController pushViewController:self.selectorController animated:YES];
     [self.selectorController.tableView reloadData];
@@ -680,12 +689,13 @@ _switch_cell:
         }
         else if (self.selectorType == 1) {
             if (indexPath.row < manager.variableNetworkFees.count) {
+                int64_t finanacial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
                 [manager setVariableNetworkFee:manager.variableNetworkFeeNames[indexPath.row]];
                 manager.variableNetworkFee = manager.variableNetworkFeeNames[indexPath.row];
                 self.selectorController.title =
                 [NSString stringWithFormat:@"%@ = %@",
                  manager.variableNetworkFee,
-                 [self convertToBTC:[manager.variableNetworkFees[indexPath.row] integerValue]]];
+                 [manager localCurrencyStringForAmount:  ([manager.variableNetworkFees[indexPath.row] integerValue] + finanacial_gate_charge) ]];
             }
         }else manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
         

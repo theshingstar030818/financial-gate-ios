@@ -123,8 +123,9 @@
         [text removeObjectAtIndex:fg_charge_index];
         [detail removeObjectAtIndex:fg_charge_index];
         [amount removeObjectAtIndex:fg_charge_index];
-        uint64_t amt = [transaction.outputAmounts[fg_charge_index] unsignedLongLongValue];
-        uint64_t cumulativeFee = fee + (amt);
+//        uint64_t amt = [transaction.outputAmounts[fg_charge_index] unsignedLongLongValue];
+        uint64_t financial_gate_charge = [manager getFinancialGateChargeAmount:@"0.50"];
+        uint64_t cumulativeFee = fee + financial_gate_charge;
         [text addObject:@""];
         [detail addObject:NSLocalizedString(@"bitcoin network fee", nil)];
         [amount addObject:@(-cumulativeFee)];
