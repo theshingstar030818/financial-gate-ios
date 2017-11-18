@@ -47,6 +47,7 @@
 {
     if (self._userDefaultsKey)
         [[NSUserDefaults standardUserDefaults] setBool:self.theSwitch.on forKey:self._userDefaultsKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)updateUi

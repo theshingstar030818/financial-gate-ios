@@ -374,6 +374,8 @@ _switch_cell:
                     cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
                     BRUserDefaultsSwitchCell *switchCell = (BRUserDefaultsSwitchCell *)cell;
                     switchCell.titleLabel.text = NSLocalizedString(@"Enable Receive Notifications", nil);
+                    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+                    switchCell.theSwitch.on = [defs boolForKey:USER_DEFAULTS_LOCAL_NOTIFICATIONS_KEY];
                     [switchCell setUserDefaultsKey:USER_DEFAULTS_LOCAL_NOTIFICATIONS_KEY];
                     break;
                 }

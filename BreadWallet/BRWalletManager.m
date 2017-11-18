@@ -285,15 +285,12 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
     
     _variableNetworkFeeNames = [defs arrayForKey:NETWORK_FEES_NAMES_KEY];
     self.variableNetworkFee = ([defs stringForKey:LOCAL_NETWORK_FEE_NAME_KEY]) ? [defs stringForKey:LOCAL_NETWORK_FEE_NAME_KEY] : DEFAULT_NETWORK_FEE;
-    [defs setObject:self.variableNetworkFee forKey:LOCAL_NETWORK_FEE_NAME_KEY];
     
     if(!_variableNetworkFeeNames)
     {
         _variableNetworkFeeNames = [[NSBundle mainBundle] objectForInfoDictionaryKey:NETWORK_FEES_NAMES_KEY];
         [defs setObject:_variableNetworkFeeNames forKey:NETWORK_FEES_NAMES_KEY];
     }
-    
-//    dispatch_async(dispatch_get_main_queue(), ^{ [self updateNetworkTransactionFees]; });
     
     _currencyCodes = [defs arrayForKey:CURRENCY_CODES_KEY];
     _currencyNames = [defs arrayForKey:CURRENCY_NAMES_KEY];
@@ -340,6 +337,7 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
             }];
 
         _wallet.feePerKb = DEFAULT_FEE_PER_KB;
+        [[NSUserDefaults standardUserDefaults] synchronize];
         feePerKb = [[NSUserDefaults standardUserDefaults] doubleForKey:FEE_PER_KB_KEY];
         if (feePerKb >= MIN_FEE_PER_KB && feePerKb <= MAX_FEE_PER_KB) _wallet.feePerKb = feePerKb;
 
@@ -942,18 +940,9 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
         _variableNetworkFeeNames = [[NSBundle mainBundle] objectForInfoDictionaryKey:NETWORK_FEES_NAMES_KEY];
         [defs setObject:_variableNetworkFeeNames forKey:NETWORK_FEES_NAMES_KEY];
     }
-    
-    
     [defs setObject:self.variableNetworkFee forKey:LOCAL_NETWORK_FEE_NAME_KEY];
-    [defs setObject:self.variableNetworkFee forKey:DEFAULT_NETWORK_FEE];
-    [self updateFeePerKb];
-    
+    [defs synchronize];
     if (! _wallet) return;
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:BRWalletBalanceChangedNotification object:nil];
-    });
-    
 }
 
 // local currency ISO code
@@ -1153,7 +1142,6 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
         NSLog(@"max network fees updated to %tu", maxNetworkFee);
         
 //        uint64_t newFee = [json[@"fee_per_kb"] unsignedLongLongValue];
-        NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
         NSUInteger i = [_variableNetworkFeeNames indexOfObject:_variableNetworkFee];
         uint64_t newFee = [[_variableNetworkFees objectAtIndex:i] intValue];
         
