@@ -432,13 +432,19 @@
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3jf-fx-Ie3">
-                                <rect key="frame" x="0.0" y="67" width="414" height="2.6666666666666714"/>
+                                <rect key="frame" x="0.0" y="67" width="414" height="5.6666666666666714"/>
                                 <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4.6699999999999999" id="umM-wo-3x9"/>
+                                </constraints>
                                 <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.10000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="eZp-EX-faL">
-                                <rect key="frame" x="0.0" y="67" width="414" height="2.6666666666666714"/>
+                                <rect key="frame" x="0.0" y="67" width="414" height="5.6666666666666714"/>
                                 <color key="tintColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4.6699999999999999" id="NiM-e9-fVZ"/>
+                                </constraints>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-5u-az7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -2495,13 +2501,13 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="1100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="349" translatesAutoresizingMaskIntoConstraints="NO" id="mxS-i4-y1n">
-                                            <rect key="frame" x="30" y="11" width="364" height="22"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="22"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" tag="1101" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4SS-5m-RoG">
-                                            <rect key="frame" x="335" y="6" width="51" height="31"/>
+                                            <rect key="frame" x="345" y="6" width="51" height="31"/>
                                             <connections>
                                                 <action selector="didUpdateSwitch:" destination="Pe6-Hf-Vsq" eventType="valueChanged" id="kim-Vz-Wk2"/>
                                             </connections>
@@ -2516,12 +2522,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Os3-ju-5lb" firstAttribute="left" secondItem="anH-PG-rgl" secondAttribute="left" id="DQI-LQ-M0i"/>
-                                        <constraint firstItem="mxS-i4-y1n" firstAttribute="leading" secondItem="anH-PG-rgl" secondAttribute="leadingMargin" constant="10" id="DcE-om-Ph7"/>
+                                        <constraint firstItem="mxS-i4-y1n" firstAttribute="leading" secondItem="anH-PG-rgl" secondAttribute="leadingMargin" id="DcE-om-Ph7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="mxS-i4-y1n" secondAttribute="trailing" id="MWo-tl-gPd"/>
                                         <constraint firstItem="4SS-5m-RoG" firstAttribute="centerY" secondItem="anH-PG-rgl" secondAttribute="centerY" id="Qk9-Zx-Ztk"/>
                                         <constraint firstItem="1ff-qS-BbM" firstAttribute="top" secondItem="Os3-ju-5lb" secondAttribute="bottom" constant="43" id="SIf-a3-pcv"/>
                                         <constraint firstItem="1ff-qS-BbM" firstAttribute="left" secondItem="anH-PG-rgl" secondAttribute="left" id="djo-DI-Obu"/>
-                                        <constraint firstItem="4SS-5m-RoG" firstAttribute="trailing" secondItem="anH-PG-rgl" secondAttribute="trailingMargin" constant="-10" id="pbQ-EL-hvu"/>
+                                        <constraint firstItem="4SS-5m-RoG" firstAttribute="trailing" secondItem="anH-PG-rgl" secondAttribute="trailingMargin" id="pbQ-EL-hvu"/>
                                         <constraint firstItem="Os3-ju-5lb" firstAttribute="top" secondItem="anH-PG-rgl" secondAttribute="top" id="qCK-Jh-7h8"/>
                                         <constraint firstItem="mxS-i4-y1n" firstAttribute="top" secondItem="anH-PG-rgl" secondAttribute="topMargin" id="sK8-te-S1j"/>
                                         <constraint firstAttribute="right" secondItem="Os3-ju-5lb" secondAttribute="right" id="ud5-tW-M03"/>

@@ -454,7 +454,13 @@
         }
     }
     else {
-        if (_balance == UINT64_MAX && [defs objectForKey:BALANCE_KEY]) self.balance = [defs doubleForKey:BALANCE_KEY];
+        if (_balance == UINT64_MAX && [defs objectForKey:BALANCE_KEY]){
+            if([BRPeerManager sharedInstance].syncProgress < 1.0){
+                self.balance = 0;
+            }
+        }else{
+            self.balance = [defs doubleForKey:BALANCE_KEY];
+        }
         self.splash.hidden = YES;
         self.navigationController.navigationBar.hidden = NO;
         self.pageViewController.view.alpha = 1.0;
