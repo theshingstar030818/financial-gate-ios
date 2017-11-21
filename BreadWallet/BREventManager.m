@@ -68,6 +68,7 @@
 
 - (instancetype)init
 {
+    [[NSUserDefaults standardUserDefaults] synchronize];
     if (self = [super init]) {
         CFUUIDRef uuid = CFUUIDCreate(NULL);
         self.sessionId = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, uuid);

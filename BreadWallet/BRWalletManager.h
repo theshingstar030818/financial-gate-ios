@@ -68,13 +68,14 @@ FOUNDATION_EXPORT NSString* _Nonnull const BRWalletManagerSeedChangedNotificatio
 @property (nonatomic, readonly) NSArray * _Nullable variableNetworkFees; // list for variable network fees
 
 @property (nonatomic, readonly) NSArray * _Nullable allNetworkFees; // list for variable network fees
-
 @property (nonatomic, readonly) NSArray * _Nullable variableNetworkFeeNames; // list for variable network fee names
 
 @property (nonatomic, readonly) NSNumberFormatter * _Nullable format; // bitcoin currency formatter
 @property (nonatomic, readonly) NSNumberFormatter * _Nullable localFormat; // local currency formatter
+
 @property (nonatomic, copy) NSString * _Nullable localCurrencyCode; // local currency ISO code
 @property (nonatomic, readonly) double localCurrencyPrice; // exchange rate in local currency units per bitcoin
+
 @property (nonatomic, readonly) NSArray * _Nullable currencyCodes; // list of supported local currency codes
 @property (nonatomic, readonly) NSArray * _Nullable currencyNames; // names for local currency codes
 @property (nonatomic, readonly) BOOL isTestnet;

@@ -107,55 +107,13 @@
     return YES;
 }
 
-- (void)cleanUp {
-    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
-    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
-    NSLog(@"cleanUp: function is called. appDomain: %@", appDomain);
-
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    if ( ![userDefaults valueForKey:@"version"] )
-    {
-        // CALL your Function;
-        NSLog(@"cleanUp: first time version: %@", [userDefaults valueForKey:@"CFBundleVersion"]);
-        [self resetDefaults];
-        // Adding version number to NSUserDefaults for first version:
-        [userDefaults setFloat:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] floatValue] forKey:@"version"];
-    }
-    if ([[NSUserDefaults standardUserDefaults] floatForKey:@"version"] == [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] floatValue] )
-    {
-        /// Same Version so dont run the function
-        NSLog(@"cleanUp: Same Version so dont run the function, version: %@", [userDefaults valueForKey:@"version"]);
-    }
-    else
-    {
-        // Call Your Function;
-        NSLog(@"cleanUp: Version number is different, there was an update, version: %@", [userDefaults valueForKey:@"version"]);
-        
-        // Update version number to NSUserDefaults for other versions:
-        [userDefaults setFloat:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] floatValue] forKey:@"version"];
-    }
-}
-
-- (void)resetDefaults {
-    NSLog(@"cleanUp: resetDefaults ");
-    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
-    NSDictionary * dict = [defs dictionaryRepresentation];
-    for (id key in dict) {
-        [defs removeObjectForKey:key];
-    }
-    [defs synchronize];
-}
-
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    NSLog(@"cleanUp: applicationDidBecomeActive");
     
     if(![BRWalletManager sharedInstance].noWallet && ![BRWalletManager sharedInstance].didAuthenticate){
         while (! [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO]) { }
     }
     
-    [self cleanUp];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (self.balance == UINT64_MAX) self.balance = [BRWalletManager sharedInstance].wallet.balance;
         [self updatePlatform];

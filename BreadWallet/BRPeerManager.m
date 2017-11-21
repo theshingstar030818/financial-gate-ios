@@ -145,8 +145,9 @@ static const char *dns_seeds[] = {
 
 - (instancetype)init
 {
+    [[NSUserDefaults standardUserDefaults] synchronize];
     if (! (self = [super init])) return nil;
-
+    
     self.earliestKeyTime = [BRWalletManager sharedInstance].seedCreationTime;
     self.connectedPeers = [NSMutableSet set];
     self.misbehavinPeers = [NSMutableSet set];
