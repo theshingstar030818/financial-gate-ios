@@ -28,6 +28,7 @@
 #import "BRRootViewController.h"
 #import "BRReceiveViewController.h"
 #import "BRSendViewController.h"
+#import "BRSendADAViewController.h"
 #import "BRSettingsViewController.h"
 #import "BRRestoreViewController.h"
 #import "BRAppDelegate.h"
@@ -100,6 +101,7 @@
     
     self.receiveViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiveViewController"];
     self.sendViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+    self.sendADAViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendADAViewController"];
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
 
     self.pageViewController.dataSource = self;
