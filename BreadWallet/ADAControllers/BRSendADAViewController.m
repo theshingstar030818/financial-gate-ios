@@ -34,6 +34,10 @@ static NSString *sanitizeString(NSString *s)
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
+- (BOOL)nextTip {
+    return NO;
+}
+
 - (void)viewBTC{
     [self.pageViewController setViewControllers:@[self.sendViewController]
                                       direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];

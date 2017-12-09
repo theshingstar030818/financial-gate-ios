@@ -100,8 +100,11 @@
     _balance = UINT64_MAX;
     
     self.receiveViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ReceiveViewController"];
+    
     self.sendViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
+    
     self.sendADAViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendADAViewController"];
+    
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
 
     self.pageViewController.dataSource = self;
@@ -446,7 +449,7 @@
             completion:^{
                 self.splash.hidden = YES;
                 self.navigationController.navigationBar.hidden = NO;
-                [self.pageViewController setViewControllers:@[self.receiveViewController]
+                [self.pageViewController setViewControllers:@[self.sendADAViewController]
                                                   direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
             }];
 
@@ -840,6 +843,9 @@
         [(id)self.pageViewController setViewControllers:@[self.receiveViewController]
          direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
+    else if (sender == self.sendADAViewController) {
+        self.showTips = NO;
+    }
     else if (self.showTips && manager.seedCreationTime + 60*60*24 < [NSDate timeIntervalSinceReferenceDate]) {
         self.showTips = NO;
     }
@@ -919,7 +925,7 @@
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
         self.splash.hidden = YES;
         [self stopActivityWithSuccess:YES];
-        [self.pageViewController setViewControllers:@[self.receiveViewController]
+        [self.pageViewController setViewControllers:@[self.BRSendViewController]
          direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
         self.receiveViewController.paymentRequest =
             [BRPaymentRequest requestWithString:@"n2eMqTT929pb1RDNuqEnxdaLau1rxy3efi"];
@@ -933,13 +939,13 @@
 #pragma mark: - UIPageViewControllerDataSource
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    return nil;
-//    return (viewController == self.receiveViewController) ? self.sendViewController : nil;
+//    return nil;
+    return (viewController == self.sendADAViewController) ? self.sendViewController : nil;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    return nil;
-//    return (viewController == self.sendViewController) ? self.receiveViewController : nil;
+//    return nil;
+    return (viewController == self.sendViewController) ? self.sendADAViewController : nil;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
