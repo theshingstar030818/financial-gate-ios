@@ -51,7 +51,6 @@
 
 @end
 
-
 @implementation BRSettingsViewController
 
 - (void)viewDidLoad {
@@ -59,19 +58,14 @@
     self.touchId = [BRWalletManager sharedInstance].touchIdEnabled;
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     self.view.alpha = 1.0;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
-    
     self.navigationController.navigationItem.backBarButtonItem.enabled = YES;
     self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
-
     if (self.navBarSwipe) [self.navigationController.navigationBar removeGestureRecognizer:self.navBarSwipe];
     self.navBarSwipe = nil;
-
     // observe the balance change notification to update the balance display
     if (! self.balanceObserver) {
         self.balanceObserver =
@@ -253,7 +247,7 @@
     BRWalletManager *manager = [BRWalletManager sharedInstance];
 
     if ([manager authenticateWithPrompt:nil andTouchId:NO]) {
-        self.selectorType = 1;
+        self.selectorType = 2;
         self.selectorOptions =
             @[NSLocalizedString(@"always require passcode", nil),
               [NSString stringWithFormat:@"%@      (%@)", [self updateBalance:SATOSHIS/10],
@@ -553,7 +547,6 @@ _switch_cell:
                                               options:NSBinarySearchingFirstEqual
                                       usingComparator:^(id obj1, id obj2)
                             {
-                                NSLog(@"....");
                                 NSNumber *fee_per_byte = [NSNumber numberWithInt:[obj2 integerValue]/1024];
                                 NSDictionary *fee_data_dict = (NSDictionary *) obj1;
                                 NSInteger c1 = [fee_data_dict[@"minFee"] compare:fee_per_byte];
@@ -571,7 +564,6 @@ _switch_cell:
     [BREventManager saveEvent:@"settings:show_cnetwork_fee_selector"];
     NSUInteger networkFeeIndex = 0;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
-    NSString *networkFee = manager.variableNetworkFee;
     NSMutableArray *options;
     self.selectorType = 1;
     options = [NSMutableArray array];
@@ -699,7 +691,9 @@ _switch_cell:
                  manager.variableNetworkFee,
                  [manager localCurrencyStringForAmount:  ([manager.variableNetworkFees[indexPath.row] integerValue] + finanacial_gate_charge) ]];
             }
-        }else manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
+        }else {
+            manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
+        }
         
         if (self.selectorType != 1 && currencyCodeIndex < self.selectorOptions.count && currencyCodeIndex != indexPath.row) {
             [tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:currencyCodeIndex inSection:0], indexPath]

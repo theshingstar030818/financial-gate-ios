@@ -9,7 +9,6 @@
 #ifndef BRSendADAViewController_h
 #define BRSendADAViewController_h
 
-
 #endif /* BRSendADAViewController_h */
 
 #import <UIKit/UIKit.h>

@@ -14,6 +14,7 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
+		21607A2D1FDC31D900701A20 /* BRWalletETH.m in Sources */ = {isa = PBXBuildFile; fileRef = 21607A2C1FDC31D900701A20 /* BRWalletETH.m */; };
 		2164476E1FCD27D400CF0843 /* BRSendADAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164476D1FCD27D400CF0843 /* BRSendADAViewController.m */; };
 		21E2CBF91FD3073A005890B2 /* BRWelcomeADAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2CBF81FD3073A005890B2 /* BRWelcomeADAViewController.m */; };
 		21E2CBFC1FD30D94005890B2 /* BRWalletADAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2CBFB1FD30D94005890B2 /* BRWalletADAManager.m */; };
@@ -203,6 +204,8 @@
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		21607A201FDC2B5500701A20 /* ethers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ethers.xcodeproj; path = ../ethers.objc/ethers.xcodeproj; sourceTree = "<group>"; };
+		21607A2B1FDC31B600701A20 /* BRWalletETH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRWalletETH.h; sourceTree = "<group>"; };
+		21607A2C1FDC31D900701A20 /* BRWalletETH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRWalletETH.m; sourceTree = "<group>"; };
 		2164476C1FCD274300CF0843 /* BRSendADAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRSendADAViewController.h; sourceTree = "<group>"; };
 		2164476D1FCD27D400CF0843 /* BRSendADAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSendADAViewController.m; sourceTree = "<group>"; };
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -583,6 +586,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		21607A2A1FDC2FFC00701A20 /* ETHControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21607A2B1FDC31B600701A20 /* BRWalletETH.h */,
+				21607A2C1FDC31D900701A20 /* BRWalletETH.m */,
+			);
+			path = ETHControllers;
+			sourceTree = "<group>";
+		};
 		219ADBD41FCEBFE1005BD8A6 /* ADAControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +841,7 @@
 		75BA5D02192296010040304C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21607A2A1FDC2FFC00701A20 /* ETHControllers */,
 				219ADBD41FCEBFE1005BD8A6 /* ADAControllers */,
 				04D1E0651F96C5C8005A2463 /* BRSupportViewController.h */,
 				04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */,
@@ -1468,6 +1481,7 @@
 				757C89521A2FCE420076B373 /* BRSettingsViewController.m in Sources */,
 				22649FED1DAABDB200042EBC /* BRCameraPlugin.swift in Sources */,
 				220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */,
+				21607A2D1FDC31D900701A20 /* BRWalletETH.m in Sources */,
 				75D5F3D2191EC270004AB296 /* BRAppDelegate.m in Sources */,
 				759FBB36193290F600AB4465 /* BRRootViewController.m in Sources */,
 				752E289A192349CE00DB5A3C /* FinancialGate.xcdatamodeld in Sources */,
