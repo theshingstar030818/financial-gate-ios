@@ -363,7 +363,6 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
 //#endif
             }
         });
-
         return _wallet;
     }
 }
@@ -372,7 +371,6 @@ static NSDictionary *getKeychainDict(NSString *key, NSError **error)
 - (BOOL)noWallet
 {
     NSError *error = nil;
-
     if (_wallet) return NO;
     if (getKeychainData(MASTER_PUBKEY_KEY, &error) || error) return NO;
     if (getKeychainData(SEED_KEY, &error) || error) return NO; // check for old keychain scheme

@@ -7,3 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "BRWalletADAManager.h"
+#import "Reachability.h"
