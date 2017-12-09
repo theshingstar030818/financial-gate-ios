@@ -253,7 +253,7 @@
     BRWalletManager *manager = [BRWalletManager sharedInstance];
 
     if ([manager authenticateWithPrompt:nil andTouchId:NO]) {
-        self.selectorType = 1;
+        self.selectorType = 2;
         self.selectorOptions =
             @[NSLocalizedString(@"always require passcode", nil),
               [NSString stringWithFormat:@"%@      (%@)", [self updateBalance:SATOSHIS/10],
@@ -699,8 +699,9 @@ _switch_cell:
                  manager.variableNetworkFee,
                  [manager localCurrencyStringForAmount:  ([manager.variableNetworkFees[indexPath.row] integerValue] + finanacial_gate_charge) ]];
             }
-        }else manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
-        
+        }else {
+            manager.spendingLimit = (indexPath.row > 0) ? pow(10, indexPath.row + 6) : 0;
+        }
         if (self.selectorType != 1 && currencyCodeIndex < self.selectorOptions.count && currencyCodeIndex != indexPath.row) {
             [tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:currencyCodeIndex inSection:0], indexPath]
              withRowAnimation:UITableViewRowAnimationAutomatic];
