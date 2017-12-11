@@ -14,6 +14,7 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
+		211896341FDEE20D007ADAA4 /* ETHWallet in Resources */ = {isa = PBXBuildFile; fileRef = 211896331FDEE20D007ADAA4 /* ETHWallet */; };
 		22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22005B951C9276AF00F87733 /* BRLinkPlugin.swift */; };
 		220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 220128D11C753C670001CAC1 /* BRSocketHelpers.c */; };
 		220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220128D41C76E1550001CAC1 /* BRWebSocket.swift */; };
@@ -184,6 +185,7 @@
 		04F85C9A1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRApplyDebitCardViewController.h; sourceTree = "<group>"; };
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		211896331FDEE20D007ADAA4 /* ETHWallet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ETHWallet; sourceTree = "<group>"; };
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DA1FAAE73600E03F7E /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -872,6 +874,7 @@
 		75D5F3C7191EC270004AB296 /* FinancialGate */ = {
 			isa = PBXGroup;
 			children = (
+				211896331FDEE20D007ADAA4 /* ETHWallet */,
 				047C7EE71F510E8900AEECD5 /* PDFcreation */,
 				BAC7B6BF1BD9C2B500165B84 /* AppleWatch */,
 				752E289C19234A4700DB5A3C /* Models */,
@@ -1215,6 +1218,7 @@
 				755FC9ED1BF1DF1B00164ABB /* BREventConfirmView.xib in Resources */,
 				752E28F719235B3000DB5A3C /* FixedPeers.plist in Resources */,
 				75D5F3DE191EC270004AB296 /* Main.storyboard in Resources */,
+				211896341FDEE20D007ADAA4 /* ETHWallet in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
