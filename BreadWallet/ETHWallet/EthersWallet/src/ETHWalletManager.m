@@ -23,7 +23,7 @@
  *  DEALINGS IN THE SOFTWARE.
  */
 
-#import "AppDelegate.h"
+#import "ETHWalletManager.h"
 
 @import NotificationCenter;
 
@@ -59,21 +59,18 @@ static NSString *CanaryUrl = @"https://ethers.io/canary.raw";
 static Address *CanaryAddress = nil;
 static NSString *CanaryVersion = nil;
 
-@interface AppDelegate () <PanelViewControllerDataSource> {
-    
+@interface ETHWalletManager () <PanelViewControllerDataSource> {
     NSArray<NSString*> *_applicationTitles;
     NSArray<NSString*> *_applicationUrls;
 }
 
 @property (nonatomic, readonly) PanelViewController *panelViewController;
 @property (nonatomic, readonly) WalletViewController *walletViewController;
-
 @property (nonatomic, readonly) Wallet *wallet;
 
 @end
 
-
-@implementation AppDelegate
+@implementation ETHWalletManager
 
 #pragma mark - Life-Cycle
 
@@ -90,36 +87,57 @@ static NSString *CanaryVersion = nil;
     });
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
++ (instancetype)sharedInstance
+{
+    static id singleton = nil;
+    static dispatch_once_t onceToken = 0;
     
-    // Schedule us for background fetching
-    [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
-    
-    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    dispatch_once(&onceToken, ^{
+        CanaryAddress = [Address addressWithString:CANARY_ADDRESS];
+        NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+        CanaryVersion = [NSString stringWithFormat:@"%@/%@", [info objectForKey:@"CFBundleIdentifier"],
+                         [info objectForKey:@"CFBundleShortVersionString"]];
+        
+        NSLog(@"Canary Version: %@", CanaryVersion);
+        _wallet = [Wallet walletWithKeychainKey:@"io.ethers.sharedWallet"];
+        singleton = self;
+    });
+    return singleton;
+}
 
+- (instancetype)init
+{
+    if (! (self = [super init])) return nil;
     _wallet = [Wallet walletWithKeychainKey:@"io.ethers.sharedWallet"];
-    _walletViewController = [[WalletViewController alloc] initWithWallet:_wallet];
-    
-    _panelViewController = [[PanelViewController alloc] initWithNibName:nil bundle:nil];
-    _panelViewController.dataSource = self;
-    [_panelViewController focusPanel:YES animated:NO];
-    _panelViewController.navigationItem.titleView = [Utilities navigationBarLogoTitle];
-    _panelViewController.titleColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
+    return self;
+}
 
-    {
-        CloudView *cloudView = [[CloudView alloc] initWithFrame:_panelViewController.view.bounds];
-        cloudView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [_panelViewController.backgroundView addSubview:cloudView];
-    }
+- (BOOL)init:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    {
-        UIColor *navigationBarColor = [UIColor colorWithHex:ColorHexNavigationBar overHex:0xb3cffe alpha:0.2];
-        [Utilities setupNavigationBar:_panelViewController.navigationBar backgroundColor:navigationBarColor];
-    }
-
-    _window.rootViewController = _panelViewController;
+//    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    _wallet = [Wallet walletWithKeychainKey:@"io.ethers.sharedWallet"];
+//    _walletViewController = [[WalletViewController alloc] initWithWallet:_wallet];
     
-    [_window makeKeyAndVisible];
+//    _panelViewController = [[PanelViewController alloc] initWithNibName:nil bundle:nil];
+//    _panelViewController.dataSource = self;
+//    [_panelViewController focusPanel:YES animated:NO];
+//    _panelViewController.navigationItem.titleView = [Utilities navigationBarLogoTitle];
+//    _panelViewController.titleColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
+//
+//    {
+//        CloudView *cloudView = [[CloudView alloc] initWithFrame:_panelViewController.view.bounds];
+//        cloudView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//        [_panelViewController.backgroundView addSubview:cloudView];
+//    }
+//
+//    {
+//        UIColor *navigationBarColor = [UIColor colorWithHex:ColorHexNavigationBar overHex:0xb3cffe alpha:0.2];
+//        [Utilities setupNavigationBar:_panelViewController.navigationBar backgroundColor:navigationBarColor];
+//    }
+//
+//    _window.rootViewController = _panelViewController;
+//
+//    [_window makeKeyAndVisible];
     
     // If the active account changed, we need to update the applications (e.g. testnet faucet for testnet accounts only)
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -381,19 +399,19 @@ typedef enum ExternalAction {
         [self.panelViewController focusPanel:YES animated:NO];
     }
     
-    __weak AppDelegate *weakSelf = self;
+    __weak ETHWalletManager *weakSelf = self;
     [ModalViewController dismissAllCompletionCallback:^() {
         if (action == ExternalActionScan) {
             [weakSelf showScanner];
         
         } else if (action == ExternalActionSend) {
             [weakSelf.wallet sendPayment:payment callback:^(Hash *hash, NSError *error) {
-                NSLog(@"AppDelegate: Sent hash=%@ error=%@", hash, error);
+                NSLog(@"ETHWalletManager: Sent hash=%@ error=%@", hash, error);
             }];
         
         } else if (action == ExternalActionConfig) {
             [weakSelf.wallet showDebuggingOptionsCallback:^() {
-                NSLog(@"AppDelegate: Done config");
+                NSLog(@"ETHWalletManager: Done config");
             }];
         }
     }];
@@ -493,7 +511,7 @@ typedef enum ExternalAction {
             sharedDefaults.address = nil;
         }
     
-        NSLog(@"AppDelegate: Disable extension");
+        NSLog(@"ETHWalletManager: Disable extension");
               
     } else {
         hasContent = YES;
@@ -516,7 +534,7 @@ typedef enum ExternalAction {
             totalBalance = [totalBalance add:[_wallet balanceForIndex:i]];
         }
         
-        NSLog(@"AppDelegate: Update extension - address=%@ totalBalance=%@ price=%.02f", address.checksumAddress, [Payment formatEther:totalBalance], _wallet.etherPrice);
+        NSLog(@"ETHWalletManager: Update extension - address=%@ totalBalance=%@ price=%.02f", address.checksumAddress, [Payment formatEther:totalBalance], _wallet.etherPrice);
     }
     
     // Total balance

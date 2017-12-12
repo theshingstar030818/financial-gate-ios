@@ -15,6 +15,8 @@
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
 		211896341FDEE20D007ADAA4 /* ETHWallet in Resources */ = {isa = PBXBuildFile; fileRef = 211896331FDEE20D007ADAA4 /* ETHWallet */; };
+		219F6A051FDF6770005710F8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219F6A041FDF6767005710F8 /* LocalAuthentication.framework */; };
+		219F6A061FDF6780005710F8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE12BE61B2DEE7F00895CC5 /* NotificationCenter.framework */; };
 		22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22005B951C9276AF00F87733 /* BRLinkPlugin.swift */; };
 		220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 220128D11C753C670001CAC1 /* BRSocketHelpers.c */; };
 		220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220128D41C76E1550001CAC1 /* BRWebSocket.swift */; };
@@ -189,6 +191,7 @@
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DA1FAAE73600E03F7E /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		219F6A041FDF6767005710F8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.release.xcconfig"; sourceTree = "<group>"; };
 		22005B951C9276AF00F87733 /* BRLinkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRLinkPlugin.swift; sourceTree = "<group>"; };
 		220128D11C753C670001CAC1 /* BRSocketHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BRSocketHelpers.c; sourceTree = "<group>"; };
@@ -519,6 +522,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219F6A061FDF6780005710F8 /* NotificationCenter.framework in Frameworks */,
+				219F6A051FDF6770005710F8 /* LocalAuthentication.framework in Frameworks */,
 				22DC3A231D2C8DD100A72EA5 /* PushKit.framework in Frameworks */,
 				225383011C694D7400968BEE /* CoreLocation.framework in Frameworks */,
 				22D3613D1C56F2CD0057CF76 /* libsqlite3.tbd in Frameworks */,
@@ -846,6 +851,7 @@
 		75D5F3C0191EC270004AB296 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				219F6A041FDF6767005710F8 /* LocalAuthentication.framework */,
 				218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */,
 				218AB6DA1FAAE73600E03F7E /* AWSSES.framework */,
 				218AB6D81FAAE73100E03F7E /* AWSCore.framework */,

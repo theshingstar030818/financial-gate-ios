@@ -28,6 +28,7 @@
 #import "BRAppDelegate.h"
 #import "BRPeerManager.h"
 #import "BRWalletManager.h"
+#import "ETHWallet/EthersWallet/src/ETHWalletManager.h"
 #import "BREventManager.h"
 #import "FinancialGate-Swift.h"
 #import "BRPhoneWCSessionManager.h"
@@ -112,6 +113,12 @@
     
     if(![BRWalletManager sharedInstance].noWallet && ![BRWalletManager sharedInstance].didAuthenticate){
         while (! [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO]) { }
+    }
+    
+    if([ETHWalletManager sharedInstance]){
+        NSLog(@"");
+    }else{
+        NSLog(@"");
     }
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

@@ -23,13 +23,9 @@
  *  DEALINGS IN THE SOFTWARE.
  */
 
+@interface ETHWalletManager
 
-#import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (nonatomic, strong) UIWindow *window;
-
++ (instancetype _Nullable)sharedInstance;
 
 @end
 
