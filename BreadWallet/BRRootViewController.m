@@ -29,6 +29,7 @@
 #import "BRReceiveViewController.h"
 #import "BRSendViewController.h"
 #import "BRSendADAViewController.h"
+#import "BRSendETHViewController.h"
 #import "BRSettingsViewController.h"
 #import "BRRestoreViewController.h"
 #import "BRAppDelegate.h"
@@ -104,6 +105,8 @@
     self.sendViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendViewController"];
     
     self.sendADAViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendADAViewController"];
+    
+    self.sendETHViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SendETHViewController"];
     
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
 
@@ -449,7 +452,7 @@
             completion:^{
                 self.splash.hidden = YES;
                 self.navigationController.navigationBar.hidden = NO;
-                [self.pageViewController setViewControllers:@[self.sendADAViewController]
+                [self.pageViewController setViewControllers:@[self.sendViewController]
                                                   direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
             }];
 
@@ -843,7 +846,7 @@
         [(id)self.pageViewController setViewControllers:@[self.receiveViewController]
          direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     }
-    else if (sender == self.sendADAViewController) {
+    else if (sender == self.sendADAViewController || sender == self.sendETHViewController) {
         self.showTips = NO;
     }
     else if (self.showTips && manager.seedCreationTime + 60*60*24 < [NSDate timeIntervalSinceReferenceDate]) {
@@ -940,12 +943,12 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
 //    return nil;
-    return (viewController == self.sendADAViewController) ? self.sendViewController : nil;
+    return (viewController == self.sendETHViewController) ? self.sendViewController : nil;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
 //    return nil;
-    return (viewController == self.sendViewController) ? self.sendADAViewController : nil;
+    return (viewController == self.sendViewController) ? self.sendETHViewController : nil;
 }
 
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {

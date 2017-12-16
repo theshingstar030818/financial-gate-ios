@@ -14,8 +14,60 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
-		21607A2D1FDC31D900701A20 /* BRWalletETH.m in Sources */ = {isa = PBXBuildFile; fileRef = 21607A2C1FDC31D900701A20 /* BRWalletETH.m */; };
 		2164476E1FCD27D400CF0843 /* BRSendADAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164476D1FCD27D400CF0843 /* BRSendADAViewController.m */; };
+		21666EBC1FE52C7400372B7B /* AccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E701FE52C7300372B7B /* AccountsViewController.m */; };
+		21666EBD1FE52C7400372B7B /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E721FE52C7400372B7B /* ApplicationViewController.m */; };
+		21666EBE1FE52C7400372B7B /* ConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E751FE52C7400372B7B /* ConfigController.m */; };
+		21666EBF1FE52C7400372B7B /* ConfigNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E771FE52C7400372B7B /* ConfigNavigationController.m */; };
+		21666EC01FE52C7400372B7B /* ConfigLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E7A1FE52C7400372B7B /* ConfigLabel.m */; };
+		21666EC11FE52C7400372B7B /* ConfigTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E7C1FE52C7400372B7B /* ConfigTextField.m */; };
+		21666EC21FE52C7400372B7B /* ConfigToggle.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E7E1FE52C7400372B7B /* ConfigToggle.m */; };
+		21666EC31FE52C7400372B7B /* ConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E801FE52C7400372B7B /* ConfigView.m */; };
+		21666EC41FE52C7400372B7B /* GasLimitKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E821FE52C7400372B7B /* GasLimitKeyboardView.m */; };
+		21666EC51FE52C7400372B7B /* GasPriceKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E841FE52C7400372B7B /* GasPriceKeyboardView.m */; };
+		21666EC61FE52C7400372B7B /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E861FE52C7400372B7B /* KeyboardView.m */; };
+		21666EC71FE52C7400372B7B /* SliderKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E881FE52C7400372B7B /* SliderKeyboardView.m */; };
+		21666EC81FE52C7400372B7B /* DebugConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E8A1FE52C7400372B7B /* DebugConfigController.m */; };
+		21666EC91FE52C7400372B7B /* MnemonicConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E8C1FE52C7400372B7B /* MnemonicConfigController.m */; };
+		21666ECA1FE52C7400372B7B /* MnemonicWarningConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E8E1FE52C7400372B7B /* MnemonicWarningConfigController.m */; };
+		21666ECB1FE52C7400372B7B /* OptionsConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E901FE52C7400372B7B /* OptionsConfigController.m */; };
+		21666ECC1FE52C7400372B7B /* PasswordConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E921FE52C7400372B7B /* PasswordConfigController.m */; };
+		21666ECD1FE52C7400372B7B /* ScannerConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E941FE52C7400372B7B /* ScannerConfigController.m */; };
+		21666ECE1FE52C7400372B7B /* TransactionConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E961FE52C7400372B7B /* TransactionConfigController.m */; };
+		21666ECF1FE52C7400372B7B /* DoneConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E981FE52C7400372B7B /* DoneConfigController.m */; };
+		21666ED01FE52C7400372B7B /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E9A1FE52C7400372B7B /* InfoViewController.m */; };
+		21666ED11FE52C7400372B7B /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E9C1FE52C7400372B7B /* ModalViewController.m */; };
+		21666ED21FE52C7400372B7B /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666E9E1FE52C7400372B7B /* PanelViewController.m */; };
+		21666ED31FE52C7400372B7B /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EA01FE52C7400372B7B /* WalletViewController.m */; };
+		21666ED41FE52C7400372B7B /* AccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EA31FE52C7400372B7B /* AccountTableViewCell.m */; };
+		21666ED51FE52C7400372B7B /* BalanceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EA51FE52C7400372B7B /* BalanceLabel.m */; };
+		21666ED61FE52C7400372B7B /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EA71FE52C7400372B7B /* BlockButton.m */; };
+		21666ED71FE52C7400372B7B /* BoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EA91FE52C7400372B7B /* BoxView.m */; };
+		21666ED81FE52C7400372B7B /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EAB1FE52C7400372B7B /* CloudView.m */; };
+		21666ED91FE52C7400372B7B /* CrossfadeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EAD1FE52C7400372B7B /* CrossfadeLabel.m */; };
+		21666EDA1FE52C7400372B7B /* FlexibleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EAF1FE52C7400372B7B /* FlexibleView.m */; };
+		21666EDB1FE52C7400372B7B /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EB11FE52C7400372B7B /* IconView.m */; };
+		21666EDC1FE52C7400372B7B /* MnemonicPhraseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EB31FE52C7400372B7B /* MnemonicPhraseView.m */; };
+		21666EDD1FE52C7400372B7B /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EB51FE52C7400372B7B /* QRCodeView.m */; };
+		21666EDE1FE52C7400372B7B /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EB71FE52C7400372B7B /* SectionHeaderView.m */; };
+		21666EDF1FE52C7400372B7B /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EB91FE52C7400372B7B /* TransactionTableViewCell.m */; };
+		21666EE01FE52C7400372B7B /* WalletView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EBB1FE52C7400372B7B /* WalletView.m */; };
+		21666EFD1FE52E1300372B7B /* AsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EE71FE52E1300372B7B /* AsyncOperation.m */; };
+		21666EFE1FE52E1300372B7B /* BLECast.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EE91FE52E1300372B7B /* BLECast.m */; };
+		21666EFF1FE52E1300372B7B /* CachedDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EEB1FE52E1300372B7B /* CachedDataStore.m */; };
+		21666F001FE52E1300372B7B /* IndexPathArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EED1FE52E1300372B7B /* IndexPathArray.m */; };
+		21666F011FE52E1300372B7B /* SharedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EEF1FE52E1300372B7B /* SharedDefaults.m */; };
+		21666F021FE52E1300372B7B /* SignedRemoteDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EF11FE52E1300372B7B /* SignedRemoteDictionary.m */; };
+		21666F031FE52E1300372B7B /* CloudKeychainSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EF41FE52E1300372B7B /* CloudKeychainSigner.m */; };
+		21666F041FE52E1300372B7B /* Signer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EF61FE52E1300372B7B /* Signer.m */; };
+		21666F051FE52E1300372B7B /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EF81FE52E1300372B7B /* UIColor+hex.m */; };
+		21666F061FE52E1300372B7B /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EFA1FE52E1300372B7B /* UIImage+resize.m */; };
+		21666F071FE52E1300372B7B /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 21666EFC1FE52E1300372B7B /* Utilities.m */; };
+		21666F081FE52F6700372B7B /* ethers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21607A261FDC2B5600701A20 /* ethers.framework */; };
+		21C51DE91FE2775C0061EC9D /* BRSendETHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C51DE21FE2775B0061EC9D /* BRSendETHViewController.m */; };
+		21C51DEA1FE2775C0061EC9D /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C51DE41FE2775B0061EC9D /* Wallet.m */; };
+		21C51DEB1FE2775C0061EC9D /* BRWalletETHManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C51DE61FE2775B0061EC9D /* BRWalletETHManager.m */; };
+		21C51DEC1FE2775C0061EC9D /* BRWelcomeETHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C51DE81FE2775B0061EC9D /* BRWelcomeETHViewController.m */; };
 		21E2CBF91FD3073A005890B2 /* BRWelcomeADAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2CBF81FD3073A005890B2 /* BRWelcomeADAViewController.m */; };
 		21E2CBFC1FD30D94005890B2 /* BRWalletADAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2CBFB1FD30D94005890B2 /* BRWalletADAManager.m */; };
 		21E2CBFF1FD30FFF005890B2 /* BRWalletADA.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E2CBFE1FD30FFF005890B2 /* BRWalletADA.m */; };
@@ -204,13 +256,115 @@
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
 		21607A201FDC2B5500701A20 /* ethers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ethers.xcodeproj; path = ../ethers.objc/ethers.xcodeproj; sourceTree = "<group>"; };
-		21607A2B1FDC31B600701A20 /* BRWalletETH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRWalletETH.h; sourceTree = "<group>"; };
-		21607A2C1FDC31D900701A20 /* BRWalletETH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRWalletETH.m; sourceTree = "<group>"; };
 		2164476C1FCD274300CF0843 /* BRSendADAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRSendADAViewController.h; sourceTree = "<group>"; };
 		2164476D1FCD27D400CF0843 /* BRSendADAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRSendADAViewController.m; sourceTree = "<group>"; };
+		21666E6F1FE52C7300372B7B /* AccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsViewController.h; sourceTree = "<group>"; };
+		21666E701FE52C7300372B7B /* AccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsViewController.m; sourceTree = "<group>"; };
+		21666E711FE52C7300372B7B /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		21666E721FE52C7400372B7B /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
+		21666E741FE52C7400372B7B /* ConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigController.h; sourceTree = "<group>"; };
+		21666E751FE52C7400372B7B /* ConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigController.m; sourceTree = "<group>"; };
+		21666E761FE52C7400372B7B /* ConfigNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigNavigationController.h; sourceTree = "<group>"; };
+		21666E771FE52C7400372B7B /* ConfigNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigNavigationController.m; sourceTree = "<group>"; };
+		21666E791FE52C7400372B7B /* ConfigLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigLabel.h; sourceTree = "<group>"; };
+		21666E7A1FE52C7400372B7B /* ConfigLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigLabel.m; sourceTree = "<group>"; };
+		21666E7B1FE52C7400372B7B /* ConfigTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTextField.h; sourceTree = "<group>"; };
+		21666E7C1FE52C7400372B7B /* ConfigTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTextField.m; sourceTree = "<group>"; };
+		21666E7D1FE52C7400372B7B /* ConfigToggle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigToggle.h; sourceTree = "<group>"; };
+		21666E7E1FE52C7400372B7B /* ConfigToggle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigToggle.m; sourceTree = "<group>"; };
+		21666E7F1FE52C7400372B7B /* ConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigView.h; sourceTree = "<group>"; };
+		21666E801FE52C7400372B7B /* ConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigView.m; sourceTree = "<group>"; };
+		21666E811FE52C7400372B7B /* GasLimitKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasLimitKeyboardView.h; sourceTree = "<group>"; };
+		21666E821FE52C7400372B7B /* GasLimitKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GasLimitKeyboardView.m; sourceTree = "<group>"; };
+		21666E831FE52C7400372B7B /* GasPriceKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasPriceKeyboardView.h; sourceTree = "<group>"; };
+		21666E841FE52C7400372B7B /* GasPriceKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GasPriceKeyboardView.m; sourceTree = "<group>"; };
+		21666E851FE52C7400372B7B /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		21666E861FE52C7400372B7B /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		21666E871FE52C7400372B7B /* SliderKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderKeyboardView.h; sourceTree = "<group>"; };
+		21666E881FE52C7400372B7B /* SliderKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderKeyboardView.m; sourceTree = "<group>"; };
+		21666E891FE52C7400372B7B /* DebugConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugConfigController.h; sourceTree = "<group>"; };
+		21666E8A1FE52C7400372B7B /* DebugConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugConfigController.m; sourceTree = "<group>"; };
+		21666E8B1FE52C7400372B7B /* MnemonicConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MnemonicConfigController.h; sourceTree = "<group>"; };
+		21666E8C1FE52C7400372B7B /* MnemonicConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MnemonicConfigController.m; sourceTree = "<group>"; };
+		21666E8D1FE52C7400372B7B /* MnemonicWarningConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MnemonicWarningConfigController.h; sourceTree = "<group>"; };
+		21666E8E1FE52C7400372B7B /* MnemonicWarningConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MnemonicWarningConfigController.m; sourceTree = "<group>"; };
+		21666E8F1FE52C7400372B7B /* OptionsConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsConfigController.h; sourceTree = "<group>"; };
+		21666E901FE52C7400372B7B /* OptionsConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsConfigController.m; sourceTree = "<group>"; };
+		21666E911FE52C7400372B7B /* PasswordConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordConfigController.h; sourceTree = "<group>"; };
+		21666E921FE52C7400372B7B /* PasswordConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordConfigController.m; sourceTree = "<group>"; };
+		21666E931FE52C7400372B7B /* ScannerConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerConfigController.h; sourceTree = "<group>"; };
+		21666E941FE52C7400372B7B /* ScannerConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerConfigController.m; sourceTree = "<group>"; };
+		21666E951FE52C7400372B7B /* TransactionConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionConfigController.h; sourceTree = "<group>"; };
+		21666E961FE52C7400372B7B /* TransactionConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionConfigController.m; sourceTree = "<group>"; };
+		21666E971FE52C7400372B7B /* DoneConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneConfigController.h; sourceTree = "<group>"; };
+		21666E981FE52C7400372B7B /* DoneConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneConfigController.m; sourceTree = "<group>"; };
+		21666E991FE52C7400372B7B /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		21666E9A1FE52C7400372B7B /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		21666E9B1FE52C7400372B7B /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		21666E9C1FE52C7400372B7B /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		21666E9D1FE52C7400372B7B /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		21666E9E1FE52C7400372B7B /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		21666E9F1FE52C7400372B7B /* WalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
+		21666EA01FE52C7400372B7B /* WalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
+		21666EA21FE52C7400372B7B /* AccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTableViewCell.h; sourceTree = "<group>"; };
+		21666EA31FE52C7400372B7B /* AccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTableViewCell.m; sourceTree = "<group>"; };
+		21666EA41FE52C7400372B7B /* BalanceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceLabel.h; sourceTree = "<group>"; };
+		21666EA51FE52C7400372B7B /* BalanceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceLabel.m; sourceTree = "<group>"; };
+		21666EA61FE52C7400372B7B /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
+		21666EA71FE52C7400372B7B /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		21666EA81FE52C7400372B7B /* BoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxView.h; sourceTree = "<group>"; };
+		21666EA91FE52C7400372B7B /* BoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoxView.m; sourceTree = "<group>"; };
+		21666EAA1FE52C7400372B7B /* CloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudView.h; sourceTree = "<group>"; };
+		21666EAB1FE52C7400372B7B /* CloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudView.m; sourceTree = "<group>"; };
+		21666EAC1FE52C7400372B7B /* CrossfadeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossfadeLabel.h; sourceTree = "<group>"; };
+		21666EAD1FE52C7400372B7B /* CrossfadeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossfadeLabel.m; sourceTree = "<group>"; };
+		21666EAE1FE52C7400372B7B /* FlexibleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexibleView.h; sourceTree = "<group>"; };
+		21666EAF1FE52C7400372B7B /* FlexibleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexibleView.m; sourceTree = "<group>"; };
+		21666EB01FE52C7400372B7B /* IconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
+		21666EB11FE52C7400372B7B /* IconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconView.m; sourceTree = "<group>"; };
+		21666EB21FE52C7400372B7B /* MnemonicPhraseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MnemonicPhraseView.h; sourceTree = "<group>"; };
+		21666EB31FE52C7400372B7B /* MnemonicPhraseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MnemonicPhraseView.m; sourceTree = "<group>"; };
+		21666EB41FE52C7400372B7B /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		21666EB51FE52C7400372B7B /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		21666EB61FE52C7400372B7B /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
+		21666EB71FE52C7400372B7B /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
+		21666EB81FE52C7400372B7B /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
+		21666EB91FE52C7400372B7B /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
+		21666EBA1FE52C7400372B7B /* WalletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletView.h; sourceTree = "<group>"; };
+		21666EBB1FE52C7400372B7B /* WalletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletView.m; sourceTree = "<group>"; };
+		21666EE61FE52E1300372B7B /* AsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncOperation.h; sourceTree = "<group>"; };
+		21666EE71FE52E1300372B7B /* AsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncOperation.m; sourceTree = "<group>"; };
+		21666EE81FE52E1300372B7B /* BLECast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLECast.h; sourceTree = "<group>"; };
+		21666EE91FE52E1300372B7B /* BLECast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLECast.m; sourceTree = "<group>"; };
+		21666EEA1FE52E1300372B7B /* CachedDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedDataStore.h; sourceTree = "<group>"; };
+		21666EEB1FE52E1300372B7B /* CachedDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedDataStore.m; sourceTree = "<group>"; };
+		21666EEC1FE52E1300372B7B /* IndexPathArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexPathArray.h; sourceTree = "<group>"; };
+		21666EED1FE52E1300372B7B /* IndexPathArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexPathArray.m; sourceTree = "<group>"; };
+		21666EEE1FE52E1300372B7B /* SharedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedDefaults.h; sourceTree = "<group>"; };
+		21666EEF1FE52E1300372B7B /* SharedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedDefaults.m; sourceTree = "<group>"; };
+		21666EF01FE52E1300372B7B /* SignedRemoteDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignedRemoteDictionary.h; sourceTree = "<group>"; };
+		21666EF11FE52E1300372B7B /* SignedRemoteDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedRemoteDictionary.m; sourceTree = "<group>"; };
+		21666EF31FE52E1300372B7B /* CloudKeychainSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudKeychainSigner.h; sourceTree = "<group>"; };
+		21666EF41FE52E1300372B7B /* CloudKeychainSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudKeychainSigner.m; sourceTree = "<group>"; };
+		21666EF51FE52E1300372B7B /* Signer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signer.h; sourceTree = "<group>"; };
+		21666EF61FE52E1300372B7B /* Signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signer.m; sourceTree = "<group>"; };
+		21666EF71FE52E1300372B7B /* UIColor+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
+		21666EF81FE52E1300372B7B /* UIColor+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
+		21666EF91FE52E1300372B7B /* UIImage+resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+resize.h"; sourceTree = "<group>"; };
+		21666EFA1FE52E1300372B7B /* UIImage+resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
+		21666EFB1FE52E1300372B7B /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		21666EFC1FE52E1300372B7B /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DA1FAAE73600E03F7E /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C51DE11FE2775B0061EC9D /* BRSendETHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRSendETHViewController.h; sourceTree = "<group>"; };
+		21C51DE21FE2775B0061EC9D /* BRSendETHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRSendETHViewController.m; sourceTree = "<group>"; };
+		21C51DE31FE2775B0061EC9D /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		21C51DE41FE2775B0061EC9D /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
+		21C51DE51FE2775B0061EC9D /* BRWalletETHManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRWalletETHManager.h; sourceTree = "<group>"; };
+		21C51DE61FE2775B0061EC9D /* BRWalletETHManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRWalletETHManager.m; sourceTree = "<group>"; };
+		21C51DE71FE2775B0061EC9D /* BRWelcomeETHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRWelcomeETHViewController.h; sourceTree = "<group>"; };
+		21C51DE81FE2775B0061EC9D /* BRWelcomeETHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRWelcomeETHViewController.m; sourceTree = "<group>"; };
 		21E2CBF71FD3072A005890B2 /* BRWelcomeADAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRWelcomeADAViewController.h; sourceTree = "<group>"; };
 		21E2CBF81FD3073A005890B2 /* BRWelcomeADAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRWelcomeADAViewController.m; sourceTree = "<group>"; };
 		21E2CBFA1FD30D88005890B2 /* BRWalletADAManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRWalletADAManager.h; sourceTree = "<group>"; };
@@ -547,6 +701,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21666F081FE52F6700372B7B /* ethers.framework in Frameworks */,
 				22DC3A231D2C8DD100A72EA5 /* PushKit.framework in Frameworks */,
 				225383011C694D7400968BEE /* CoreLocation.framework in Frameworks */,
 				22D3613D1C56F2CD0057CF76 /* libsqlite3.tbd in Frameworks */,
@@ -586,13 +741,145 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		21607A2A1FDC2FFC00701A20 /* ETHControllers */ = {
+		21666E6E1FE52C7300372B7B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				21607A2B1FDC31B600701A20 /* BRWalletETH.h */,
-				21607A2C1FDC31D900701A20 /* BRWalletETH.m */,
+				21666E6F1FE52C7300372B7B /* AccountsViewController.h */,
+				21666E701FE52C7300372B7B /* AccountsViewController.m */,
+				21666E711FE52C7300372B7B /* ApplicationViewController.h */,
+				21666E721FE52C7400372B7B /* ApplicationViewController.m */,
+				21666E731FE52C7400372B7B /* ConfigViewControllers */,
+				21666E971FE52C7400372B7B /* DoneConfigController.h */,
+				21666E981FE52C7400372B7B /* DoneConfigController.m */,
+				21666E991FE52C7400372B7B /* InfoViewController.h */,
+				21666E9A1FE52C7400372B7B /* InfoViewController.m */,
+				21666E9B1FE52C7400372B7B /* ModalViewController.h */,
+				21666E9C1FE52C7400372B7B /* ModalViewController.m */,
+				21666E9D1FE52C7400372B7B /* PanelViewController.h */,
+				21666E9E1FE52C7400372B7B /* PanelViewController.m */,
+				21666E9F1FE52C7400372B7B /* WalletViewController.h */,
+				21666EA01FE52C7400372B7B /* WalletViewController.m */,
 			);
-			path = ETHControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		21666E731FE52C7400372B7B /* ConfigViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21666E741FE52C7400372B7B /* ConfigController.h */,
+				21666E751FE52C7400372B7B /* ConfigController.m */,
+				21666E761FE52C7400372B7B /* ConfigNavigationController.h */,
+				21666E771FE52C7400372B7B /* ConfigNavigationController.m */,
+				21666E781FE52C7400372B7B /* ConfigViews */,
+				21666E891FE52C7400372B7B /* DebugConfigController.h */,
+				21666E8A1FE52C7400372B7B /* DebugConfigController.m */,
+				21666E8B1FE52C7400372B7B /* MnemonicConfigController.h */,
+				21666E8C1FE52C7400372B7B /* MnemonicConfigController.m */,
+				21666E8D1FE52C7400372B7B /* MnemonicWarningConfigController.h */,
+				21666E8E1FE52C7400372B7B /* MnemonicWarningConfigController.m */,
+				21666E8F1FE52C7400372B7B /* OptionsConfigController.h */,
+				21666E901FE52C7400372B7B /* OptionsConfigController.m */,
+				21666E911FE52C7400372B7B /* PasswordConfigController.h */,
+				21666E921FE52C7400372B7B /* PasswordConfigController.m */,
+				21666E931FE52C7400372B7B /* ScannerConfigController.h */,
+				21666E941FE52C7400372B7B /* ScannerConfigController.m */,
+				21666E951FE52C7400372B7B /* TransactionConfigController.h */,
+				21666E961FE52C7400372B7B /* TransactionConfigController.m */,
+			);
+			path = ConfigViewControllers;
+			sourceTree = "<group>";
+		};
+		21666E781FE52C7400372B7B /* ConfigViews */ = {
+			isa = PBXGroup;
+			children = (
+				21666E791FE52C7400372B7B /* ConfigLabel.h */,
+				21666E7A1FE52C7400372B7B /* ConfigLabel.m */,
+				21666E7B1FE52C7400372B7B /* ConfigTextField.h */,
+				21666E7C1FE52C7400372B7B /* ConfigTextField.m */,
+				21666E7D1FE52C7400372B7B /* ConfigToggle.h */,
+				21666E7E1FE52C7400372B7B /* ConfigToggle.m */,
+				21666E7F1FE52C7400372B7B /* ConfigView.h */,
+				21666E801FE52C7400372B7B /* ConfigView.m */,
+				21666E811FE52C7400372B7B /* GasLimitKeyboardView.h */,
+				21666E821FE52C7400372B7B /* GasLimitKeyboardView.m */,
+				21666E831FE52C7400372B7B /* GasPriceKeyboardView.h */,
+				21666E841FE52C7400372B7B /* GasPriceKeyboardView.m */,
+				21666E851FE52C7400372B7B /* KeyboardView.h */,
+				21666E861FE52C7400372B7B /* KeyboardView.m */,
+				21666E871FE52C7400372B7B /* SliderKeyboardView.h */,
+				21666E881FE52C7400372B7B /* SliderKeyboardView.m */,
+			);
+			path = ConfigViews;
+			sourceTree = "<group>";
+		};
+		21666EA11FE52C7400372B7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21666EA21FE52C7400372B7B /* AccountTableViewCell.h */,
+				21666EA31FE52C7400372B7B /* AccountTableViewCell.m */,
+				21666EA41FE52C7400372B7B /* BalanceLabel.h */,
+				21666EA51FE52C7400372B7B /* BalanceLabel.m */,
+				21666EA61FE52C7400372B7B /* BlockButton.h */,
+				21666EA71FE52C7400372B7B /* BlockButton.m */,
+				21666EA81FE52C7400372B7B /* BoxView.h */,
+				21666EA91FE52C7400372B7B /* BoxView.m */,
+				21666EAA1FE52C7400372B7B /* CloudView.h */,
+				21666EAB1FE52C7400372B7B /* CloudView.m */,
+				21666EAC1FE52C7400372B7B /* CrossfadeLabel.h */,
+				21666EAD1FE52C7400372B7B /* CrossfadeLabel.m */,
+				21666EAE1FE52C7400372B7B /* FlexibleView.h */,
+				21666EAF1FE52C7400372B7B /* FlexibleView.m */,
+				21666EB01FE52C7400372B7B /* IconView.h */,
+				21666EB11FE52C7400372B7B /* IconView.m */,
+				21666EB21FE52C7400372B7B /* MnemonicPhraseView.h */,
+				21666EB31FE52C7400372B7B /* MnemonicPhraseView.m */,
+				21666EB41FE52C7400372B7B /* QRCodeView.h */,
+				21666EB51FE52C7400372B7B /* QRCodeView.m */,
+				21666EB61FE52C7400372B7B /* SectionHeaderView.h */,
+				21666EB71FE52C7400372B7B /* SectionHeaderView.m */,
+				21666EB81FE52C7400372B7B /* TransactionTableViewCell.h */,
+				21666EB91FE52C7400372B7B /* TransactionTableViewCell.m */,
+				21666EBA1FE52C7400372B7B /* WalletView.h */,
+				21666EBB1FE52C7400372B7B /* WalletView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21666EE51FE52E1300372B7B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				21666EE61FE52E1300372B7B /* AsyncOperation.h */,
+				21666EE71FE52E1300372B7B /* AsyncOperation.m */,
+				21666EE81FE52E1300372B7B /* BLECast.h */,
+				21666EE91FE52E1300372B7B /* BLECast.m */,
+				21666EEA1FE52E1300372B7B /* CachedDataStore.h */,
+				21666EEB1FE52E1300372B7B /* CachedDataStore.m */,
+				21666EEC1FE52E1300372B7B /* IndexPathArray.h */,
+				21666EED1FE52E1300372B7B /* IndexPathArray.m */,
+				21666EEE1FE52E1300372B7B /* SharedDefaults.h */,
+				21666EEF1FE52E1300372B7B /* SharedDefaults.m */,
+				21666EF01FE52E1300372B7B /* SignedRemoteDictionary.h */,
+				21666EF11FE52E1300372B7B /* SignedRemoteDictionary.m */,
+				21666EF21FE52E1300372B7B /* Signers */,
+				21666EF71FE52E1300372B7B /* UIColor+hex.h */,
+				21666EF81FE52E1300372B7B /* UIColor+hex.m */,
+				21666EF91FE52E1300372B7B /* UIImage+resize.h */,
+				21666EFA1FE52E1300372B7B /* UIImage+resize.m */,
+				21666EFB1FE52E1300372B7B /* Utilities.h */,
+				21666EFC1FE52E1300372B7B /* Utilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		21666EF21FE52E1300372B7B /* Signers */ = {
+			isa = PBXGroup;
+			children = (
+				21666EF31FE52E1300372B7B /* CloudKeychainSigner.h */,
+				21666EF41FE52E1300372B7B /* CloudKeychainSigner.m */,
+				21666EF51FE52E1300372B7B /* Signer.h */,
+				21666EF61FE52E1300372B7B /* Signer.m */,
+			);
+			path = Signers;
 			sourceTree = "<group>";
 		};
 		219ADBD41FCEBFE1005BD8A6 /* ADAControllers */ = {
@@ -608,6 +895,24 @@
 				21E2CBFE1FD30FFF005890B2 /* BRWalletADA.m */,
 			);
 			path = ADAControllers;
+			sourceTree = "<group>";
+		};
+		21C51DE01FE2775B0061EC9D /* ETHControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21666EE51FE52E1300372B7B /* Utilities */,
+				21666E6E1FE52C7300372B7B /* ViewControllers */,
+				21666EA11FE52C7400372B7B /* Views */,
+				21C51DE11FE2775B0061EC9D /* BRSendETHViewController.h */,
+				21C51DE21FE2775B0061EC9D /* BRSendETHViewController.m */,
+				21C51DE31FE2775B0061EC9D /* Wallet.h */,
+				21C51DE41FE2775B0061EC9D /* Wallet.m */,
+				21C51DE51FE2775B0061EC9D /* BRWalletETHManager.h */,
+				21C51DE61FE2775B0061EC9D /* BRWalletETHManager.m */,
+				21C51DE71FE2775B0061EC9D /* BRWelcomeETHViewController.h */,
+				21C51DE81FE2775B0061EC9D /* BRWelcomeETHViewController.m */,
+			);
+			path = ETHControllers;
 			sourceTree = "<group>";
 		};
 		229279961C695C1100C98E78 /* AppRuntime */ = {
@@ -841,7 +1146,7 @@
 		75BA5D02192296010040304C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				21607A2A1FDC2FFC00701A20 /* ETHControllers */,
+				21C51DE01FE2775B0061EC9D /* ETHControllers */,
 				219ADBD41FCEBFE1005BD8A6 /* ADAControllers */,
 				04D1E0651F96C5C8005A2463 /* BRSupportViewController.h */,
 				04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */,
@@ -1403,35 +1708,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C51DEC1FE2775C0061EC9D /* BRWelcomeETHViewController.m in Sources */,
+				21666ED41FE52C7400372B7B /* AccountTableViewCell.m in Sources */,
 				2230E2441D610D9A001EF2E9 /* BRCoding.swift in Sources */,
+				21666EDC1FE52C7400372B7B /* MnemonicPhraseView.m in Sources */,
+				21666ECA1FE52C7400372B7B /* MnemonicWarningConfigController.m in Sources */,
 				3647C69B1E9FC3980007997A /* BRTEST.m in Sources */,
+				21666F071FE52E1300372B7B /* Utilities.m in Sources */,
+				21666EDA1FE52C7400372B7B /* FlexibleView.m in Sources */,
 				22F04A001C9714EF00F137D8 /* BRUserDefaultsSwitchCell.m in Sources */,
+				21C51DEA1FE2775C0061EC9D /* Wallet.m in Sources */,
 				047C7EF01F510EF700AEECD5 /* BRPdfPageView.m in Sources */,
 				752E28AA19234AE300DB5A3C /* BRAddressEntity.m in Sources */,
 				75AA5F55194143D5003F23BD /* BRBouncyBurgerButton.m in Sources */,
 				752E28AB19234AE300DB5A3C /* BRMerkleBlockEntity.m in Sources */,
 				2292799A1C695CAE00C98E78 /* BRHTTPFileMiddleware.swift in Sources */,
+				21666F011FE52E1300372B7B /* SharedDefaults.m in Sources */,
 				BA7B53501BDA9A2800355E8D /* BRAppleWatchData.m in Sources */,
 				752E28AC19234AE300DB5A3C /* BRPeerEntity.m in Sources */,
 				752E28AD19234AE300DB5A3C /* BRTransactionEntity.m in Sources */,
 				752E28AE19234AE300DB5A3C /* BRTxInputEntity.m in Sources */,
 				752E28AF19234AE300DB5A3C /* BRTxOutputEntity.m in Sources */,
 				22DE8CF11D02407F007F07F3 /* BRWalletConstants.m in Sources */,
+				21666ED51FE52C7400372B7B /* BalanceLabel.m in Sources */,
+				21666F001FE52E1300372B7B /* IndexPathArray.m in Sources */,
+				21666EBC1FE52C7400372B7B /* AccountsViewController.m in Sources */,
 				BAA4843C1B3EFFAF0075C749 /* UIImage+Utils.m in Sources */,
 				2292799F1C695D2800C98E78 /* BRTar.swift in Sources */,
+				21666F061FE52E1300372B7B /* UIImage+resize.m in Sources */,
 				229279A81C6960FC00C98E78 /* BRGeoLocationPlugin.swift in Sources */,
+				21666ED91FE52C7400372B7B /* CrossfadeLabel.m in Sources */,
 				BA7B535C1BDBC36700355E8D /* BRTransaction+Utils.m in Sources */,
 				758DBD0E1980634900389E2A /* BRTxDetailViewController.m in Sources */,
 				7548CF3719556FD700EF827F /* BRCopyLabel.m in Sources */,
 				229279A11C695D7900C98E78 /* BRBSPatch.swift in Sources */,
 				752E28D119234C3600DB5A3C /* BRKey.m in Sources */,
 				84F68C8A1975E9E2002FC300 /* BRScanViewController.m in Sources */,
+				21666EC71FE52C7400372B7B /* SliderKeyboardView.m in Sources */,
+				21666F031FE52E1300372B7B /* CloudKeychainSigner.m in Sources */,
+				21666EDD1FE52C7400372B7B /* QRCodeView.m in Sources */,
 				2204604E1B9F61E600D07B61 /* BREventManager.m in Sources */,
+				21666EDE1FE52C7400372B7B /* SectionHeaderView.m in Sources */,
 				752E28D219234C3600DB5A3C /* BRKey+BIP38.m in Sources */,
+				21666EBD1FE52C7400372B7B /* ApplicationViewController.m in Sources */,
 				220128D71C76E4F30001CAC1 /* BRWalletPlugin.swift in Sources */,
 				220460551BA0BEEE00D07B61 /* BREventConfirmView.m in Sources */,
+				21666ECD1FE52C7400372B7B /* ScannerConfigController.m in Sources */,
 				752E28D919234C3600DB5A3C /* BRTransaction.m in Sources */,
 				361F0A711F1D41D300697328 /* RegisterViewController.m in Sources */,
+				21666EC51FE52C7400372B7B /* GasPriceKeyboardView.m in Sources */,
+				21666EC91FE52C7400372B7B /* MnemonicConfigController.m in Sources */,
 				752E28CE19234C3600DB5A3C /* BRBIP32Sequence.m in Sources */,
 				BAC7B6BE1BD9C29900165B84 /* BRPhoneWCSessionManager.m in Sources */,
 				04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */,
@@ -1439,56 +1765,86 @@
 				229279A51C695DE700C98E78 /* BRAPIProxy.swift in Sources */,
 				752E28DA19234C3600DB5A3C /* BRWallet.m in Sources */,
 				229279981C695C4200C98E78 /* BRHTTPServer.swift in Sources */,
+				21666ED21FE52C7400372B7B /* PanelViewController.m in Sources */,
+				21666ED31FE52C7400372B7B /* WalletViewController.m in Sources */,
 				22BF17471CDF831800AA41C6 /* Extensions.swift in Sources */,
 				220128D91C77B3100001CAC1 /* BRHTTPIndexMiddleware.swift in Sources */,
 				752E28DB19234C3600DB5A3C /* BRWalletManager.m in Sources */,
+				21666ED71FE52C7400372B7B /* BoxView.m in Sources */,
+				21666ECE1FE52C7400372B7B /* TransactionConfigController.m in Sources */,
+				21666ED61FE52C7400372B7B /* BlockButton.m in Sources */,
 				752E28D319234C3600DB5A3C /* BRMerkleBlock.m in Sources */,
+				21666EC31FE52C7400372B7B /* ConfigView.m in Sources */,
+				21666EC01FE52C7400372B7B /* ConfigLabel.m in Sources */,
+				21666ED81FE52C7400372B7B /* CloudView.m in Sources */,
 				22331F441D60312F00F29551 /* BRKVStoreObjects.swift in Sources */,
 				222040C41C1A0903005CE1C3 /* BRWebViewController.swift in Sources */,
 				752E28D019234C3600DB5A3C /* BRBloomFilter.m in Sources */,
+				21666EFE1FE52E1300372B7B /* BLECast.m in Sources */,
 				752E28D619234C3600DB5A3C /* BRPeer.m in Sources */,
 				04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */,
 				043B43AE1F4E684D00A78846 /* BRTxHistoryViewController.m in Sources */,
 				752E28D819234C3600DB5A3C /* BRPeerManager.m in Sources */,
 				752E28D419234C3600DB5A3C /* BRPaymentProtocol.m in Sources */,
+				21666EC81FE52C7400372B7B /* DebugConfigController.m in Sources */,
 				22F7B6D51D1479FA007CC848 /* BRBitID.swift in Sources */,
+				21666EBE1FE52C7400372B7B /* ConfigController.m in Sources */,
 				22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */,
 				21E2CBFF1FD30FFF005890B2 /* BRWalletADA.m in Sources */,
 				752E28D519234C3600DB5A3C /* BRPaymentRequest.m in Sources */,
 				7525B619192453840041C0F2 /* BRNavigationBar.m in Sources */,
 				2292799C1C695CD600C98E78 /* BRHTTPRouter.swift in Sources */,
+				21666EC11FE52C7400372B7B /* ConfigTextField.m in Sources */,
 				75F2E0D61BEAA6A400EAE861 /* BRTxMetadataEntity.m in Sources */,
+				21666EC41FE52C7400372B7B /* GasLimitKeyboardView.m in Sources */,
 				75878BC1192AEC3F002505AB /* BRReceiveViewController.m in Sources */,
+				21666EC21FE52C7400372B7B /* ConfigToggle.m in Sources */,
 				75878BBF192ACD46002505AB /* BRAmountViewController.m in Sources */,
 				21E2CBFC1FD30D94005890B2 /* BRWalletADAManager.m in Sources */,
 				759816E719357D6F005060EA /* BRBubbleView.m in Sources */,
 				047C7EEA1F510E8900AEECD5 /* RP_UIView_2_PDF.m in Sources */,
+				21C51DE91FE2775C0061EC9D /* BRSendETHViewController.m in Sources */,
+				21666EFD1FE52E1300372B7B /* AsyncOperation.m in Sources */,
 				04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */,
+				21666ECB1FE52C7400372B7B /* OptionsConfigController.m in Sources */,
+				21666EDB1FE52C7400372B7B /* IconView.m in Sources */,
 				21E2CBF91FD3073A005890B2 /* BRWelcomeADAViewController.m in Sources */,
 				22F7B6DA1D14A665007CC848 /* BRActivityView.swift in Sources */,
 				22B5F7841D665A0300657B77 /* BRKVStorePlugin.swift in Sources */,
+				21666F051FE52E1300372B7B /* UIColor+hex.m in Sources */,
 				757BE7E3192C0E9D0061CB20 /* BRRestoreViewController.m in Sources */,
 				757BE7E6192C1FF70061CB20 /* BRWelcomeViewController.m in Sources */,
+				21666ED01FE52C7400372B7B /* InfoViewController.m in Sources */,
 				757BE7E9192D4E880061CB20 /* BRSeedViewController.m in Sources */,
 				752E28E719234DA200DB5A3C /* NSData+Bitcoin.m in Sources */,
 				220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */,
 				752E28E919234DA200DB5A3C /* NSManagedObject+Sugar.m in Sources */,
 				BA7B53541BDAA0A800355E8D /* BRAppleWatchTransactionData.m in Sources */,
+				21666EC61FE52C7400372B7B /* KeyboardView.m in Sources */,
 				2299CF371D5C0D0B0055EA28 /* BRReplicatedKVStore.swift in Sources */,
 				751B2B5C1B68911700EA87FB /* BROptionViewController.m in Sources */,
 				752E28EA19234DA200DB5A3C /* NSMutableData+Bitcoin.m in Sources */,
+				21C51DEB1FE2775C0061EC9D /* BRWalletETHManager.m in Sources */,
 				752E28EB19234DA200DB5A3C /* NSString+Bitcoin.m in Sources */,
 				757C89521A2FCE420076B373 /* BRSettingsViewController.m in Sources */,
+				21666ECC1FE52C7400372B7B /* PasswordConfigController.m in Sources */,
+				21666EDF1FE52C7400372B7B /* TransactionTableViewCell.m in Sources */,
+				21666EBF1FE52C7400372B7B /* ConfigNavigationController.m in Sources */,
 				22649FED1DAABDB200042EBC /* BRCameraPlugin.swift in Sources */,
+				21666ED11FE52C7400372B7B /* ModalViewController.m in Sources */,
 				220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */,
-				21607A2D1FDC31D900701A20 /* BRWalletETH.m in Sources */,
 				75D5F3D2191EC270004AB296 /* BRAppDelegate.m in Sources */,
 				759FBB36193290F600AB4465 /* BRRootViewController.m in Sources */,
+				21666F041FE52E1300372B7B /* Signer.m in Sources */,
 				752E289A192349CE00DB5A3C /* FinancialGate.xcdatamodeld in Sources */,
+				21666EE01FE52C7400372B7B /* WalletView.m in Sources */,
 				759FBB37193290F600AB4465 /* BRSendViewController.m in Sources */,
+				21666ECF1FE52C7400372B7B /* DoneConfigController.m in Sources */,
+				21666EFF1FE52E1300372B7B /* CachedDataStore.m in Sources */,
 				752E28F119234E8100DB5A3C /* Reachability.m in Sources */,
 				22FF2C381BED381400B36384 /* BRAPIClient.swift in Sources */,
 				2164476E1FCD27D400CF0843 /* BRSendADAViewController.m in Sources */,
+				21666F021FE52E1300372B7B /* SignedRemoteDictionary.m in Sources */,
 				75D5F3CE191EC270004AB296 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
