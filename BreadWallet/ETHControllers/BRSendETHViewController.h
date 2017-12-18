@@ -13,8 +13,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-//#import "BRAmountViewController.h"
-//#import "BRSendBalanceViewController.h"
+#import "Wallet.h"
+
 
 @interface BRSendETHViewController : UIViewController <UIAlertViewDelegate, UITextViewDelegate,
 AVCaptureMetadataOutputObjectsDelegate, UIViewControllerTransitioningDelegate,
@@ -22,11 +22,5 @@ UIViewControllerAnimatedTransitioning>
 
 @property (nonatomic, strong) IBOutlet UIPageViewController *pageViewController;
 @property (nonatomic, strong) IBOutlet BRSendETHViewController *sendViewController;
-
-//- (IBAction)tip:(id)sender;
-//
-//- (void)handleURL:(NSURL *)url;
-//- (void)handleFile:(NSData *)file;
-//- (void)updateClipboardText;
 
 @end

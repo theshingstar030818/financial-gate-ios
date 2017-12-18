@@ -9,13 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "BRSendETHViewController.h"
 
-static NSString *sanitizeString(NSString *s)
-{
-    NSMutableString *sane = [NSMutableString stringWithString:(s) ? s : @""];
-    
-    CFStringTransform((CFMutableStringRef)sane, NULL, kCFStringTransformToUnicodeName, NO);
-    return sane;
-}
 
 @interface BRSendETHViewController ()
 

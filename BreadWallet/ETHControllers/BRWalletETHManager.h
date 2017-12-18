@@ -16,7 +16,6 @@
 @interface BRWalletETHManager : NSObject<UIAlertViewDelegate, UITextFieldDelegate, UITextViewDelegate>
 
 @property (nonatomic, readonly) Wallet * _Nullable wallet;
-@property (nonatomic, readonly) BOOL noWallet; // true if keychain is available and we know that no wallet exists on it
 + (instancetype _Nullable)sharedInstance;
 
 

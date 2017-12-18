@@ -37,6 +37,9 @@
 #import "BRBouncyBurgerButton.h"
 #import "BRPeerManager.h"
 #import "BRWalletManager.h"
+
+#import "BRWalletETHManager.h"
+
 #import "BRPaymentRequest.h"
 #import "UIImage+Utils.h"
 #import "BREventManager.h"
@@ -126,7 +129,8 @@
     }
 
     BRWalletManager *manager = [BRWalletManager sharedInstance];
-
+    BRWalletETHManager *managerETH = [BRWalletETHManager sharedInstance];
+    
     self.urlObserver =
         [[NSNotificationCenter defaultCenter] addObserverForName:BRURLNotification object:nil queue:nil
                                                       usingBlock:^(NSNotification *note) {

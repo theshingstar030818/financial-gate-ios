@@ -109,11 +109,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    
     if(![BRWalletManager sharedInstance].noWallet && ![BRWalletManager sharedInstance].didAuthenticate){
         while (! [[BRWalletManager sharedInstance] authenticateWithPrompt:nil andTouchId:NO]) { }
     }
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if (self.balance == UINT64_MAX) self.balance = [BRWalletManager sharedInstance].wallet.balance;
         [self updatePlatform];
