@@ -51,7 +51,6 @@
 
 @end
 
-
 @implementation BRSettingsViewController
 
 - (void)viewDidLoad {
@@ -59,19 +58,15 @@
     self.touchId = [BRWalletManager sharedInstance].touchIdEnabled;
 }
 
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     self.view.alpha = 1.0;
     BRWalletManager *manager = [BRWalletManager sharedInstance];
-    
     self.navigationController.navigationItem.backBarButtonItem.enabled = YES;
     self.navigationController.navigationBar.tintColor = [UIColor lightGrayColor];
-
     if (self.navBarSwipe) [self.navigationController.navigationBar removeGestureRecognizer:self.navBarSwipe];
     self.navBarSwipe = nil;
-
     // observe the balance change notification to update the balance display
     if (! self.balanceObserver) {
         self.balanceObserver =
@@ -553,7 +548,6 @@ _switch_cell:
                                               options:NSBinarySearchingFirstEqual
                                       usingComparator:^(id obj1, id obj2)
                             {
-                                NSLog(@"....");
                                 NSNumber *fee_per_byte = [NSNumber numberWithInt:[obj2 integerValue]/1024];
                                 NSDictionary *fee_data_dict = (NSDictionary *) obj1;
                                 NSInteger c1 = [fee_data_dict[@"minFee"] compare:fee_per_byte];

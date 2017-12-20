@@ -248,6 +248,47 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.22352941176470587" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Menu3" textLabel="z5R-CH-O1c" style="IBUITableViewCellStyleDefault" id="tq4-HI-9yi">
+                                <rect key="frame" x="0.0" y="242" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tq4-HI-9yi" id="4jA-Nc-H8U">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-dl-U6z">
+                                            <rect key="frame" x="0.0" y="0.0" width="429" height="1"/>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="28I-Mb-uig"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="345" id="z5R-CH-O1c">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        </label>
+                                        <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yA-u8-Zur">
+                                            <rect key="frame" x="0.0" y="45" width="429" height="0.0"/>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="mwA-k7-Zq3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yN3-dl-U6z" firstAttribute="leading" secondItem="4jA-Nc-H8U" secondAttribute="leading" id="0ko-bK-9hO"/>
+                                        <constraint firstItem="yN3-dl-U6z" firstAttribute="trailing" secondItem="z5R-CH-O1c" secondAttribute="trailing" constant="35" id="5U5-KM-UsH"/>
+                                        <constraint firstItem="yN3-dl-U6z" firstAttribute="top" secondItem="4jA-Nc-H8U" secondAttribute="top" id="Obz-Xm-uGs"/>
+                                        <constraint firstItem="2yA-u8-Zur" firstAttribute="left" secondItem="4jA-Nc-H8U" secondAttribute="left" id="tZh-vP-YDj"/>
+                                        <constraint firstItem="2yA-u8-Zur" firstAttribute="top" secondItem="yN3-dl-U6z" secondAttribute="bottom" constant="44" id="uHd-zh-mV9"/>
+                                        <constraint firstItem="z5R-CH-O1c" firstAttribute="right" secondItem="2yA-u8-Zur" secondAttribute="right" constant="-35" id="uhB-qk-4gF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.22352941179999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="6Bl-Zl-U7O" id="Rrl-DA-rov"/>
@@ -1990,7 +2031,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rw-eg-hrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3458" y="-21"/>
+            <point key="canvasLocation" x="2952" y="-1115"/>
         </scene>
         <!--Tx Detail View Controller-->
         <scene sceneID="QQa-M8-H76">
@@ -2330,7 +2371,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ca-uh-Ij3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4209" y="-21"/>
+            <point key="canvasLocation" x="3467" y="-21"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="9gb-yr-0Gl">

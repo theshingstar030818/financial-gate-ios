@@ -428,7 +428,7 @@ static NSString *dateFormat(NSString *template) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -461,6 +461,11 @@ static NSString *dateFormat(NSString *template) {
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Settings", nil);
+            break;
+
+        case 5:
+            cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+            cell.textLabel.text = NSLocalizedString(@"Markets", nil);
             break;
     }
 
@@ -542,6 +547,7 @@ static NSString *dateFormat(NSString *template) {
             destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"TxHistoryViewController"];
             [self.navigationController pushViewController:destinationController animated:YES];
         }
+            
             break;
             
         case 2: // ApplyDebitCardCharge
@@ -562,19 +568,13 @@ static NSString *dateFormat(NSString *template) {
             
             [self presentViewController:alert animated:YES completion:nil];
         }
-            
-            //            [BREventManager saveEvent:@"tx_history:ApplyDebitCardCharge"];
-            //            destinationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ApplyDebitCard"];
-            //            [self.navigationController pushViewController:destinationController animated:YES];
             break;
-            
         case 3: // Import Private Key
         {
             [BREventManager saveEvent:@"tx_history:import_priv_key"];
             [self scanQR:nil];
         }
             break;
-            
         case 4: // Settings
         {
             [BREventManager saveEvent:@"tx_history:settings"];
@@ -582,7 +582,15 @@ static NSString *dateFormat(NSString *template) {
             [self.navigationController pushViewController:destinationController animated:YES];
         }
             break;
-            
+        case 5: // Markets
+        {
+            [BREventManager saveEvent:@"markets:markets"];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MarketsViewStoryboard"
+                                                                 bundle:nil];
+            destinationController = [storyboard instantiateViewControllerWithIdentifier:@"BRMarketsViewController"];
+            [self.navigationController pushViewController:destinationController animated:YES];
+        }
+            break;
         default:
             break;
     }

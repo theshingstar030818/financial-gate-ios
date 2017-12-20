@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D59B7140BE76FA6E43FA243B6443E418"
+               BlueprintIdentifier = "F6B86C2CFF32757B5E8A962C5C3A96BF"
                BuildableName = "Pods_FinancialGate.framework"
                BlueprintName = "Pods-FinancialGate"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D59B7140BE76FA6E43FA243B6443E418"
+            BlueprintIdentifier = "F6B86C2CFF32757B5E8A962C5C3A96BF"
             BuildableName = "Pods_FinancialGate.framework"
             BlueprintName = "Pods-FinancialGate"
             ReferencedContainer = "container:Pods.xcodeproj">

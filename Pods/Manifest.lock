@@ -2,17 +2,29 @@ PODS:
   - AWSCore (2.6.4)
   - AWSSES (2.6.4):
     - AWSCore (= 2.6.4)
+  - drCharts (1.4)
   - IQKeyboardManager (4.0.10)
 
 DEPENDENCIES:
   - AWSSES
+  - drCharts (from `https://github.com/Zomato/DR-charts.git`)
   - IQKeyboardManager (~> 4.0)
+
+EXTERNAL SOURCES:
+  drCharts:
+    :git: https://github.com/Zomato/DR-charts.git
+
+CHECKOUT OPTIONS:
+  drCharts:
+    :commit: 7515365aa0ccb0c5922b35f0fae6fcad5911cc14
+    :git: https://github.com/Zomato/DR-charts.git
 
 SPEC CHECKSUMS:
   AWSCore: f5611be1c3edc38dbf9d6da0a5d2b6c4841d1c05
   AWSSES: c04aaa4976c32a58f2f7f7447e7e1c028bcfe33e
+  drCharts: fd568784a514819ea7af12aabdd67e00ac359370
   IQKeyboardManager: 593ee99b88381f4b9ccb22bd680f22606351bd41
 
-PODFILE CHECKSUM: 45fcf67c11d1f9a4416ed138261b6330e17c62a6
+PODFILE CHECKSUM: 5e302ef3bd99cc2f00e6dc1587b9111b54e86b03
 
 COCOAPODS: 1.3.1

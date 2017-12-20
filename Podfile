@@ -12,7 +12,10 @@ target ‘FinancialGate' do
   # Pods for AWS 
   
   pod 'AWSSES'
-  
+
+  # pod 'drCharts', :git => 'https://github.com/Zomato/DR-charts.git'
+  pod 'drCharts', :git => 'https://github.com/Zomato/DR-charts.git'
+
 end
 
 

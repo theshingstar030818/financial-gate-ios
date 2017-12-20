@@ -14,6 +14,18 @@
 		04D1E0671F96C5C8005A2463 /* BRSupportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1E0661F96C5C8005A2463 /* BRSupportViewController.m */; };
 		04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB2D601F4EB73700EFFE41 /* BRSendBalanceViewController.m */; };
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
+		2157BE7C1FE7EB16007D906B /* BRMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */; };
+		2157BE8B1FE93976007D906B /* BRCoinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */; };
+		216652131FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216652121FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard */; };
+		216652181FEA13B500B2E974 /* MarketsViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216652171FEA13B500B2E974 /* MarketsViewStoryboard.storyboard */; };
+		219C9DBB1FEA42D700DBADD4 /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DA41FEA42D600DBADD4 /* BarChart.m */; };
+		219C9DBC1FEA42D700DBADD4 /* CircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DA71FEA42D600DBADD4 /* CircularChart.m */; };
+		219C9DBD1FEA42D700DBADD4 /* DRScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DAB1FEA42D600DBADD4 /* DRScrollView.m */; };
+		219C9DBE1FEA42D700DBADD4 /* HorizontalStackBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DAE1FEA42D600DBADD4 /* HorizontalStackBarChart.m */; };
+		219C9DBF1FEA42D700DBADD4 /* LegendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DB11FEA42D600DBADD4 /* LegendView.m */; };
+		219C9DC01FEA42D700DBADD4 /* LineGraphMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DB41FEA42D600DBADD4 /* LineGraphMarker.m */; };
+		219C9DC11FEA42D700DBADD4 /* MultiLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DB61FEA42D600DBADD4 /* MultiLineGraphView.m */; };
+		219C9DC21FEA42D700DBADD4 /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DB91FEA42D600DBADD4 /* PieChart.m */; };
 		22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22005B951C9276AF00F87733 /* BRLinkPlugin.swift */; };
 		220128D31C753C670001CAC1 /* BRSocketHelpers.c in Sources */ = {isa = PBXBuildFile; fileRef = 220128D11C753C670001CAC1 /* BRSocketHelpers.c */; };
 		220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220128D41C76E1550001CAC1 /* BRWebSocket.swift */; };
@@ -123,6 +135,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2157BE761FE7C819007D906B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2157BE711FE7C818007D906B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		2157BE781FE7C819007D906B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2157BE711FE7C818007D906B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
 		31D68B551C23B6C10030FAAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75D5F3B6191EC270004AB296 /* Project object */;
@@ -184,9 +210,35 @@
 		04F85C9A1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRApplyDebitCardViewController.h; sourceTree = "<group>"; };
 		04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRApplyDebitCardViewController.m; sourceTree = "<group>"; };
 		0516534243F1D53380EF46FF /* Pods-WatchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp/Pods-WatchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2157BE711FE7C818007D906B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		2157BE7A1FE7EAC4007D906B /* BRMarketsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRMarketsViewController.h; sourceTree = "<group>"; };
+		2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRMarketsViewController.m; sourceTree = "<group>"; };
+		2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRCoinDetailViewController.m; sourceTree = "<group>"; };
+		2157BE8C1FE93987007D906B /* BRCoinDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRCoinDetailViewController.h; sourceTree = "<group>"; };
+		216652121FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoinDetailViewStoryBoard.storyboard; sourceTree = "<group>"; };
+		216652171FEA13B500B2E974 /* MarketsViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketsViewStoryboard.storyboard; sourceTree = "<group>"; };
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DA1FAAE73600E03F7E /* AWSSES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSSES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		218AB6DC1FAAE73A00E03F7E /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		219C9DA31FEA42D600DBADD4 /* BarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChart.h; sourceTree = "<group>"; };
+		219C9DA41FEA42D600DBADD4 /* BarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChart.m; sourceTree = "<group>"; };
+		219C9DA61FEA42D600DBADD4 /* CircularChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularChart.h; sourceTree = "<group>"; };
+		219C9DA71FEA42D600DBADD4 /* CircularChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularChart.m; sourceTree = "<group>"; };
+		219C9DA81FEA42D600DBADD4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		219C9DA91FEA42D600DBADD4 /* DrGraphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrGraphs.h; sourceTree = "<group>"; };
+		219C9DAA1FEA42D600DBADD4 /* DRScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRScrollView.h; sourceTree = "<group>"; };
+		219C9DAB1FEA42D600DBADD4 /* DRScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRScrollView.m; sourceTree = "<group>"; };
+		219C9DAD1FEA42D600DBADD4 /* HorizontalStackBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalStackBarChart.h; sourceTree = "<group>"; };
+		219C9DAE1FEA42D600DBADD4 /* HorizontalStackBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalStackBarChart.m; sourceTree = "<group>"; };
+		219C9DB01FEA42D600DBADD4 /* LegendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegendView.h; sourceTree = "<group>"; };
+		219C9DB11FEA42D600DBADD4 /* LegendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegendView.m; sourceTree = "<group>"; };
+		219C9DB31FEA42D600DBADD4 /* LineGraphMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraphMarker.h; sourceTree = "<group>"; };
+		219C9DB41FEA42D600DBADD4 /* LineGraphMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraphMarker.m; sourceTree = "<group>"; };
+		219C9DB51FEA42D600DBADD4 /* MultiLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiLineGraphView.h; sourceTree = "<group>"; };
+		219C9DB61FEA42D600DBADD4 /* MultiLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiLineGraphView.m; sourceTree = "<group>"; };
+		219C9DB81FEA42D600DBADD4 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		219C9DB91FEA42D600DBADD4 /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
+		219C9DBA1FEA42D600DBADD4 /* drCharts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drCharts.h; sourceTree = "<group>"; };
 		21E59418CC6A98C0F0340A80 /* Pods-FinancialGate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialGate.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialGate/Pods-FinancialGate.release.xcconfig"; sourceTree = "<group>"; };
 		22005B951C9276AF00F87733 /* BRLinkPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BRLinkPlugin.swift; sourceTree = "<group>"; };
 		220128D11C753C670001CAC1 /* BRSocketHelpers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BRSocketHelpers.c; sourceTree = "<group>"; };
@@ -547,6 +599,97 @@
 			path = PDFcreation;
 			sourceTree = "<group>";
 		};
+		2157BE721FE7C818007D906B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2157BE771FE7C819007D906B /* Charts.framework */,
+				2157BE791FE7C819007D906B /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		219C9DA01FEA42D600DBADD4 /* dr-Charts */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DA11FEA42D600DBADD4 /* Classes */,
+				219C9DBA1FEA42D600DBADD4 /* drCharts.h */,
+			);
+			path = "dr-Charts";
+			sourceTree = "<group>";
+		};
+		219C9DA11FEA42D600DBADD4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DA21FEA42D600DBADD4 /* BarChart */,
+				219C9DA51FEA42D600DBADD4 /* CircularChart */,
+				219C9DA81FEA42D600DBADD4 /* Constants.h */,
+				219C9DA91FEA42D600DBADD4 /* DrGraphs.h */,
+				219C9DAA1FEA42D600DBADD4 /* DRScrollView.h */,
+				219C9DAB1FEA42D600DBADD4 /* DRScrollView.m */,
+				219C9DAC1FEA42D600DBADD4 /* HorizontalStackChart */,
+				219C9DAF1FEA42D600DBADD4 /* Legend */,
+				219C9DB21FEA42D600DBADD4 /* LineChart */,
+				219C9DB71FEA42D600DBADD4 /* PieChart */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		219C9DA21FEA42D600DBADD4 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DA31FEA42D600DBADD4 /* BarChart.h */,
+				219C9DA41FEA42D600DBADD4 /* BarChart.m */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		219C9DA51FEA42D600DBADD4 /* CircularChart */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DA61FEA42D600DBADD4 /* CircularChart.h */,
+				219C9DA71FEA42D600DBADD4 /* CircularChart.m */,
+			);
+			path = CircularChart;
+			sourceTree = "<group>";
+		};
+		219C9DAC1FEA42D600DBADD4 /* HorizontalStackChart */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DAD1FEA42D600DBADD4 /* HorizontalStackBarChart.h */,
+				219C9DAE1FEA42D600DBADD4 /* HorizontalStackBarChart.m */,
+			);
+			path = HorizontalStackChart;
+			sourceTree = "<group>";
+		};
+		219C9DAF1FEA42D600DBADD4 /* Legend */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DB01FEA42D600DBADD4 /* LegendView.h */,
+				219C9DB11FEA42D600DBADD4 /* LegendView.m */,
+			);
+			path = Legend;
+			sourceTree = "<group>";
+		};
+		219C9DB21FEA42D600DBADD4 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DB31FEA42D600DBADD4 /* LineGraphMarker.h */,
+				219C9DB41FEA42D600DBADD4 /* LineGraphMarker.m */,
+				219C9DB51FEA42D600DBADD4 /* MultiLineGraphView.h */,
+				219C9DB61FEA42D600DBADD4 /* MultiLineGraphView.m */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+		219C9DB71FEA42D600DBADD4 /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				219C9DB81FEA42D600DBADD4 /* PieChart.h */,
+				219C9DB91FEA42D600DBADD4 /* PieChart.m */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
 		229279961C695C1100C98E78 /* AppRuntime */ = {
 			isa = PBXGroup;
 			children = (
@@ -812,6 +955,10 @@
 				3647C69A1E9FC3980007997A /* BRTEST.m */,
 				361F0A6F1F1D41D300697328 /* RegisterViewController.h */,
 				361F0A701F1D41D300697328 /* RegisterViewController.m */,
+				2157BE7A1FE7EAC4007D906B /* BRMarketsViewController.h */,
+				2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */,
+				2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */,
+				2157BE8C1FE93987007D906B /* BRCoinDetailViewController.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -819,6 +966,7 @@
 		75D5F3B5191EC270004AB296 = {
 			isa = PBXGroup;
 			children = (
+				2157BE711FE7C818007D906B /* Charts.xcodeproj */,
 				75D5F3C7191EC270004AB296 /* FinancialGate */,
 				BAE12BE81B2DEE7F00895CC5 /* TodayExtension */,
 				75D5F3EC191EC270004AB296 /* FinancialGateTests */,
@@ -872,6 +1020,7 @@
 		75D5F3C7191EC270004AB296 /* FinancialGate */ = {
 			isa = PBXGroup;
 			children = (
+				219C9DA01FEA42D600DBADD4 /* dr-Charts */,
 				047C7EE71F510E8900AEECD5 /* PDFcreation */,
 				BAC7B6BF1BD9C2B500165B84 /* AppleWatch */,
 				752E289C19234A4700DB5A3C /* Models */,
@@ -884,6 +1033,8 @@
 				22F45A0F1C3329EB00B07A15 /* BRUserDefaultsConstants.h */,
 				75D5F3DF191EC270004AB296 /* Images.xcassets */,
 				75D5F3DC191EC270004AB296 /* Main.storyboard */,
+				216652121FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard */,
+				216652171FEA13B500B2E974 /* MarketsViewStoryboard.storyboard */,
 				75F2E0D21BE9803900EAE861 /* Launch Screen.storyboard */,
 				752E2898192349CE00DB5A3C /* FinancialGate.xcdatamodeld */,
 				75C0E3C11B1BA294007BC531 /* BIP39Words.plist */,
@@ -1183,6 +1334,12 @@
 			mainGroup = 75D5F3B5191EC270004AB296;
 			productRefGroup = 75D5F3BF191EC270004AB296 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2157BE721FE7C818007D906B /* Products */;
+					ProjectRef = 2157BE711FE7C818007D906B /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				75D5F3BD191EC270004AB296 /* FinancialGate */,
@@ -1192,6 +1349,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2157BE771FE7C819007D906B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 2157BE761FE7C819007D906B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2157BE791FE7C819007D906B /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 2157BE781FE7C819007D906B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		31D68B4E1C23B6C10030FAAA /* Resources */ = {
@@ -1205,6 +1379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216652131FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard in Resources */,
 				75D5F3E0191EC270004AB296 /* Images.xcassets in Resources */,
 				22FBC9701CE3A9D5009578B7 /* bread-buy.tar in Resources */,
 				047C7EF21F510F0E00AEECD5 /* BRPdfPageView.xib in Resources */,
@@ -1212,6 +1387,7 @@
 				75F2E0D31BE9803900EAE861 /* Launch Screen.storyboard in Resources */,
 				75C0E3BF1B1BA294007BC531 /* BIP39Words.plist in Resources */,
 				75E83CF61B5F997A0038FB70 /* coinflip.aiff in Resources */,
+				216652181FEA13B500B2E974 /* MarketsViewStoryboard.storyboard in Resources */,
 				755FC9ED1BF1DF1B00164ABB /* BREventConfirmView.xib in Resources */,
 				752E28F719235B3000DB5A3C /* FixedPeers.plist in Resources */,
 				75D5F3DE191EC270004AB296 /* Main.storyboard in Resources */,
@@ -1253,12 +1429,14 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSSES/AWSSES.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/drCharts/drCharts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSES.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/drCharts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1318,9 +1496,11 @@
 				3647C69B1E9FC3980007997A /* BRTEST.m in Sources */,
 				22F04A001C9714EF00F137D8 /* BRUserDefaultsSwitchCell.m in Sources */,
 				047C7EF01F510EF700AEECD5 /* BRPdfPageView.m in Sources */,
+				219C9DC01FEA42D700DBADD4 /* LineGraphMarker.m in Sources */,
 				752E28AA19234AE300DB5A3C /* BRAddressEntity.m in Sources */,
 				75AA5F55194143D5003F23BD /* BRBouncyBurgerButton.m in Sources */,
 				752E28AB19234AE300DB5A3C /* BRMerkleBlockEntity.m in Sources */,
+				2157BE7C1FE7EB16007D906B /* BRMarketsViewController.m in Sources */,
 				2292799A1C695CAE00C98E78 /* BRHTTPFileMiddleware.swift in Sources */,
 				BA7B53501BDA9A2800355E8D /* BRAppleWatchData.m in Sources */,
 				752E28AC19234AE300DB5A3C /* BRPeerEntity.m in Sources */,
@@ -1333,6 +1513,7 @@
 				229279A81C6960FC00C98E78 /* BRGeoLocationPlugin.swift in Sources */,
 				BA7B535C1BDBC36700355E8D /* BRTransaction+Utils.m in Sources */,
 				758DBD0E1980634900389E2A /* BRTxDetailViewController.m in Sources */,
+				219C9DC21FEA42D700DBADD4 /* PieChart.m in Sources */,
 				7548CF3719556FD700EF827F /* BRCopyLabel.m in Sources */,
 				229279A11C695D7900C98E78 /* BRBSPatch.swift in Sources */,
 				752E28D119234C3600DB5A3C /* BRKey.m in Sources */,
@@ -1348,10 +1529,12 @@
 				04DB2D611F4EB73700EFFE41 /* BRSendBalanceViewController.m in Sources */,
 				752E28CF19234C3600DB5A3C /* BRBIP39Mnemonic.m in Sources */,
 				229279A51C695DE700C98E78 /* BRAPIProxy.swift in Sources */,
+				219C9DBC1FEA42D700DBADD4 /* CircularChart.m in Sources */,
 				752E28DA19234C3600DB5A3C /* BRWallet.m in Sources */,
 				229279981C695C4200C98E78 /* BRHTTPServer.swift in Sources */,
 				22BF17471CDF831800AA41C6 /* Extensions.swift in Sources */,
 				220128D91C77B3100001CAC1 /* BRHTTPIndexMiddleware.swift in Sources */,
+				219C9DBF1FEA42D700DBADD4 /* LegendView.m in Sources */,
 				752E28DB19234C3600DB5A3C /* BRWalletManager.m in Sources */,
 				752E28D319234C3600DB5A3C /* BRMerkleBlock.m in Sources */,
 				22331F441D60312F00F29551 /* BRKVStoreObjects.swift in Sources */,
@@ -1365,10 +1548,14 @@
 				22F7B6D51D1479FA007CC848 /* BRBitID.swift in Sources */,
 				22005B961C9276AF00F87733 /* BRLinkPlugin.swift in Sources */,
 				752E28D519234C3600DB5A3C /* BRPaymentRequest.m in Sources */,
+				219C9DC11FEA42D700DBADD4 /* MultiLineGraphView.m in Sources */,
 				7525B619192453840041C0F2 /* BRNavigationBar.m in Sources */,
 				2292799C1C695CD600C98E78 /* BRHTTPRouter.swift in Sources */,
+				2157BE8B1FE93976007D906B /* BRCoinDetailViewController.m in Sources */,
 				75F2E0D61BEAA6A400EAE861 /* BRTxMetadataEntity.m in Sources */,
 				75878BC1192AEC3F002505AB /* BRReceiveViewController.m in Sources */,
+				219C9DBD1FEA42D700DBADD4 /* DRScrollView.m in Sources */,
+				219C9DBE1FEA42D700DBADD4 /* HorizontalStackBarChart.m in Sources */,
 				75878BBF192ACD46002505AB /* BRAmountViewController.m in Sources */,
 				759816E719357D6F005060EA /* BRBubbleView.m in Sources */,
 				047C7EEA1F510E8900AEECD5 /* RP_UIView_2_PDF.m in Sources */,
@@ -1389,6 +1576,7 @@
 				757C89521A2FCE420076B373 /* BRSettingsViewController.m in Sources */,
 				22649FED1DAABDB200042EBC /* BRCameraPlugin.swift in Sources */,
 				220128D51C76E1550001CAC1 /* BRWebSocket.swift in Sources */,
+				219C9DBB1FEA42D700DBADD4 /* BarChart.m in Sources */,
 				75D5F3D2191EC270004AB296 /* BRAppDelegate.m in Sources */,
 				759FBB36193290F600AB4465 /* BRRootViewController.m in Sources */,
 				752E289A192349CE00DB5A3C /* FinancialGate.xcdatamodeld in Sources */,
