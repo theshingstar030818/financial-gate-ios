@@ -10,9 +10,15 @@
 #import "BRCoinDetailViewController.h"
 #import "BRWalletManager.h"
 #import "DrGraphs.h"
+#import "Reachability.h"
+
+#define COIN_COMPARE_API = @"https://min-api.cryptocompare.com/data/";
+#define COIN_COMPARE_API_HIST_MIN = @"https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
+#define COIN_COMPARE_API_HIST_HR = @"https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
+#define COIN_COMPARE_API_HIST_1D = @"https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
 
 #define COIN_CELL_HEIGHT 75
-#define header_height 10
+#define header_height 1
 
 #define CHART_LINE 0
 #define CHART_HORIZONTAL_STACK 1
@@ -22,8 +28,10 @@
 
 @interface BRCoinDetailViewController ()<MultiLineGraphViewDataSource, MultiLineGraphViewDelegate, PieChartDataSource, PieChartDelegate, HorizontalStackBarChartDataSource, HorizontalStackBarChartDelegate, BarChartDataSource, BarChartDelegate, CircularChartDataSource, CircularChartDelegate>
 
+@property (nonatomic, strong) NSDictionary *histMINData, *histHRData, *histDAYData;
 @property (nonatomic, strong) NSArray *histMIN, *histHR, *histDAY;
 @property (nonatomic, strong) id coinStatusObserver;
+@property (nonatomic, strong) Reachability *reachability;
 
 @end
 
@@ -62,11 +70,50 @@
     return cell;
 }
 
+- (void)loadChartData:(UITableViewCell *)cell :(UITableView *)tableView
+{
+//    if (self.reachability.currentReachabilityStatus == NotReachable) {
+//        return;
+//    }
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    NSString *lcc = [manager localCurrencyCode];
+    NSString *coinCode = [_coin valueForKey:@"symbol"];
+    NSString *hwString = [@"https://min-api.cryptocompare.com/data/histohour?fsym=" stringByAppendingString:coinCode];
+    hwString = [hwString stringByAppendingString:@"&tsym="];
+    hwString = [hwString stringByAppendingString:lcc];
+    hwString = [hwString stringByAppendingString:@"&limit=60&aggregate=3&e=CCCAGG"];
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:hwString] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10.0];
+    NSLog(@"%@", req.URL.absoluteString);
+    [[[NSURLSession sharedSession] dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+         if (error != nil) {
+             NSLog(@"unable to fetch market tickers: %@", error);
+             return;
+         }
+        
+        NSLog(@"Got data for : %@ ", coinCode);
+        
+        _histHRData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        _histHR =[_histHRData valueForKey:@"Data"];
+//        [self initializeWithChartType:ChartTypeLine :self.tableView];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.histHR.count > 0) {
+                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:2]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+            }else{
+                [self.tableView reloadData];
+            }
+        });
+//        [self.tableView reloadData];
+    }] resume];
+}
+
 #pragma Mark CreateLineGraph
 - (UITableViewCell *)createLineGraph:(UITableView*)tableView{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"line_chart_cell"];
     UIView *graphView = (id)[cell viewWithTag:8];
-    MultiLineGraphView *graph = [[MultiLineGraphView alloc] initWithFrame:CGRectMake(0, header_height, WIDTH(cell), 250.0 - header_height)];
+    MultiLineGraphView *graph = [[MultiLineGraphView alloc] initWithFrame:CGRectMake(30, header_height, WIDTH(cell), 250.0)];
     [graph setDelegate:self];
     [graph setDataSource:self];
     [graph setLegendViewType:LegendTypeHorizontal];
@@ -105,11 +152,7 @@
 }
 
 - (UIColor *)colorForTheLineWithLineNumber:(NSInteger)lineNumber{
-    NSInteger aRedValue = arc4random()%255;
-    NSInteger aGreenValue = arc4random()%255;
-    NSInteger aBlueValue = arc4random()%255;
-    UIColor *randColor = [UIColor colorWithRed:aRedValue/255.0f green:aGreenValue/255.0f blue:aBlueValue/255.0f alpha:1.0f];
-    return randColor;
+    return [UIColor whiteColor];
 }
 
 - (CGFloat)widthForTheLineWithLineNumber:(NSInteger)lineNumber{
@@ -117,7 +160,8 @@
 }
 
 - (NSString *)nameForTheLineWithLineNumber:(NSInteger)lineNumber{
-    return [NSString stringWithFormat:@"data %ld",(long)lineNumber];
+//    return [NSString stringWithFormat:@"BTC %ld",(long)lineNumber];
+    return @"";
 }
 
 - (BOOL)shouldFillGraphWithLineNumber:(NSInteger)lineNumber{
@@ -146,7 +190,7 @@
 - (BOOL)shouldDrawPointsWithLineNumber:(NSInteger)lineNumber{
     switch (lineNumber) {
         case 0:
-            return true;
+            return false;
             break;
         case 1:
             return false;
@@ -171,8 +215,14 @@
         case 0:
         {
             NSMutableArray *array = [[NSMutableArray alloc] init];
-            for (int i = 20; i < 30; i++) {
-                [array addObject:[NSNumber numberWithLong:random() % 100]];
+            if(_histHR.count>0){
+                for (int i = 0; i <= _histHR.count-1; i++) {
+                    [array addObject:[_histHR[i] valueForKey:@"close"]];
+                }
+            }else{
+                for (int i = 21; i <= 21; i++) {
+                    [array addObject:[NSString stringWithFormat:@"%d", i]];
+                }
             }
             return array;
         }
@@ -220,8 +270,14 @@
         case 0:
         {
             NSMutableArray *array = [[NSMutableArray alloc] init];
-            for (int i = 21; i <= 30; i++) {
-                [array addObject:[NSString stringWithFormat:@"%d Jun", i]];
+            if(_histHR.count>0){
+                for (int i = 0; i <= _histHR.count-1; i++) {
+                    [array addObject:[NSString stringWithFormat:@"%d", i]];
+                }
+            }else{
+                for (int i = 21; i <= 21; i++) {
+                    [array addObject:[NSString stringWithFormat:@"%d", i]];
+                }
             }
             return array;
         }
@@ -268,28 +324,32 @@
 }
 
 - (UIView *)customViewForLineChartTouchWithXValue:(id)xValue andYValue:(id)yValue{
+    
+    BRWalletManager *manager = [BRWalletManager sharedInstance];
+    NSString *lcc = [manager localCurrencyCode];
+    
     UIView *view = [[UIView alloc] init];
     [view setBackgroundColor:[UIColor whiteColor]];
     [view.layer setCornerRadius:4.0F];
     [view.layer setBorderWidth:1.0F];
     [view.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [view.layer setShadowColor:[[UIColor blackColor] CGColor]];
+    [view.layer setShadowColor:[[UIColor whiteColor] CGColor]];
     [view.layer setShadowRadius:2.0F];
     [view.layer setShadowOpacity:0.3F];
     
     CGFloat y = 0;
     CGFloat width = 0;
-    for (int i = 0; i < 3 ; i++) {
+//    for (int i = 0; i < 3 ; i++) {
         UILabel *label = [[UILabel alloc] init];
         [label setFont:[UIFont systemFontOfSize:12]];
         [label setTextAlignment:NSTextAlignmentCenter];
-        [label setText:[NSString stringWithFormat:@"Line Data:y = %@ x = %@", yValue, xValue]];
+        [label setText:[NSString stringWithFormat:@"price = %@ %@ date = %@", lcc, yValue, xValue]];
         [label setFrame:CGRectMake(0, y, 200, 30)];
         [view addSubview:label];
         
         width = WIDTH(label);
         y = BOTTOM(label);
-    }
+//    }
     
     [view setFrame:CGRectMake(0, 0, width, y)];
     return view;
@@ -297,11 +357,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadChartData:[[self tableView] dequeueReusableCellWithIdentifier:@"line_chart_cell"] :[self tableView]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    self.reachability = [Reachability reachabilityForInternetConnection];
     if (! self.coinStatusObserver) {
         NSLog(@"need to add observer here ");
     }
@@ -433,8 +494,8 @@
             break;
         }
         case 2: {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"line_chart_cell"];
             cell = [self initializeWithChartType:ChartTypeLine :tableView];
-//            [cell setBackgroundColor:[UIColor whiteColor]];
             [self setBackgroundForCell:cell indexPath:indexPath];
             break;
         }

@@ -159,7 +159,6 @@
     }
     
     [self.graphView setNeedsDisplay];
-    
     [self.graphScrollView addSubview:self.graphView];
     
     [self.graphScrollView setNeedsDisplay];
