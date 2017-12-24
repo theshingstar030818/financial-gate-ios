@@ -490,12 +490,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRSendViewController.m"
-                  timestampString = "535674772.527251"
+                  timestampString = "535784899.914466"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "1612"
                   endingLineNumber = "1612"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "84">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -505,12 +505,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRSendViewController.m"
-                  timestampString = "535674772.531472"
+                  timestampString = "535784899.917409"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1612"
-                  endingLineNumber = "1612"
-                  offsetFromSymbolStart = "15">
+                  startingLineNumber = "1613"
+                  endingLineNumber = "1613"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -650,12 +650,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRTransactionEntity.m"
-                  timestampString = "535674772.570733"
+                  timestampString = "535784899.932083"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "117"
                   endingLineNumber = "117"
-                  offsetFromSymbolStart = "1256">
+                  offsetFromSymbolStart = "1124">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -665,12 +665,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRTransactionEntity.m"
-                  timestampString = "535674772.574434"
+                  timestampString = "535784899.93418"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "117"
                   endingLineNumber = "117"
-                  offsetFromSymbolStart = "1264">
+                  offsetFromSymbolStart = "1140">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1450,12 +1450,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRSendViewController.m"
-                  timestampString = "535674772.709906"
+                  timestampString = "535784900.014838"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "666"
                   endingLineNumber = "666"
-                  offsetFromSymbolStart = "1605">
+                  offsetFromSymbolStart = "1468">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1465,12 +1465,12 @@
                   moduleName = "FinancialGate"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tanzeel/Development/financial-gate-ios/BreadWallet/BRSendViewController.m"
-                  timestampString = "535674772.71357"
+                  timestampString = "535784900.018693"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "666"
                   endingLineNumber = "666"
-                  offsetFromSymbolStart = "1613">
+                  offsetFromSymbolStart = "1484">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2154,7 +2154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.320811"
+            timestampString = "535788334.391617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "909"
@@ -2170,7 +2170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.320939"
+            timestampString = "535788334.392212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "908"
@@ -2186,7 +2186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321024"
+            timestampString = "535788334.392316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "913"
@@ -2202,7 +2202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321104"
+            timestampString = "535788334.392392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "916"
@@ -2218,7 +2218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321159"
+            timestampString = "535788334.392456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "918"
@@ -2426,7 +2426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.32141"
+            timestampString = "535788334.39277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1232"
@@ -2474,7 +2474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321562"
+            timestampString = "535788334.392906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1251"
@@ -2490,7 +2490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321627"
+            timestampString = "535788334.393008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1241"
@@ -2506,7 +2506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321676"
+            timestampString = "535788334.393127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1242"
@@ -2522,7 +2522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321723"
+            timestampString = "535788334.393231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1243"
@@ -2538,7 +2538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.32177"
+            timestampString = "535788334.393342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "897"
@@ -2554,7 +2554,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.321817"
+            timestampString = "535788334.393442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "860"
@@ -3290,7 +3290,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.322669"
+            timestampString = "535788334.394139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1143"
@@ -3306,7 +3306,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.322853"
+            timestampString = "535788334.394265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1141"
@@ -3322,7 +3322,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.322932"
+            timestampString = "535788334.394361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1109"
@@ -3402,7 +3402,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.323071"
+            timestampString = "535788334.394532"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "938"
@@ -3418,7 +3418,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.323119"
+            timestampString = "535788334.394627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "287"
@@ -3434,7 +3434,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.323163"
+            timestampString = "535788334.394717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1093"
@@ -3450,7 +3450,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.323207"
+            timestampString = "535788334.394814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1095"
@@ -3466,7 +3466,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.32325"
+            timestampString = "535788334.394935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "925"
@@ -3482,7 +3482,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRWalletManager.m"
-            timestampString = "535670468.323292"
+            timestampString = "535788334.395047"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "282"
@@ -3766,7 +3766,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRAppDelegate.m"
@@ -3898,11 +3898,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRMarketsViewController.m"
-            timestampString = "535674861.97074"
+            timestampString = "535788334.395747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-loadMarketsTicker"
             landmarkType = "7">
          </BreakpointContent>
@@ -3962,11 +3962,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.971474"
+            timestampString = "535788334.396867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
+            startingLineNumber = "597"
+            endingLineNumber = "597"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3978,11 +3978,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.978994"
+            timestampString = "535788334.401677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "423"
-            endingLineNumber = "423"
+            startingLineNumber = "587"
+            endingLineNumber = "587"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3990,15 +3990,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.983432"
+            timestampString = "535788334.405674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "337"
-            endingLineNumber = "337"
+            startingLineNumber = "476"
+            endingLineNumber = "476"
             landmarkName = "-customViewForLineChartTouchWithXValue:andYValue:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4009,12 +4009,60 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.984878"
+            filePath = "BreadWallet/dr-Charts/Classes/LineChart/MultiLineGraphView.m"
+            timestampString = "535788334.408244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "358"
+            endingLineNumber = "358"
+            landmarkName = "-createGraph"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.409178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "697"
+            endingLineNumber = "697"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.410661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "711"
+            endingLineNumber = "711"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.412131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
             landmarkName = "-dataForXAxisWithLineNumber:"
             landmarkType = "7">
          </BreakpointContent>
@@ -4022,16 +4070,160 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/dr-Charts/Classes/LineChart/MultiLineGraphView.m"
+            timestampString = "535788334.41333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-getDataFromDataSource"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRMarketsViewController.m"
+            timestampString = "535788334.413589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "431"
+            endingLineNumber = "431"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.986144"
+            filePath = "BreadWallet/BRMarketsViewController.m"
+            timestampString = "535788334.413922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-loadMarketsTicker"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRMarketsViewController.m"
+            timestampString = "535788334.414177"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "-setTickers:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRMarketsViewController.m"
+            timestampString = "535788334.414459"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRMarketsViewController.m"
+            timestampString = "535788334.414759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
+            landmarkName = "-setTickers:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.415019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-loadChartData::"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.415171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-loadChartData::"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.41529"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-loadChartData::"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.415406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-rangeChangeButton:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4042,12 +4234,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreadWallet/BRCoinDetailViewController.m"
-            timestampString = "535674861.987921"
+            timestampString = "535788334.415508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-rangeChangeButton:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.415624"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-rangeChangeButton:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.41573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "-rangeChangeButton:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreadWallet/BRCoinDetailViewController.m"
+            timestampString = "535788334.415859"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-rangeChangeButton:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

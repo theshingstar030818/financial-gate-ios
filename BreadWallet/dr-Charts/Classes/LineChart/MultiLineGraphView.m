@@ -61,8 +61,8 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        self.drawGridY = TRUE;
-        self.drawGridX = TRUE;
+        self.drawGridY = FALSE;
+        self.drawGridX = FALSE;
         
         self.gridLineColor = [UIColor lightGrayColor];
         self.gridLineWidth = 0.3;
@@ -75,7 +75,7 @@
         self.markerTextColor = [UIColor whiteColor];
         self.markerWidth = 0.4;
         
-        self.showLegend = TRUE;
+        self.showLegend = FALSE;
         self.legendViewType = LegendTypeVertical;
         
         self.showMarker = TRUE;
@@ -159,6 +159,7 @@
     }
     
     [self.graphView setNeedsDisplay];
+    
     [self.graphScrollView addSubview:self.graphView];
     
     [self.graphScrollView setNeedsDisplay];

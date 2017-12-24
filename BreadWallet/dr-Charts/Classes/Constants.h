@@ -16,12 +16,12 @@
 #define PH                                              [[UIScreen mainScreen].bounds.size.height]
 #define PW                                              [[UIScreen mainScreen].bounds.size.width]
 
-#define INNER_PADDING 10
-#define SIDE_PADDING 15
-#define LEGEND_VIEW 15
-#define OFFSET_X 30
-#define OFFSET_Y 30
-#define OFFSET_PADDING 5
+#define INNER_PADDING 0
+#define SIDE_PADDING 0
+#define LEGEND_VIEW 0
+#define OFFSET_X 0
+#define OFFSET_Y 0
+#define OFFSET_PADDING 0
 
 #define DEG2RAD(angle) angle*M_PI/180.0
 

@@ -19,19 +19,15 @@
 #import "BREventManager.h"
 #import "FinancialGate-Swift.h"
 #import <WebKit/WebKit.h>
-
 #import "Reachability.h"
+
+
+
 #define COIN_MARKET_CAP_TRACKER     @"COIN_MARKET_CAP_TRACKER"
 #define COIN_MARKET_CAP_TRACKER_TIME     @"COIN_MARKET_CAP_TRACKER_TIME"
 #define COIN_MARKET_CAP_URL         @"https://api.coinmarketcap.com/v1/ticker/?"
 #define COIN_MARKET_CAP_CONVERT     @"convert="
 #define COIN_MARKET_CAP_LIMIT       @"limit="
-
-#define COIN_COMPARE_API = @"https://min-api.cryptocompare.com/data/";
-#define COIN_COMPARE_API_HIST_MIN = @"https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
-#define COIN_COMPARE_API_HIST_HR = @"https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
-#define COIN_COMPARE_API_HIST_1D = @"https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=USD&limit=60&aggregate=3&e=CCCAGG";
-
 
 #define TRANSACTION_CELL_HEIGHT 75
 
@@ -289,12 +285,12 @@ static NSString *dateFormat(NSString *template)
 - (void)setTickers:(NSArray *)tickers {
     _tickers = @[];
     NSLog(@"Tickers: %long", tickers.count);
-    if (tickers.count <= 5) self.moreTx = NO;
-    _tickers = (self.moreTx) ? [tickers subarrayWithRange:NSMakeRange(0, tickers.count)] : [tickers copy];
+    if (tickers.count <= 5) self.moreTickers = NO;
+    _tickers = (self.moreTickers) ? [tickers subarrayWithRange:NSMakeRange(0, tickers.count)] : [tickers copy];
     if (! [BRWalletManager sharedInstance].didAuthenticate) {
         for (NSDictionary *ticker in _tickers) {
             _tickers = [_tickers subarrayWithRange:NSMakeRange(0, [_tickers indexOfObject:ticker])];
-            self.moreTx = YES;
+            self.moreTickers = YES;
             break;
         }
     }
