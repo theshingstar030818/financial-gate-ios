@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="GNQ-ib-V5N">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="AhL-cz-Wkj" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q2y-yA-oyo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="NM6-mY-5hW">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shironeko" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-Dl-EhO">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="zoc-Dl-EhO" secondAttribute="height" multiplier="67:41" id="2u7-gQ-bEg"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSAKA Osaka" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0U-u4-iju">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="e5z-9u-LpZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnB-ql-HOe">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="zFM-1H-OTV"/>
+                                    </constraints>
+                                    <string key="text">Business hours: (lunch time: 11: 
+30-16 
+: 00) 17: 00-24: 00-5: 5 - 5 KS Building Shinsaibashi Musashi Chuo-ku Chuo-ku Osaka prefecture 542-0085 Osaka City phone number: 06-6226-7220 Business hours: 00 
+regular holiday: Monday 
+homepage: http://www.ck-shironeko.com/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOt-Fq-GsN">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="Nsh-pr-Nfw"/>
+                                    </constraints>
+                                    <string key="text">chef's kichen white cat
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="zoc-Dl-EhO" firstAttribute="leading" secondItem="MOt-Fq-GsN" secondAttribute="leading" id="9Ss-v5-TUn"/>
+                                <constraint firstItem="zoc-Dl-EhO" firstAttribute="top" secondItem="I0U-u4-iju" secondAttribute="bottom" constant="8" symbolic="YES" id="EcJ-9R-FA0"/>
+                                <constraint firstItem="I0U-u4-iju" firstAttribute="leading" secondItem="NM6-mY-5hW" secondAttribute="leading" id="F8j-WR-qsa"/>
+                                <constraint firstItem="MOt-Fq-GsN" firstAttribute="top" secondItem="zoc-Dl-EhO" secondAttribute="bottom" constant="16" id="IAG-xL-4DV"/>
+                                <constraint firstItem="I0U-u4-iju" firstAttribute="leading" secondItem="rnB-ql-HOe" secondAttribute="leading" constant="-8" id="LmH-fQ-CUF"/>
+                                <constraint firstItem="rnB-ql-HOe" firstAttribute="top" secondItem="MOt-Fq-GsN" secondAttribute="bottom" constant="3" id="NaE-lg-0YF"/>
+                                <constraint firstItem="I0U-u4-iju" firstAttribute="trailing" secondItem="rnB-ql-HOe" secondAttribute="trailing" constant="8" id="T1S-mp-MUn"/>
+                                <constraint firstItem="I0U-u4-iju" firstAttribute="top" secondItem="NM6-mY-5hW" secondAttribute="top" constant="29" id="aCp-V5-oq6"/>
+                                <constraint firstItem="I0U-u4-iju" firstAttribute="centerX" secondItem="NM6-mY-5hW" secondAttribute="centerX" id="jgG-ED-5I2"/>
+                                <constraint firstItem="zoc-Dl-EhO" firstAttribute="trailing" secondItem="MOt-Fq-GsN" secondAttribute="trailing" id="kma-8K-6b4"/>
+                                <constraint firstItem="MOt-Fq-GsN" firstAttribute="centerX" secondItem="rnB-ql-HOe" secondAttribute="centerX" id="w1E-un-5Au"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="AhL-cz-Wkj" id="rjU-fx-Ez1"/>
+                            <outlet property="delegate" destination="AhL-cz-Wkj" id="IHo-2B-0gs"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQC-UK-PNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shironeko" width="335" height="205"/>
+    </resources>
+</document>

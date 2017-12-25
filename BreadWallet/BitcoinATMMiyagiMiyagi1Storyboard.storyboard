@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="1Fn-Kc-4gf">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="1yi-aM-ffG" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dhj-6E-khr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="DsH-PW-JEO">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tejinaya_sumb-1" translatesAutoresizingMaskIntoConstraints="NO" id="djD-dB-Ygu">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="djD-dB-Ygu" secondAttribute="height" multiplier="67:41" id="6TR-np-FQM"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBh-Jf-NbI">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="Bop-3U-qBW"/>
+                                    </constraints>
+                                    <string key="text">MIYAGI Miyagi
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="It4-Gb-Grb">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="R0I-wn-mMS"/>
+                                    </constraints>
+                                    <string key="text">2 9-8 Kokubuncho Aoba-ku Sendai, Miyagi 980-0803 FL Sendai Building 4F 
+Telephone Number: 022-797-7068 
+Opening Hours: 19: 00-24: 00 
+Closed: Sunday Closed 
+Homepage: https: // m.facebook.com/tejinaya.sendai/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-vs-TmL">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="Sqk-Ef-y1S"/>
+                                    </constraints>
+                                    <string key="text">Magician Sendai store
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="RXT-vs-TmL" firstAttribute="top" secondItem="djD-dB-Ygu" secondAttribute="bottom" constant="16" id="7BW-hd-JtT"/>
+                                <constraint firstItem="djD-dB-Ygu" firstAttribute="trailing" secondItem="RXT-vs-TmL" secondAttribute="trailing" id="Dhx-IO-Ggu"/>
+                                <constraint firstItem="It4-Gb-Grb" firstAttribute="top" secondItem="RXT-vs-TmL" secondAttribute="bottom" constant="3" id="I7g-d1-NuA"/>
+                                <constraint firstItem="djD-dB-Ygu" firstAttribute="top" secondItem="OBh-Jf-NbI" secondAttribute="bottom" constant="8" symbolic="YES" id="KDF-0a-kvQ"/>
+                                <constraint firstItem="OBh-Jf-NbI" firstAttribute="leading" secondItem="It4-Gb-Grb" secondAttribute="leading" constant="-8" id="LEy-MY-j1c"/>
+                                <constraint firstItem="OBh-Jf-NbI" firstAttribute="leading" secondItem="DsH-PW-JEO" secondAttribute="leading" id="RFQ-pR-b71"/>
+                                <constraint firstItem="RXT-vs-TmL" firstAttribute="centerX" secondItem="It4-Gb-Grb" secondAttribute="centerX" id="doU-q5-nRw"/>
+                                <constraint firstItem="djD-dB-Ygu" firstAttribute="leading" secondItem="RXT-vs-TmL" secondAttribute="leading" id="ghD-4p-cik"/>
+                                <constraint firstItem="OBh-Jf-NbI" firstAttribute="trailing" secondItem="It4-Gb-Grb" secondAttribute="trailing" constant="8" id="qIR-Nx-8LS"/>
+                                <constraint firstItem="OBh-Jf-NbI" firstAttribute="centerX" secondItem="DsH-PW-JEO" secondAttribute="centerX" id="rGY-qR-tMi"/>
+                                <constraint firstItem="OBh-Jf-NbI" firstAttribute="top" secondItem="DsH-PW-JEO" secondAttribute="top" constant="29" id="tI1-xk-WtY"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="1yi-aM-ffG" id="1O7-wt-Vcb"/>
+                            <outlet property="delegate" destination="1yi-aM-ffG" id="oGb-bK-ezS"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDV-sc-Ad6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tejinaya_sumb-1" width="335" height="205"/>
+    </resources>
+</document>

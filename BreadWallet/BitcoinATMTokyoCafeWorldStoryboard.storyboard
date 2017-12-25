@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="oPj-Zb-SZd">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="aap-DL-Zmy" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ghR-d6-lf1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="xMW-mb-6vm">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldstar" translatesAutoresizingMaskIntoConstraints="NO" id="Ldj-kI-IOV">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ldj-kI-IOV" secondAttribute="height" multiplier="67:41" id="wed-48-lrn"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOKYO tokyo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-fu-kr0">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="Y24-CL-Eaa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL1-Gg-vWC">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="cU1-tc-Ygy"/>
+                                    </constraints>
+                                    <string key="text">106-0032 Roppongi, Minato-ku, Tokyo 5-1-3 Gotoubiru B1F 
+Telephone number: 03-6459-2046 
+Hours: 11: 00 ~ next 5:00 
+regular holiday: a day, seven days a week 
+Homepage: Http://Worldstarcafe.Com /</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egF-po-5js">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="olb-gd-BuM"/>
+                                    </constraints>
+                                    <string key="text">WORLD STAR CAFE (World Star Cafe)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="6Fm-fu-kr0" firstAttribute="trailing" secondItem="xL1-Gg-vWC" secondAttribute="trailing" constant="8" id="AfW-EA-BKP"/>
+                                <constraint firstItem="6Fm-fu-kr0" firstAttribute="top" secondItem="xMW-mb-6vm" secondAttribute="top" constant="29" id="Lc2-we-yLN"/>
+                                <constraint firstItem="egF-po-5js" firstAttribute="centerX" secondItem="xL1-Gg-vWC" secondAttribute="centerX" id="O5X-qM-3rz"/>
+                                <constraint firstItem="Ldj-kI-IOV" firstAttribute="trailing" secondItem="egF-po-5js" secondAttribute="trailing" id="TXS-ng-ixb"/>
+                                <constraint firstItem="egF-po-5js" firstAttribute="top" secondItem="Ldj-kI-IOV" secondAttribute="bottom" constant="16" id="Umg-VS-59X"/>
+                                <constraint firstItem="6Fm-fu-kr0" firstAttribute="leading" secondItem="xMW-mb-6vm" secondAttribute="leading" id="XcC-ve-tim"/>
+                                <constraint firstItem="xL1-Gg-vWC" firstAttribute="top" secondItem="egF-po-5js" secondAttribute="bottom" constant="3" id="lCk-zC-aib"/>
+                                <constraint firstItem="Ldj-kI-IOV" firstAttribute="leading" secondItem="egF-po-5js" secondAttribute="leading" id="oUZ-V1-uAw"/>
+                                <constraint firstItem="6Fm-fu-kr0" firstAttribute="leading" secondItem="xL1-Gg-vWC" secondAttribute="leading" constant="-8" id="tth-XL-p1g"/>
+                                <constraint firstItem="Ldj-kI-IOV" firstAttribute="top" secondItem="6Fm-fu-kr0" secondAttribute="bottom" constant="8" symbolic="YES" id="uQB-uZ-oqi"/>
+                                <constraint firstItem="6Fm-fu-kr0" firstAttribute="centerX" secondItem="xMW-mb-6vm" secondAttribute="centerX" id="z2A-vp-Pa4"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="aap-DL-Zmy" id="8Ap-xT-IvR"/>
+                            <outlet property="delegate" destination="aap-DL-Zmy" id="qpa-Va-kaK"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rZ-70-4OF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="worldstar" width="335" height="205"/>
+    </resources>
+</document>

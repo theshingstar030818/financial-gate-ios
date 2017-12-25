@@ -71,6 +71,7 @@ static NSString *dateFormat(NSString *template) {
 @property (nonatomic, strong) UIImageView *wallpaper;
 @property (nonatomic, strong) BRWebViewController *buyController;
 
+
 @end
 
 @implementation BROptionViewController
@@ -428,7 +429,7 @@ static NSString *dateFormat(NSString *template) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -436,37 +437,47 @@ static NSString *dateFormat(NSString *template) {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:actionIdent];
 
     switch (indexPath.row) {
-        case 0:
+        case 0:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Support", nil);
             break;
-            
-        case 1:
+        }
+        case 1:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Transaction History", nil);
             break;
+        }
             
-        case 2:
+        case 2:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Apply For Debit Card", nil);
             cell.imageView.image = [UIImage imageNamed:@""];
             cell.accessoryType = UITableViewCellAccessoryNone;
             break;
             
-        case 3:
+        }
+        case 3:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Import Private Key", nil);
             break;
+        }
             
-        case 4:
+        case 4:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Settings", nil);
             break;
+        }
 
-        case 5:
+        case 5:{
             cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
             cell.textLabel.text = NSLocalizedString(@"Markets", nil);
             break;
+        }
+        case 6:{
+            cell = [tableView dequeueReusableCellWithIdentifier:disclosureIdent];
+            cell.textLabel.text = NSLocalizedString(@"Bitcoin ATMs", nil);
+            break;
+        }
     }
 
     [self setBackgroundForCell:cell tableView:tableView indexPath:indexPath];
@@ -591,8 +602,19 @@ static NSString *dateFormat(NSString *template) {
             [self.navigationController pushViewController:destinationController animated:YES];
         }
             break;
-        default:
+        case 6: // Bitcoin ATMs
+        {
+            [BREventManager saveEvent:@"Bitcoin:ATMs"];
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BitcoinATMStoryboard"
+                                                                 bundle:nil];
+            destinationController = [storyboard instantiateViewControllerWithIdentifier:@"BRBitcoinATM"];
+            [self.navigationController pushViewController:destinationController animated:YES];
+        }
             break;
+        default:
+        {
+            break;
+        }
     }
 }
 

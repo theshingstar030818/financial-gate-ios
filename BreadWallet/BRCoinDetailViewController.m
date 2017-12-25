@@ -95,7 +95,6 @@
     
     if(sender.tag == 41){
         NSLog(@"Today"); // 24 hr and Today
-        
         _limit = @"24";
         _apiCall = @"histohour";
         self.histoRange = hours24;

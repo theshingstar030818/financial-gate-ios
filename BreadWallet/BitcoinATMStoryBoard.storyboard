@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATM-->
+        <scene sceneID="fIs-g1-tWA">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="ytv-Q3-EPP" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fWC-6H-i6P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="vCC-rm-mUc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="3364"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallstreet" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-or-EVC">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="5xw-or-EVC" secondAttribute="height" multiplier="67:41" id="gYX-3h-TRh"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOKYO tokyo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHo-WY-R3x">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078431372548" green="0.32941176470588235" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.011764705882352941" green="0.15294117647058825" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="Gcv-gA-qsj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rie-gw-BKb">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="mwU-ab-x4G"/>
+                                    </constraints>
+                                    <string key="text">Sun City Hall, Minato-ku, Tokyo 106-0032 3-15-22 Sunshine Central Building 1F 
+Telephone number: 03-6804-5417 
+Opening hours: 18: 00 ~ 5:00 
+Closed holiday: Sunday 
+homepage: http://wallstreetcafejp.com/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXN-G1-mQc">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="icX-s1-vjt"/>
+                                    </constraints>
+                                    <string key="text">WALL STREET CAFE (Wall Street Cafe)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jva-EF-Jcg">
+                                    <rect key="frame" x="20" y="438" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294642857144" blue="0.7244698660714286" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="tokyo1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="57V-CV-5d1"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.011764705882352941" green="0.15294117647058825" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="JJT-9D-49M"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="worldstar" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-Lm-xka">
+                                    <rect key="frame" x="20" y="547" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="8rZ-Lm-xka" secondAttribute="height" multiplier="67:41" id="Kni-vJ-cji"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOKYO tokyo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-ei-hTk">
+                                    <rect key="frame" x="0.0" y="506" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="ipr-VC-JTp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lR-6u-Npj">
+                                    <rect key="frame" x="8" y="797" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="pYc-HA-sNo"/>
+                                    </constraints>
+                                    <string key="text">106-0032 Roppongi, Minato-ku, Tokyo 5-1-3 Gotoubiru B1F 
+Telephone number: 03-6459-2046 
+Hours: 11: 00 ~ next 5:00 
+regular holiday: a day, seven days a week 
+Homepage: Http://Worldstarcafe.Com /</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5p-PZ-9Ls">
+                                    <rect key="frame" x="20" y="768" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="DEJ-LA-XOq"/>
+                                    </constraints>
+                                    <string key="text">WORLD STAR CAFE (World Star Cafe)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-vP-SSv">
+                                    <rect key="frame" x="20" y="915" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="tokyo2"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="T9O-z0-4VM"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="gka-xa-pfE"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shironeko" translatesAutoresizingMaskIntoConstraints="NO" id="JS4-RY-Vbq">
+                                    <rect key="frame" x="20" y="1017" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="JS4-RY-Vbq" secondAttribute="height" multiplier="67:41" id="cuH-d7-31O"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSAKA Osaka" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIs-ll-Ckp">
+                                    <rect key="frame" x="0.0" y="976" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="23l-ml-sDn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oN-2a-Wth">
+                                    <rect key="frame" x="8" y="1267" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="d4y-CO-Wku"/>
+                                    </constraints>
+                                    <string key="text">Business hours: (lunch time: 11: 
+30-16 
+: 00) 17: 00-24: 00-5: 5 - 5 KS Building Shinsaibashi Musashi Chuo-ku Chuo-ku Osaka prefecture 542-0085 Osaka City phone number: 06-6226-7220 Business hours: 00 
+regular holiday: Monday 
+homepage: http://www.ck-shironeko.com/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fep-wA-n0M">
+                                    <rect key="frame" x="20" y="1238" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="lXb-J4-FNz"/>
+                                    </constraints>
+                                    <string key="text">chef's kichen white cat
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnm-Dk-xjD">
+                                    <rect key="frame" x="20" y="1385" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="osaka1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="t6W-dH-aVe"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="y8L-YX-WZL"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petit_sumb" translatesAutoresizingMaskIntoConstraints="NO" id="SUP-9t-pVl">
+                                    <rect key="frame" x="20" y="1490" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="SUP-9t-pVl" secondAttribute="height" multiplier="67:41" id="JZp-Ze-tDR"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIROSHIMA Hiroshima" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I31-kU-ibu">
+                                    <rect key="frame" x="0.0" y="1449" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="GgB-AT-tf3"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFX-fg-uvk">
+                                    <rect key="frame" x="8" y="1740" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="BH4-dN-fBQ"/>
+                                    </constraints>
+                                    <string key="text">2 - 9 Hashimoto cho, Naka-ku, Hiroshima-ken 
+730-0015 Hi-life Hashimoto-cho 1st F : No. 082-836-7735 
+Business hours: 9: 00-24: 00 
+Closed holiday: irregular holidays 
+Homepage: http: // petit -colon.com/
+
+　Click here for details of installation site
+
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FE-ZN-0uV">
+                                    <rect key="frame" x="20" y="1711" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="2PQ-Dh-VJj"/>
+                                    </constraints>
+                                    <string key="text">Petit Colon (petit colon)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-7e-cVy">
+                                    <rect key="frame" x="20" y="1858" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="hiroshima1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="uqu-n2-pJo"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="PZH-jn-eOh"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tejinaya_sumb-1" translatesAutoresizingMaskIntoConstraints="NO" id="wLS-3w-iM5">
+                                    <rect key="frame" x="20" y="1957" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="wLS-3w-iM5" secondAttribute="height" multiplier="67:41" id="Nqe-2z-K5l"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVB-0b-j3M">
+                                    <rect key="frame" x="0.0" y="1916" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="NVW-O5-bvn"/>
+                                    </constraints>
+                                    <string key="text">MIYAGI Miyagi
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwF-HD-wxw">
+                                    <rect key="frame" x="8" y="2207" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="6Ox-kZ-HBy"/>
+                                    </constraints>
+                                    <string key="text">2 9-8 Kokubuncho Aoba-ku Sendai, Miyagi 980-0803 FL Sendai Building 4F 
+Telephone Number: 022-797-7068 
+Opening Hours: 19: 00-24: 00 
+Closed: Sunday Closed 
+Homepage: https: // m.facebook.com/tejinaya.sendai/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-6P-7nW">
+                                    <rect key="frame" x="20" y="2178" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="abq-rq-W5O"/>
+                                    </constraints>
+                                    <string key="text">Magician Sendai store
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqv-VF-K6F">
+                                    <rect key="frame" x="20" y="2325" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="miyagi1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="iZx-fy-ZXX"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="xke-YT-148"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="norbesa-4" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-Tu-tNu">
+                                    <rect key="frame" x="20" y="2429" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="OZe-Tu-tNu" secondAttribute="height" multiplier="67:41" id="HrI-Da-DSG"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-YO-y4I">
+                                    <rect key="frame" x="0.0" y="2388" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="8ZL-Fl-Hsc"/>
+                                    </constraints>
+                                    <string key="text">HOKKAIDO Hokkaido
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TPZ-BP-uU3">
+                                    <rect key="frame" x="8" y="2679" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="TUR-wf-AvM"/>
+                                    </constraints>
+                                    <string key="text">Southern 3-chome West Chuo-ku, Sapporo, Hokkaido 060-0063 1-1 
+phone number: 011-271-3660 
+Opening hours: 10: 00-24: 00 
+Closed holidays: 24 hours a day 
+Website: http: // www. norbesa.jp/
+
+　Click here for details of installation site
+
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdM-TX-iZ8">
+                                    <rect key="frame" x="20" y="2650" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="LrO-v3-7YH"/>
+                                    </constraints>
+                                    <string key="text">nORBESA (Norbesa)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMM-QA-Iqb">
+                                    <rect key="frame" x="20" y="2797" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="norbesa1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="SSq-5E-d4o"/>
+                                    </constraints>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="G07-Xd-GkO"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cuba-mojito2" translatesAutoresizingMaskIntoConstraints="NO" id="C3G-BU-0Sp">
+                                    <rect key="frame" x="20" y="2898" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="C3G-BU-0Sp" secondAttribute="height" multiplier="67:41" id="ZKl-Ne-TO2"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79S-kM-hAV">
+                                    <rect key="frame" x="0.0" y="2857" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="qwg-WW-xs9"/>
+                                    </constraints>
+                                    <string key="text">KANAGAWA Kanagawa
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="olo-YA-GYR">
+                                    <rect key="frame" x="8" y="3148" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="55O-qD-ZlW"/>
+                                    </constraints>
+                                    <string key="text">Telephone number: 045 - 305 - 4 173 
+Business hours: 16: 00-22: 00 (Lunch time: 11: 00-14: 00) 
+Closed on Saturday and Sunday, 1-8 Mr. Ishikawa-cho Naka-ku, Yokohama-shi, Kanagawa Prefecture 231 0868 Sunday: Monday</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zch-Hn-vVp">
+                                    <rect key="frame" x="20" y="3119" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="IHt-yn-a60"/>
+                                    </constraints>
+                                    <string key="text">Cuba mojit specialty store
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFk-lJ-gvq">
+                                    <rect key="frame" x="20" y="3266" width="335" height="30"/>
+                                    <color key="backgroundColor" red="0.091015625000000003" green="0.33041294640000002" blue="0.72446986609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="kanagawa1"/>
+                                    <state key="normal" title="Click here for details on installation site">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.01176470588" green="0.1529411765" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="viewAtmDetai:" destination="ytv-Q3-EPP" eventType="touchDown" id="xA5-se-Rlg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="aMM-QA-Iqb" firstAttribute="top" secondItem="TPZ-BP-uU3" secondAttribute="bottom" constant="8" symbolic="YES" id="0S1-7z-gAI"/>
+                                <constraint firstItem="jva-EF-Jcg" firstAttribute="trailing" secondItem="8rZ-Lm-xka" secondAttribute="trailing" id="0SF-6e-vUC"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="top" secondItem="79S-kM-hAV" secondAttribute="bottom" constant="8" symbolic="YES" id="0bD-6n-5zP"/>
+                                <constraint firstItem="5xw-or-EVC" firstAttribute="trailing" secondItem="MXN-G1-mQc" secondAttribute="trailing" id="0jW-D1-mLM"/>
+                                <constraint firstItem="UVB-0b-j3M" firstAttribute="leading" secondItem="RwF-HD-wxw" secondAttribute="leading" constant="-8" id="1V8-cb-8Id"/>
+                                <constraint firstItem="Cmb-ei-hTk" firstAttribute="leading" secondItem="2lR-6u-Npj" secondAttribute="leading" constant="-8" id="1sj-Ei-2I7"/>
+                                <constraint firstItem="zIs-ll-Ckp" firstAttribute="leading" secondItem="8oN-2a-Wth" secondAttribute="leading" constant="-8" id="2TR-h3-snL"/>
+                                <constraint firstItem="TPZ-BP-uU3" firstAttribute="top" secondItem="HdM-TX-iZ8" secondAttribute="bottom" constant="3" id="5S2-Fh-udB"/>
+                                <constraint firstItem="5xw-or-EVC" firstAttribute="leading" secondItem="MXN-G1-mQc" secondAttribute="leading" id="5bw-iF-J9D"/>
+                                <constraint firstItem="Cmb-ei-hTk" firstAttribute="trailing" secondItem="2lR-6u-Npj" secondAttribute="trailing" constant="8" id="68j-Va-i58"/>
+                                <constraint firstItem="zch-Hn-vVp" firstAttribute="leading" secondItem="iFk-lJ-gvq" secondAttribute="leading" id="6an-yf-Bt0"/>
+                                <constraint firstItem="oBJ-7e-cVy" firstAttribute="leading" secondItem="wLS-3w-iM5" secondAttribute="leading" id="726-pD-Vap"/>
+                                <constraint firstItem="MXN-G1-mQc" firstAttribute="top" secondItem="5xw-or-EVC" secondAttribute="bottom" constant="16" id="7n6-mM-7sf"/>
+                                <constraint firstItem="olo-YA-GYR" firstAttribute="top" secondItem="zch-Hn-vVp" secondAttribute="bottom" constant="3" id="8Iy-z0-L4o"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="width" secondItem="SUP-9t-pVl" secondAttribute="height" multiplier="67:41" id="9JS-mL-cmR"/>
+                                <constraint firstItem="dnm-Dk-xjD" firstAttribute="leading" secondItem="SUP-9t-pVl" secondAttribute="leading" id="AD1-bI-iBY"/>
+                                <constraint firstItem="jva-EF-Jcg" firstAttribute="leading" secondItem="8rZ-Lm-xka" secondAttribute="leading" id="AZN-w6-2ao"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="top" secondItem="UVB-0b-j3M" secondAttribute="bottom" constant="8" symbolic="YES" id="Bfb-Bw-41W"/>
+                                <constraint firstItem="HdM-TX-iZ8" firstAttribute="centerX" secondItem="TPZ-BP-uU3" secondAttribute="centerX" id="BuO-vm-xi2"/>
+                                <constraint firstItem="qHo-WY-R3x" firstAttribute="top" secondItem="vCC-rm-mUc" secondAttribute="top" constant="29" id="D8g-I3-he4"/>
+                                <constraint firstItem="ZFX-fg-uvk" firstAttribute="top" secondItem="3FE-ZN-0uV" secondAttribute="bottom" constant="3" id="DbR-ts-P4z"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="width" secondItem="C3G-BU-0Sp" secondAttribute="height" multiplier="67:41" id="Eh2-xg-FTB"/>
+                                <constraint firstItem="IIG-YO-y4I" firstAttribute="top" secondItem="Wqv-VF-K6F" secondAttribute="bottom" constant="33" id="F0h-3T-wr0"/>
+                                <constraint firstItem="oBJ-7e-cVy" firstAttribute="top" secondItem="ZFX-fg-uvk" secondAttribute="bottom" constant="8" symbolic="YES" id="FD7-XF-QnH"/>
+                                <constraint firstItem="8oN-2a-Wth" firstAttribute="top" secondItem="Fep-wA-n0M" secondAttribute="bottom" constant="3" id="Fq6-lD-uQJ"/>
+                                <constraint firstItem="2lR-6u-Npj" firstAttribute="top" secondItem="Q5p-PZ-9Ls" secondAttribute="bottom" constant="3" id="GJs-ka-Nad"/>
+                                <constraint firstItem="zch-Hn-vVp" firstAttribute="centerX" secondItem="olo-YA-GYR" secondAttribute="centerX" id="Hcy-dA-MKW"/>
+                                <constraint firstItem="ANg-6P-7nW" firstAttribute="trailing" secondItem="Wqv-VF-K6F" secondAttribute="trailing" id="Iyw-vX-MCF"/>
+                                <constraint firstItem="qHo-WY-R3x" firstAttribute="leading" secondItem="vCC-rm-mUc" secondAttribute="leading" id="JZp-b6-nsw"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="trailing" secondItem="ANg-6P-7nW" secondAttribute="trailing" id="Jdt-5Q-fu0"/>
+                                <constraint firstItem="MXN-G1-mQc" firstAttribute="leading" secondItem="jva-EF-Jcg" secondAttribute="leading" id="Jly-Jv-7Ca"/>
+                                <constraint firstAttribute="bottom" secondItem="iFk-lJ-gvq" secondAttribute="bottom" constant="68" id="JpY-Zu-lD6"/>
+                                <constraint firstItem="jva-EF-Jcg" firstAttribute="top" secondItem="Rie-gw-BKb" secondAttribute="bottom" constant="8" symbolic="YES" id="K3X-7l-bQC"/>
+                                <constraint firstItem="zch-Hn-vVp" firstAttribute="trailing" secondItem="iFk-lJ-gvq" secondAttribute="trailing" id="K8M-uL-F0M"/>
+                                <constraint firstItem="MXN-G1-mQc" firstAttribute="centerX" secondItem="Rie-gw-BKb" secondAttribute="centerX" id="Kbm-Ei-J4Y"/>
+                                <constraint firstItem="Q5p-PZ-9Ls" firstAttribute="centerX" secondItem="2lR-6u-Npj" secondAttribute="centerX" id="L5V-my-esf"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="width" secondItem="C3G-BU-0Sp" secondAttribute="height" multiplier="67:41" id="L6u-8l-Dxe"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="width" secondItem="SUP-9t-pVl" secondAttribute="height" multiplier="67:41" id="L8B-a1-PnI"/>
+                                <constraint firstItem="I31-kU-ibu" firstAttribute="leading" secondItem="UVB-0b-j3M" secondAttribute="leading" id="LGv-a1-0tU"/>
+                                <constraint firstItem="Q5p-PZ-9Ls" firstAttribute="trailing" secondItem="iYj-vP-SSv" secondAttribute="trailing" id="MML-Zd-mkF"/>
+                                <constraint firstItem="ANg-6P-7nW" firstAttribute="leading" secondItem="Wqv-VF-K6F" secondAttribute="leading" id="NEx-mZ-pjd"/>
+                                <constraint firstItem="Fep-wA-n0M" firstAttribute="leading" secondItem="dnm-Dk-xjD" secondAttribute="leading" id="NTt-NF-pWD"/>
+                                <constraint firstItem="JS4-RY-Vbq" firstAttribute="width" secondItem="JS4-RY-Vbq" secondAttribute="height" multiplier="67:41" id="NaW-df-qFP"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="width" secondItem="C3G-BU-0Sp" secondAttribute="height" multiplier="67:41" id="OX6-uO-s4J"/>
+                                <constraint firstItem="Cmb-ei-hTk" firstAttribute="leading" secondItem="zIs-ll-Ckp" secondAttribute="leading" id="QJA-dG-YLn"/>
+                                <constraint firstItem="3FE-ZN-0uV" firstAttribute="leading" secondItem="oBJ-7e-cVy" secondAttribute="leading" id="QOw-w3-Yat"/>
+                                <constraint firstItem="8rZ-Lm-xka" firstAttribute="leading" secondItem="Q5p-PZ-9Ls" secondAttribute="leading" id="Qpt-pa-nab"/>
+                                <constraint firstItem="79S-kM-hAV" firstAttribute="leading" secondItem="olo-YA-GYR" secondAttribute="leading" constant="-8" id="QvU-fY-avP"/>
+                                <constraint firstItem="3FE-ZN-0uV" firstAttribute="centerX" secondItem="ZFX-fg-uvk" secondAttribute="centerX" id="RcN-Hv-cm5"/>
+                                <constraint firstItem="Cmb-ei-hTk" firstAttribute="top" secondItem="jva-EF-Jcg" secondAttribute="bottom" constant="38" id="Rnb-3b-DGh"/>
+                                <constraint firstItem="JS4-RY-Vbq" firstAttribute="width" secondItem="JS4-RY-Vbq" secondAttribute="height" multiplier="67:41" id="SL0-cy-Vo6"/>
+                                <constraint firstItem="dnm-Dk-xjD" firstAttribute="top" secondItem="8oN-2a-Wth" secondAttribute="bottom" constant="8" symbolic="YES" id="SOd-ci-mK5"/>
+                                <constraint firstItem="Cmb-ei-hTk" firstAttribute="leading" secondItem="qHo-WY-R3x" secondAttribute="leading" id="SQx-nl-o5b"/>
+                                <constraint firstItem="8rZ-Lm-xka" firstAttribute="trailing" secondItem="Q5p-PZ-9Ls" secondAttribute="trailing" id="TaV-oX-1Gz"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="width" secondItem="OZe-Tu-tNu" secondAttribute="height" multiplier="67:41" id="X1D-M5-ixY"/>
+                                <constraint firstItem="79S-kM-hAV" firstAttribute="trailing" secondItem="olo-YA-GYR" secondAttribute="trailing" constant="8" id="XYu-jQ-Lg6"/>
+                                <constraint firstItem="Fep-wA-n0M" firstAttribute="trailing" secondItem="dnm-Dk-xjD" secondAttribute="trailing" id="YZ1-fw-pfv"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="width" secondItem="wLS-3w-iM5" secondAttribute="height" multiplier="67:41" id="aTF-zF-bLu"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="width" secondItem="SUP-9t-pVl" secondAttribute="height" multiplier="67:41" id="b8Y-7s-8mT"/>
+                                <constraint firstItem="zIs-ll-Ckp" firstAttribute="leading" secondItem="I31-kU-ibu" secondAttribute="leading" id="bJe-8H-fjm"/>
+                                <constraint firstItem="zch-Hn-vVp" firstAttribute="top" secondItem="C3G-BU-0Sp" secondAttribute="bottom" constant="16" id="bYi-eV-DyV"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="width" secondItem="OZe-Tu-tNu" secondAttribute="height" multiplier="67:41" id="bxZ-ZW-s9x"/>
+                                <constraint firstItem="ANg-6P-7nW" firstAttribute="top" secondItem="wLS-3w-iM5" secondAttribute="bottom" constant="16" id="byX-E3-ei7"/>
+                                <constraint firstItem="5xw-or-EVC" firstAttribute="top" secondItem="qHo-WY-R3x" secondAttribute="bottom" constant="8" symbolic="YES" id="cCa-Ak-003"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="leading" secondItem="ANg-6P-7nW" secondAttribute="leading" id="cGC-Em-cJZ"/>
+                                <constraint firstItem="HdM-TX-iZ8" firstAttribute="leading" secondItem="aMM-QA-Iqb" secondAttribute="leading" id="cQN-bn-Fm4"/>
+                                <constraint firstItem="UVB-0b-j3M" firstAttribute="leading" secondItem="IIG-YO-y4I" secondAttribute="leading" id="cnn-L4-OAO"/>
+                                <constraint firstItem="Q5p-PZ-9Ls" firstAttribute="top" secondItem="8rZ-Lm-xka" secondAttribute="bottom" constant="16" id="d4d-yA-Q3y"/>
+                                <constraint firstItem="UVB-0b-j3M" firstAttribute="trailing" secondItem="RwF-HD-wxw" secondAttribute="trailing" constant="8" id="dTk-8c-pXd"/>
+                                <constraint firstItem="qHo-WY-R3x" firstAttribute="centerX" secondItem="vCC-rm-mUc" secondAttribute="centerX" id="dWx-9Z-O1z"/>
+                                <constraint firstItem="JS4-RY-Vbq" firstAttribute="trailing" secondItem="Fep-wA-n0M" secondAttribute="trailing" id="dYW-YZ-0Bj"/>
+                                <constraint firstItem="UVB-0b-j3M" firstAttribute="top" secondItem="oBJ-7e-cVy" secondAttribute="bottom" constant="28" id="djL-Vh-pQq"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="width" secondItem="wLS-3w-iM5" secondAttribute="height" multiplier="67:41" id="e3D-K8-e5f"/>
+                                <constraint firstItem="JS4-RY-Vbq" firstAttribute="top" secondItem="zIs-ll-Ckp" secondAttribute="bottom" constant="8" symbolic="YES" id="eQM-7d-axA"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="width" secondItem="C3G-BU-0Sp" secondAttribute="height" multiplier="67:41" id="f5G-Pq-fzZ"/>
+                                <constraint firstItem="79S-kM-hAV" firstAttribute="top" secondItem="aMM-QA-Iqb" secondAttribute="bottom" constant="30" id="fIk-lm-deW"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="leading" secondItem="zch-Hn-vVp" secondAttribute="leading" id="fPE-6r-C70"/>
+                                <constraint firstItem="aMM-QA-Iqb" firstAttribute="leading" secondItem="C3G-BU-0Sp" secondAttribute="leading" id="gfy-Qh-vpI"/>
+                                <constraint firstItem="MXN-G1-mQc" firstAttribute="trailing" secondItem="jva-EF-Jcg" secondAttribute="trailing" id="gr0-ZG-ZlX"/>
+                                <constraint firstItem="JS4-RY-Vbq" firstAttribute="leading" secondItem="Fep-wA-n0M" secondAttribute="leading" id="hO8-FX-ghX"/>
+                                <constraint firstItem="I31-kU-ibu" firstAttribute="leading" secondItem="ZFX-fg-uvk" secondAttribute="leading" constant="-8" id="hu9-7E-EdF"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="trailing" secondItem="HdM-TX-iZ8" secondAttribute="trailing" id="i3G-HR-xYS"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="width" secondItem="OZe-Tu-tNu" secondAttribute="height" multiplier="67:41" id="iE2-55-AT1"/>
+                                <constraint firstItem="IIG-YO-y4I" firstAttribute="leading" secondItem="79S-kM-hAV" secondAttribute="leading" id="igV-iK-n2I"/>
+                                <constraint firstItem="qHo-WY-R3x" firstAttribute="trailing" secondItem="Rie-gw-BKb" secondAttribute="trailing" constant="8" id="jZ2-jb-uGr"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="trailing" secondItem="3FE-ZN-0uV" secondAttribute="trailing" id="k01-jK-pgS"/>
+                                <constraint firstItem="Fep-wA-n0M" firstAttribute="top" secondItem="JS4-RY-Vbq" secondAttribute="bottom" constant="16" id="kcP-GP-0l6"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="leading" secondItem="HdM-TX-iZ8" secondAttribute="leading" id="lBX-hg-PXm"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="top" secondItem="I31-kU-ibu" secondAttribute="bottom" constant="8" symbolic="YES" id="nYY-qz-vyn"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="width" secondItem="wLS-3w-iM5" secondAttribute="height" multiplier="67:41" id="nrR-VF-jpX"/>
+                                <constraint firstItem="RwF-HD-wxw" firstAttribute="top" secondItem="ANg-6P-7nW" secondAttribute="bottom" constant="3" id="oXk-vJ-InW"/>
+                                <constraint firstItem="Q5p-PZ-9Ls" firstAttribute="leading" secondItem="iYj-vP-SSv" secondAttribute="leading" id="otu-GL-9Yh"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="top" secondItem="IIG-YO-y4I" secondAttribute="bottom" constant="8" symbolic="YES" id="p6M-H0-85g"/>
+                                <constraint firstItem="ANg-6P-7nW" firstAttribute="centerX" secondItem="RwF-HD-wxw" secondAttribute="centerX" id="pSA-Cw-4jn"/>
+                                <constraint firstItem="Fep-wA-n0M" firstAttribute="centerX" secondItem="8oN-2a-Wth" secondAttribute="centerX" id="px7-Ii-xfZ"/>
+                                <constraint firstItem="wLS-3w-iM5" firstAttribute="width" secondItem="wLS-3w-iM5" secondAttribute="height" multiplier="67:41" id="q1a-GM-REV"/>
+                                <constraint firstItem="SUP-9t-pVl" firstAttribute="leading" secondItem="3FE-ZN-0uV" secondAttribute="leading" id="qT1-8R-6Mw"/>
+                                <constraint firstItem="IIG-YO-y4I" firstAttribute="trailing" secondItem="TPZ-BP-uU3" secondAttribute="trailing" constant="8" id="qfj-Se-qiN"/>
+                                <constraint firstItem="8rZ-Lm-xka" firstAttribute="width" secondItem="8rZ-Lm-xka" secondAttribute="height" multiplier="67:41" id="qpS-7t-X93"/>
+                                <constraint firstItem="IIG-YO-y4I" firstAttribute="leading" secondItem="TPZ-BP-uU3" secondAttribute="leading" constant="-8" id="roe-Nb-HrJ"/>
+                                <constraint firstItem="HdM-TX-iZ8" firstAttribute="top" secondItem="OZe-Tu-tNu" secondAttribute="bottom" constant="16" id="tKS-uR-n6t"/>
+                                <constraint firstItem="iYj-vP-SSv" firstAttribute="leading" secondItem="JS4-RY-Vbq" secondAttribute="leading" id="uCR-aW-tCS"/>
+                                <constraint firstItem="qHo-WY-R3x" firstAttribute="leading" secondItem="Rie-gw-BKb" secondAttribute="leading" constant="-8" id="ufd-bn-VEx"/>
+                                <constraint firstItem="zIs-ll-Ckp" firstAttribute="trailing" secondItem="8oN-2a-Wth" secondAttribute="trailing" constant="8" id="uil-5Z-CZ0"/>
+                                <constraint firstItem="3FE-ZN-0uV" firstAttribute="trailing" secondItem="oBJ-7e-cVy" secondAttribute="trailing" id="vbK-1o-QMd"/>
+                                <constraint firstItem="iFk-lJ-gvq" firstAttribute="top" secondItem="olo-YA-GYR" secondAttribute="bottom" constant="8" symbolic="YES" id="vms-1M-7tO"/>
+                                <constraint firstItem="8rZ-Lm-xka" firstAttribute="top" secondItem="Cmb-ei-hTk" secondAttribute="bottom" constant="8" symbolic="YES" id="vs3-8h-tP6"/>
+                                <constraint firstItem="zIs-ll-Ckp" firstAttribute="top" secondItem="iYj-vP-SSv" secondAttribute="bottom" constant="31" id="x83-b1-2JZ"/>
+                                <constraint firstItem="3FE-ZN-0uV" firstAttribute="top" secondItem="SUP-9t-pVl" secondAttribute="bottom" constant="16" id="xBF-LE-aTU"/>
+                                <constraint firstItem="iYj-vP-SSv" firstAttribute="top" secondItem="2lR-6u-Npj" secondAttribute="bottom" constant="8" symbolic="YES" id="xFc-ap-kxA"/>
+                                <constraint firstItem="Wqv-VF-K6F" firstAttribute="leading" secondItem="OZe-Tu-tNu" secondAttribute="leading" id="xL0-d6-Xzx"/>
+                                <constraint firstItem="I31-kU-ibu" firstAttribute="trailing" secondItem="ZFX-fg-uvk" secondAttribute="trailing" constant="8" id="xX2-gx-MHi"/>
+                                <constraint firstItem="OZe-Tu-tNu" firstAttribute="width" secondItem="OZe-Tu-tNu" secondAttribute="height" multiplier="67:41" id="yIB-nB-4Y5"/>
+                                <constraint firstItem="Rie-gw-BKb" firstAttribute="top" secondItem="MXN-G1-mQc" secondAttribute="bottom" constant="3" id="z0L-de-L50"/>
+                                <constraint firstItem="HdM-TX-iZ8" firstAttribute="trailing" secondItem="aMM-QA-Iqb" secondAttribute="trailing" id="zBl-Mi-0bQ"/>
+                                <constraint firstItem="Wqv-VF-K6F" firstAttribute="top" secondItem="RwF-HD-wxw" secondAttribute="bottom" constant="8" symbolic="YES" id="zYf-vw-Cp6"/>
+                                <constraint firstItem="C3G-BU-0Sp" firstAttribute="trailing" secondItem="zch-Hn-vVp" secondAttribute="trailing" id="zxM-nG-mhy"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="ytv-Q3-EPP" id="Ahc-WE-tEs"/>
+                            <outlet property="delegate" destination="ytv-Q3-EPP" id="vgf-jK-ikF"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8j-f2-yfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cuba-mojito2" width="335" height="205"/>
+        <image name="norbesa-4" width="335" height="205"/>
+        <image name="petit_sumb" width="335" height="205"/>
+        <image name="shironeko" width="335" height="205"/>
+        <image name="tejinaya_sumb-1" width="335" height="205"/>
+        <image name="wallstreet" width="335" height="205"/>
+        <image name="worldstar" width="335" height="205"/>
+    </resources>
+</document>

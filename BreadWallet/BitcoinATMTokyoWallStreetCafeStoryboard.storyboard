@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="tyL-OD-Rbs">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="QW8-79-2K6" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Oye-SR-JLo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="zJE-qk-0Jr">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="2760"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallstreet" translatesAutoresizingMaskIntoConstraints="NO" id="1vP-4y-u3c">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="1vP-4y-u3c" secondAttribute="height" multiplier="67:41" id="FBu-T7-h93"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOKYO tokyo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-r4-a4C">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="msS-hf-1KL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2f-DJ-jee">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="Oi9-C2-jmv"/>
+                                    </constraints>
+                                    <string key="text">Sun City Hall, Minato-ku, Tokyo 106-0032 3-15-22 Sunshine Central Building 1F 
+Telephone number: 03-6804-5417 
+Opening hours: 18: 00 ~ 5:00 
+Closed holiday: Sunday 
+homepage: http://wallstreetcafejp.com/</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opi-a2-br7">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="Dwc-7c-M2O"/>
+                                    </constraints>
+                                    <string key="text">WALL STREET CAFE (Wall Street Cafe)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="1vP-4y-u3c" firstAttribute="leading" secondItem="Opi-a2-br7" secondAttribute="leading" id="4NJ-tL-s6F"/>
+                                <constraint firstItem="dkn-r4-a4C" firstAttribute="trailing" secondItem="N2f-DJ-jee" secondAttribute="trailing" constant="8" id="NBz-x5-tMr"/>
+                                <constraint firstItem="1vP-4y-u3c" firstAttribute="trailing" secondItem="Opi-a2-br7" secondAttribute="trailing" id="ULg-tf-0FS"/>
+                                <constraint firstItem="N2f-DJ-jee" firstAttribute="top" secondItem="Opi-a2-br7" secondAttribute="bottom" constant="3" id="eMV-5c-x2Y"/>
+                                <constraint firstItem="Opi-a2-br7" firstAttribute="top" secondItem="1vP-4y-u3c" secondAttribute="bottom" constant="16" id="gn6-MV-qwa"/>
+                                <constraint firstItem="dkn-r4-a4C" firstAttribute="leading" secondItem="zJE-qk-0Jr" secondAttribute="leading" id="hex-WA-78X"/>
+                                <constraint firstItem="1vP-4y-u3c" firstAttribute="top" secondItem="dkn-r4-a4C" secondAttribute="bottom" constant="8" symbolic="YES" id="ofc-vl-VwI"/>
+                                <constraint firstItem="dkn-r4-a4C" firstAttribute="centerX" secondItem="zJE-qk-0Jr" secondAttribute="centerX" id="p4V-g4-klF"/>
+                                <constraint firstItem="dkn-r4-a4C" firstAttribute="leading" secondItem="N2f-DJ-jee" secondAttribute="leading" constant="-8" id="vpF-7R-1c4"/>
+                                <constraint firstItem="dkn-r4-a4C" firstAttribute="top" secondItem="zJE-qk-0Jr" secondAttribute="top" constant="29" id="wll-Rk-nxU"/>
+                                <constraint firstItem="Opi-a2-br7" firstAttribute="centerX" secondItem="N2f-DJ-jee" secondAttribute="centerX" id="zS4-kq-Ej7"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="QW8-79-2K6" id="CVV-Bc-t3f"/>
+                            <outlet property="delegate" destination="QW8-79-2K6" id="W2Q-Xq-hAo"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdB-Qn-SIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallstreet" width="335" height="205"/>
+    </resources>
+</document>

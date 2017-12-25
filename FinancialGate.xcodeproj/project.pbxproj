@@ -16,6 +16,15 @@
 		04F85C9C1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F85C9B1F4F74E100BDD6A6 /* BRApplyDebitCardViewController.m */; };
 		2157BE7C1FE7EB16007D906B /* BRMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */; };
 		2157BE8B1FE93976007D906B /* BRCoinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */; };
+		2164D22A1FF05EDF0017D547 /* BRBitcoinATM.m in Sources */ = {isa = PBXBuildFile; fileRef = 2164D2291FF05EDF0017D547 /* BRBitcoinATM.m */; };
+		2164D22C1FF05EFD0017D547 /* BitcoinATMStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D22B1FF05EFD0017D547 /* BitcoinATMStoryboard.storyboard */; };
+		2164D2311FF0FD220017D547 /* BitcoinATMTokyoWallStreetCafeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D2301FF0FD220017D547 /* BitcoinATMTokyoWallStreetCafeStoryboard.storyboard */; };
+		2164D2351FF11C3D0017D547 /* BitcoinATMTokyoCafeWorldStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D2341FF11C3D0017D547 /* BitcoinATMTokyoCafeWorldStoryboard.storyboard */; };
+		2164D2371FF11C730017D547 /* BitcoinATMOsakaChefKitchenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D2361FF11C730017D547 /* BitcoinATMOsakaChefKitchenStoryboard.storyboard */; };
+		2164D2391FF11C9D0017D547 /* BitcoinATMHiroshima1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D2381FF11C9D0017D547 /* BitcoinATMHiroshima1Storyboard.storyboard */; };
+		2164D23B1FF11CDC0017D547 /* BitcoinATMMiyagiMiyagi1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D23A1FF11CDC0017D547 /* BitcoinATMMiyagiMiyagi1Storyboard.storyboard */; };
+		2164D23D1FF11D080017D547 /* BitcoinATMHOKKAIDO1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D23C1FF11D080017D547 /* BitcoinATMHOKKAIDO1Storyboard.storyboard */; };
+		2164D23F1FF1207C0017D547 /* BitcoinATM KANAGAWA1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2164D23E1FF1207C0017D547 /* BitcoinATM KANAGAWA1Storyboard.storyboard */; };
 		216652131FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216652121FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard */; };
 		216652181FEA13B500B2E974 /* MarketsViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216652171FEA13B500B2E974 /* MarketsViewStoryboard.storyboard */; };
 		219C9DBB1FEA42D700DBADD4 /* BarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C9DA41FEA42D600DBADD4 /* BarChart.m */; };
@@ -215,6 +224,16 @@
 		2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRMarketsViewController.m; sourceTree = "<group>"; };
 		2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRCoinDetailViewController.m; sourceTree = "<group>"; };
 		2157BE8C1FE93987007D906B /* BRCoinDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRCoinDetailViewController.h; sourceTree = "<group>"; };
+		2164D2261FF05EC60017D547 /* BRBitcoinATM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRBitcoinATM.h; sourceTree = "<group>"; };
+		2164D2291FF05EDF0017D547 /* BRBitcoinATM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRBitcoinATM.m; sourceTree = "<group>"; };
+		2164D22B1FF05EFD0017D547 /* BitcoinATMStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMStoryboard.storyboard; sourceTree = "<group>"; };
+		2164D2301FF0FD220017D547 /* BitcoinATMTokyoWallStreetCafeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMTokyoWallStreetCafeStoryboard.storyboard; sourceTree = "<group>"; };
+		2164D2341FF11C3D0017D547 /* BitcoinATMTokyoCafeWorldStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMTokyoCafeWorldStoryboard.storyboard; sourceTree = "<group>"; };
+		2164D2361FF11C730017D547 /* BitcoinATMOsakaChefKitchenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMOsakaChefKitchenStoryboard.storyboard; sourceTree = "<group>"; };
+		2164D2381FF11C9D0017D547 /* BitcoinATMHiroshima1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMHiroshima1Storyboard.storyboard; sourceTree = "<group>"; };
+		2164D23A1FF11CDC0017D547 /* BitcoinATMMiyagiMiyagi1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMMiyagiMiyagi1Storyboard.storyboard; sourceTree = "<group>"; };
+		2164D23C1FF11D080017D547 /* BitcoinATMHOKKAIDO1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BitcoinATMHOKKAIDO1Storyboard.storyboard; sourceTree = "<group>"; };
+		2164D23E1FF1207C0017D547 /* BitcoinATM KANAGAWA1Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "BitcoinATM KANAGAWA1Storyboard.storyboard"; sourceTree = "<group>"; };
 		216652121FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoinDetailViewStoryBoard.storyboard; sourceTree = "<group>"; };
 		216652171FEA13B500B2E974 /* MarketsViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketsViewStoryboard.storyboard; sourceTree = "<group>"; };
 		218AB6D81FAAE73100E03F7E /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -959,6 +978,8 @@
 				2157BE7B1FE7EB16007D906B /* BRMarketsViewController.m */,
 				2157BE8A1FE93976007D906B /* BRCoinDetailViewController.m */,
 				2157BE8C1FE93987007D906B /* BRCoinDetailViewController.h */,
+				2164D2261FF05EC60017D547 /* BRBitcoinATM.h */,
+				2164D2291FF05EDF0017D547 /* BRBitcoinATM.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1044,6 +1065,14 @@
 				75CE50BD1B525D1B00DBC18C /* breadwallet.entitlements */,
 				7579F7FE19231D4600CA56F4 /* ThirdParty */,
 				75D5F3C8191EC270004AB296 /* Supporting Files */,
+				2164D22B1FF05EFD0017D547 /* BitcoinATMStoryboard.storyboard */,
+				2164D2301FF0FD220017D547 /* BitcoinATMTokyoWallStreetCafeStoryboard.storyboard */,
+				2164D2341FF11C3D0017D547 /* BitcoinATMTokyoCafeWorldStoryboard.storyboard */,
+				2164D2361FF11C730017D547 /* BitcoinATMOsakaChefKitchenStoryboard.storyboard */,
+				2164D2381FF11C9D0017D547 /* BitcoinATMHiroshima1Storyboard.storyboard */,
+				2164D23A1FF11CDC0017D547 /* BitcoinATMMiyagiMiyagi1Storyboard.storyboard */,
+				2164D23C1FF11D080017D547 /* BitcoinATMHOKKAIDO1Storyboard.storyboard */,
+				2164D23E1FF1207C0017D547 /* BitcoinATM KANAGAWA1Storyboard.storyboard */,
 			);
 			name = FinancialGate;
 			path = BreadWallet;
@@ -1380,14 +1409,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				216652131FE9759B00B2E974 /* CoinDetailViewStoryBoard.storyboard in Resources */,
+				2164D23D1FF11D080017D547 /* BitcoinATMHOKKAIDO1Storyboard.storyboard in Resources */,
 				75D5F3E0191EC270004AB296 /* Images.xcassets in Resources */,
 				22FBC9701CE3A9D5009578B7 /* bread-buy.tar in Resources */,
+				2164D2351FF11C3D0017D547 /* BitcoinATMTokyoCafeWorldStoryboard.storyboard in Resources */,
+				2164D2391FF11C9D0017D547 /* BitcoinATMHiroshima1Storyboard.storyboard in Resources */,
+				2164D2371FF11C730017D547 /* BitcoinATMOsakaChefKitchenStoryboard.storyboard in Resources */,
+				2164D23F1FF1207C0017D547 /* BitcoinATM KANAGAWA1Storyboard.storyboard in Resources */,
 				047C7EF21F510F0E00AEECD5 /* BRPdfPageView.xib in Resources */,
+				2164D23B1FF11CDC0017D547 /* BitcoinATMMiyagiMiyagi1Storyboard.storyboard in Resources */,
 				757E09991ADB8EEB006FD352 /* Localizable.strings in Resources */,
 				75F2E0D31BE9803900EAE861 /* Launch Screen.storyboard in Resources */,
 				75C0E3BF1B1BA294007BC531 /* BIP39Words.plist in Resources */,
 				75E83CF61B5F997A0038FB70 /* coinflip.aiff in Resources */,
+				2164D22C1FF05EFD0017D547 /* BitcoinATMStoryboard.storyboard in Resources */,
 				216652181FEA13B500B2E974 /* MarketsViewStoryboard.storyboard in Resources */,
+				2164D2311FF0FD220017D547 /* BitcoinATMTokyoWallStreetCafeStoryboard.storyboard in Resources */,
 				755FC9ED1BF1DF1B00164ABB /* BREventConfirmView.xib in Resources */,
 				752E28F719235B3000DB5A3C /* FixedPeers.plist in Resources */,
 				75D5F3DE191EC270004AB296 /* Main.storyboard in Resources */,
@@ -1501,6 +1538,7 @@
 				75AA5F55194143D5003F23BD /* BRBouncyBurgerButton.m in Sources */,
 				752E28AB19234AE300DB5A3C /* BRMerkleBlockEntity.m in Sources */,
 				2157BE7C1FE7EB16007D906B /* BRMarketsViewController.m in Sources */,
+				2164D22A1FF05EDF0017D547 /* BRBitcoinATM.m in Sources */,
 				2292799A1C695CAE00C98E78 /* BRHTTPFileMiddleware.swift in Sources */,
 				BA7B53501BDA9A2800355E8D /* BRAppleWatchData.m in Sources */,
 				752E28AC19234AE300DB5A3C /* BRPeerEntity.m in Sources */,

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="cTl-bP-yel">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="eF8-wh-xIe" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WCd-Xf-zg7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Mgt-6v-K2c">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petit_sumb" translatesAutoresizingMaskIntoConstraints="NO" id="TIC-NV-oXi">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="TIC-NV-oXi" secondAttribute="height" multiplier="67:41" id="auO-dE-gHX"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIROSHIMA Hiroshima" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxl-nH-pYA">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="2fj-tq-h2Y"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gow-7C-mH8">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="bLo-Je-X5a"/>
+                                    </constraints>
+                                    <string key="text">2 - 9 Hashimoto cho, Naka-ku, Hiroshima-ken 
+730-0015 Hi-life Hashimoto-cho 1st F : No. 082-836-7735 
+Business hours: 9: 00-24: 00 
+Closed holiday: irregular holidays 
+Homepage: http: // petit -colon.com/
+
+　Click here for details of installation site
+
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOa-2A-pcW">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="6rd-1x-Nui"/>
+                                    </constraints>
+                                    <string key="text">Petit Colon (petit colon)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="TOa-2A-pcW" firstAttribute="centerX" secondItem="gow-7C-mH8" secondAttribute="centerX" id="2Ec-pS-3g5"/>
+                                <constraint firstItem="mxl-nH-pYA" firstAttribute="leading" secondItem="Mgt-6v-K2c" secondAttribute="leading" id="P4T-ub-9Be"/>
+                                <constraint firstItem="mxl-nH-pYA" firstAttribute="top" secondItem="Mgt-6v-K2c" secondAttribute="top" constant="29" id="WcY-aL-NGY"/>
+                                <constraint firstItem="mxl-nH-pYA" firstAttribute="leading" secondItem="gow-7C-mH8" secondAttribute="leading" constant="-8" id="bH8-Mc-hcH"/>
+                                <constraint firstItem="mxl-nH-pYA" firstAttribute="trailing" secondItem="gow-7C-mH8" secondAttribute="trailing" constant="8" id="e9L-BJ-74V"/>
+                                <constraint firstItem="TIC-NV-oXi" firstAttribute="top" secondItem="mxl-nH-pYA" secondAttribute="bottom" constant="8" symbolic="YES" id="ej7-sf-d2x"/>
+                                <constraint firstItem="TOa-2A-pcW" firstAttribute="top" secondItem="TIC-NV-oXi" secondAttribute="bottom" constant="16" id="gqT-X7-9Pz"/>
+                                <constraint firstItem="TIC-NV-oXi" firstAttribute="leading" secondItem="TOa-2A-pcW" secondAttribute="leading" id="pLn-Ka-Op6"/>
+                                <constraint firstItem="TIC-NV-oXi" firstAttribute="trailing" secondItem="TOa-2A-pcW" secondAttribute="trailing" id="uTq-ga-eMt"/>
+                                <constraint firstItem="gow-7C-mH8" firstAttribute="top" secondItem="TOa-2A-pcW" secondAttribute="bottom" constant="3" id="uh1-WM-hvD"/>
+                                <constraint firstItem="mxl-nH-pYA" firstAttribute="centerX" secondItem="Mgt-6v-K2c" secondAttribute="centerX" id="xkd-wq-RlB"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="eF8-wh-xIe" id="UjQ-9r-Tt1"/>
+                            <outlet property="delegate" destination="eF8-wh-xIe" id="045-SF-wwP"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5B5-MF-Evl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="petit_sumb" width="335" height="205"/>
+    </resources>
+</document>

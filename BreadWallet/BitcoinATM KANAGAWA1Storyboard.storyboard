@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BitcoinATMDetail-->
+        <scene sceneID="OjE-hY-Clx">
+            <objects>
+                <tableViewController storyboardIdentifier="BRBitcoinATM" id="ChP-BG-4FH" userLabel="BitcoinATMDetail" customClass="BRBitcoinATM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zfk-ax-NX9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="yTe-m5-LGs">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cuba-mojito2" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-e1-OTe">
+                                    <rect key="frame" x="20" y="70" width="335" height="205"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="hH0-e1-OTe" secondAttribute="height" multiplier="67:41" id="8bd-aq-k6N"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEa-9X-YZC">
+                                    <rect key="frame" x="0.0" y="29" width="375" height="33"/>
+                                    <color key="backgroundColor" red="0.090196078430000007" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.01176470588" green="0.1529411765" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="O88-Bx-6t4"/>
+                                    </constraints>
+                                    <string key="text">KANAGAWA Kanagawa
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2by-4j-3cF">
+                                    <rect key="frame" x="8" y="320" width="359" height="110"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="110" id="rD2-pz-5Jc"/>
+                                    </constraints>
+                                    <string key="text">Telephone number: 045 - 305 - 4 173 
+Business hours: 16: 00-22: 00 (Lunch time: 11: 00-14: 00) 
+Closed on Saturday and Sunday, 1-8 Mr. Ishikawa-cho Naka-ku, Yokohama-shi, Kanagawa Prefecture 231 0868 Sunday: Monday</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-Jb-4oS">
+                                    <rect key="frame" x="20" y="291" width="335" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="77f-RT-kcB"/>
+                                    </constraints>
+                                    <string key="text">nORBESA (Norbesa)
+</string>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="AEa-9X-YZC" firstAttribute="trailing" secondItem="2by-4j-3cF" secondAttribute="trailing" constant="8" id="6hI-El-js7"/>
+                                <constraint firstItem="AEa-9X-YZC" firstAttribute="centerX" secondItem="yTe-m5-LGs" secondAttribute="centerX" id="G3L-48-bga"/>
+                                <constraint firstItem="hH0-e1-OTe" firstAttribute="leading" secondItem="NxG-Jb-4oS" secondAttribute="leading" id="K7t-vO-xyw"/>
+                                <constraint firstItem="NxG-Jb-4oS" firstAttribute="centerX" secondItem="2by-4j-3cF" secondAttribute="centerX" id="QId-U3-x9S"/>
+                                <constraint firstItem="2by-4j-3cF" firstAttribute="top" secondItem="NxG-Jb-4oS" secondAttribute="bottom" constant="3" id="bM7-NE-Zc3"/>
+                                <constraint firstItem="hH0-e1-OTe" firstAttribute="trailing" secondItem="NxG-Jb-4oS" secondAttribute="trailing" id="fRg-Yv-BvK"/>
+                                <constraint firstItem="AEa-9X-YZC" firstAttribute="leading" secondItem="2by-4j-3cF" secondAttribute="leading" constant="-8" id="hRd-9t-T3U"/>
+                                <constraint firstItem="AEa-9X-YZC" firstAttribute="leading" secondItem="yTe-m5-LGs" secondAttribute="leading" id="lXW-yY-Dga"/>
+                                <constraint firstItem="hH0-e1-OTe" firstAttribute="top" secondItem="AEa-9X-YZC" secondAttribute="bottom" constant="8" symbolic="YES" id="oW5-2T-YXi"/>
+                                <constraint firstItem="AEa-9X-YZC" firstAttribute="top" secondItem="yTe-m5-LGs" secondAttribute="top" constant="29" id="vrD-vN-sG6"/>
+                                <constraint firstItem="NxG-Jb-4oS" firstAttribute="top" secondItem="hH0-e1-OTe" secondAttribute="bottom" constant="16" id="wBu-ad-khL"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="ChP-BG-4FH" id="1If-JK-Wmq"/>
+                            <outlet property="delegate" destination="ChP-BG-4FH" id="7uP-Ch-Cm6"/>
+                        </connections>
+                    </tableView>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltD-QQ-FJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="-103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cuba-mojito2" width="335" height="205"/>
+    </resources>
+</document>
